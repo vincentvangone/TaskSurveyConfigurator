@@ -1,0 +1,6 @@
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\bin\Debug\ErrorLogger.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\bin\Debug\ErrorLogger.pdb
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\obj\Debug\Utilities.csproj.AssemblyReference.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\obj\Debug\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\obj\Debug\ErrorLogger.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\ErrorLogger\obj\Debug\ErrorLogger.pdb

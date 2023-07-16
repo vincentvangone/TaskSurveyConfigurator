@@ -1,0 +1,6 @@
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\bin\Debug\Utilities.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\bin\Debug\Utilities.pdb
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\obj\Debug\Utilities.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\Utilities\obj\Debug\Utilities.pdb

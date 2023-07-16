@@ -1,0 +1,11 @@
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.AssemblyReference.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CoreCompileInputs.cache
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\obj\Debug\DatabaseLayer.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\obj\Debug\DatabaseLayer.pdb
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\ErrorLogger.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\ErrorLogger.pdb
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\obj\Debug\DatabaseLayer.csproj.CopyComplete
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\Utilities.dll
+C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\DatabaseLayer\bin\Debug\Utilities.pdb

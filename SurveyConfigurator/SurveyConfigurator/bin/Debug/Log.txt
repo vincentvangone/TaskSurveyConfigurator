@@ -1,0 +1,975 @@
+
+Log Entry : 7:04:59 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:05:03 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:05:06 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:05:08 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:06:15 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:06:22 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:07:51 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:07:57 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:08:03 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:08:48 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:08:54 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:08:58 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:09:13 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:09:18 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:14:06 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:14:21 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:15:15 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:15:32 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:16:47 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:16:54 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:17:04 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 7:17:27 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:17:35 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 7:24:08 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:24:17 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: NumberOfSmileys
+-------------------------------
+
+Log Entry : 7:24:34 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: NumberOfSmileys
+-------------------------------
+
+Log Entry : 7:24:38 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: NumberOfSmileys
+-------------------------------
+
+Log Entry : 7:25:16 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 7:25:21 AM Wednesday, July 12, 2023
+  :
+  :NumberOfSmileys
+-------------------------------
+
+Log Entry : 7:25:52 AM Wednesday, July 12, 2023
+  :
+  :NumberOfSmileys
+-------------------------------
+
+Log Entry : 7:27:13 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:06:27 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:06:30 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 9:06:56 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:07:00 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 9:07:01 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 9:07:05 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 9:09:21 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:09:27 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 9:09:28 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 9:09:37 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 9:09:38 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 9:14:56 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:15:37 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:16:44 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:17:21 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:18:44 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:20:43 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:23:25 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:23:59 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:25:21 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:29:52 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:30:40 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:32:41 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:36:25 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:38:35 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:38:42 AM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 9:40:39 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:41:41 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:42:29 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:42:51 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 9:45:43 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:08:07 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:09:34 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:09:58 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:17:26 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:23:41 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 10:23:55 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 11:27:01 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 11:27:47 AM Wednesday, July 12, 2023
+  :
+  :test?
+-------------------------------
+
+Log Entry : 3:00:14 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:00:58 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:07:45 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:07:50 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Type
+-------------------------------
+
+Log Entry : 3:07:51 PM Wednesday, July 12, 2023
+  :
+  :Procedure or function 'P_InsertQuestion' expects parameter '@Type', which was not supplied.
+-------------------------------
+
+Log Entry : 3:07:57 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:09:07 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:09:16 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:09:21 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:17:55 PM Wednesday, July 12, 2023
+  :
+  :Procedure or function 'P_InsertQuestionStar' expects parameter '@NumberOfStars', which was not supplied.
+-------------------------------
+
+Log Entry : 3:20:21 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:20:25 PM Wednesday, July 12, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 3:43:07 PM Wednesday, July 12, 2023
+  :
+  :Object reference not set to an instance of an object.
+-------------------------------
+
+Log Entry : 3:43:38 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 3:54:02 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:09:47 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:09:50 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:09:58 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:11:42 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:12:03 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:12:09 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:12:15 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:12:15 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:12:18 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:12:19 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:12:53 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:13:16 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:13:38 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:15:09 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:15:11 PM Wednesday, July 12, 2023
+  :
+  :Cant connect to database.
+-------------------------------
+
+Log Entry : 4:16:14 PM Wednesday, July 12, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 4:16:44 PM Wednesday, July 12, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 5:49:42 AM Thursday, July 13, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 6:01:49 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:01:56 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:20:09 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:23:34 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:24:00 AM Thursday, July 13, 2023
+  :
+  :Specified argument was out of the range of valid values.
+Parameter name: EndValue
+-------------------------------
+
+Log Entry : 6:24:41 AM Thursday, July 13, 2023
+  :
+  :Specified argument was out of the range of valid values.
+Parameter name: EndValue
+-------------------------------
+
+Log Entry : 6:24:47 AM Thursday, July 13, 2023
+  :
+  :Please Enter Valid End Value - Less than 100, Greater than start.
+-------------------------------
+
+Log Entry : 6:27:02 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:27:11 AM Thursday, July 13, 2023
+  :
+  :Value cannot be null.
+Parameter name: Text
+-------------------------------
+
+Log Entry : 6:27:15 AM Thursday, July 13, 2023
+  :
+  :Please Enter Valid End Value - Less than 100, Greater than start.
+-------------------------------
+
+Log Entry : 6:27:30 AM Thursday, July 13, 2023
+  :
+  :Start Caption Too Long (> 50 characters) 
+-------------------------------
+
+Log Entry : 6:35:14 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:35:26 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:37:53 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:39:44 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:40:56 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:43:23 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:48:11 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:49:23 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:49:29 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:54:29 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:55:43 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 6:56:22 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:04:57 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:05:54 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:06:31 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:09:45 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:10:32 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:10:39 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 7:16:34 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 10:09:50 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:17:34 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:20:23 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:22:47 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:27:35 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:33:40 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:34:24 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:35:26 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:37:03 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:39:15 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:40:52 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:43:54 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:46:05 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 10:49:35 AM Thursday, July 13, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 10:49:41 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 10:49:49 AM Thursday, July 13, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 10:50:08 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 10:52:08 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 10:52:24 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 10:52:59 AM Thursday, July 13, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 10:53:01 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 10:54:31 AM Thursday, July 13, 2023
+  :
+  :A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+-------------------------------
+
+Log Entry : 10:54:35 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 11:34:57 AM Thursday, July 13, 2023
+  :
+  :Incorrect Connection String. 
+Check App.config file.
+-------------------------------
+
+Log Entry : 11:35:06 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 11:35:13 AM Thursday, July 13, 2023
+  :
+  :Incorrect Connection String. 
+Check App.config file.
+-------------------------------
+
+Log Entry : 11:35:25 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 11:36:18 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database, please check connection string in 'App.config' .
+-------------------------------
+
+Log Entry : 11:36:35 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 11:38:26 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database. 
+Check Connection String in App.config file.
+-------------------------------
+
+Log Entry : 11:38:38 AM Thursday, July 13, 2023
+  :
+  :Failed to connect to database. 
+Check Connection String in App.config file.
+-------------------------------
+
+Log Entry : 11:39:35 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 11:40:05 AM Thursday, July 13, 2023
+  :
+  :View Procedure failed.
+-------------------------------
+
+Log Entry : 11:42:53 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 11:56:17 AM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:19:57 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:24:45 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:25:36 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:26:27 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:45:46 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 1:45:51 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful edit.
+-------------------------------
+
+Log Entry : 3:16:04 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful Save.
+-------------------------------
+
+Log Entry : 3:16:07 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful Save.
+-------------------------------
+
+Log Entry : 3:16:08 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful Save.
+-------------------------------
+
+Log Entry : 3:20:01 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful Save.
+-------------------------------
+
+Log Entry : 3:20:02 PM Thursday, July 13, 2023
+  :
+  :Unsuccessful Save.
+-------------------------------
+
+Log Entry : 3:59:12 PM Thursday, July 13, 2023
+  :
+  :Start Caption Too Long (> 50 characters) 
+-------------------------------
+
+Log Entry : 3:59:35 PM Thursday, July 13, 2023
+  :
+  :Enter Valid End Value - Less than 100, Greater than start.
+-------------------------------
+
+Log Entry : 4:04:13 PM Thursday, July 13, 2023
+  :
+  :Question Type should be specified.
+-------------------------------
+
+Log Entry : 4:04:19 PM Thursday, July 13, 2023
+  :
+  :Question Type should be specified.
+-------------------------------
+
+Log Entry : 4:04:49 PM Thursday, July 13, 2023
+  :
+  :Enter Valid End Value - Less than 100, Greater than start.
+-------------------------------
+
+Log Entry : 4:23:09 PM Thursday, July 13, 2023
+  :
+  :Enter Valid Number of Stars (1-10).
+-------------------------------
+
+Log Entry : 4:25:06 PM Thursday, July 13, 2023
+  :
+  :Enter Valid Number of Stars (1-10).
+-------------------------------
