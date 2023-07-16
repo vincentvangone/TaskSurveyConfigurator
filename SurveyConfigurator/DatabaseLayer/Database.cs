@@ -28,7 +28,7 @@ namespace DatabaseLayer
                 Connection.Open();
                 return true;
             }
-            catch 
+            catch (Exception E)
             {
                 Logger.WriteLog("Failed to connect to database. \nCheck Connection String in App.config file.");
                 return false;
@@ -93,7 +93,7 @@ namespace DatabaseLayer
             }
             catch (TransactionAbortedException Exception)
             {
-                Logger.WriteLog(Exception.Message);
+                Logger.WriteLog("Save Failed. Please Try Again.", Exception.Message);
             }
 
         }
@@ -167,7 +167,7 @@ namespace DatabaseLayer
             }
             catch (TransactionAbortedException Exception)
             {
-                Logger.WriteLog(Exception.Message);
+                Logger.WriteLog("Save Failed. Please Try Again.", Exception.Message);
             }
 
         }
@@ -233,7 +233,7 @@ namespace DatabaseLayer
             }
             catch (TransactionAbortedException Exception)
             {
-                Logger.WriteLog(Exception.Message);
+                Logger.WriteLog("Save Failed. Please Try Again.", Exception.Message);
             }
 
         }
@@ -312,7 +312,7 @@ namespace DatabaseLayer
                 }
                 catch (TransactionAbortedException Exception)
                 {
-                    Logger.WriteLog(Exception.Message);
+                    Logger.WriteLog("Delete Failed. Please Try Again.",Exception.Message);
                 }
 
             }
@@ -341,9 +341,9 @@ namespace DatabaseLayer
                 }
 
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("View Procedure failed.");
+                Logger.WriteLog("View Procedure failed.",E.Message );
                 return null;
             }
         }
@@ -376,9 +376,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit." , E.Message);
                 return null;
             }
            
@@ -404,9 +404,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save." ,E.Message);
                 
             }
 
@@ -438,9 +438,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit." ,E.Message);
                 return null;
             }
 
@@ -475,9 +475,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit." , E.Message);
                 return 0;
             }
 
@@ -504,11 +504,12 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save." , E.Message);
 
             }
+
 
         }
 
@@ -541,9 +542,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit." , E.Message);
                 return 0;
             }
 
@@ -571,9 +572,9 @@ namespace DatabaseLayer
                     
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save.",E.Message );
                
             }
         }
@@ -606,9 +607,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit.",E.Message );
                 return 0;
             }
 
@@ -640,9 +641,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit.",E.Message );
                 return 100;
             }
         }
@@ -673,9 +674,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit.",E.Message );
                 return "";
             }
         }
@@ -706,9 +707,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful edit.");
+                Logger.WriteLog("Unsuccessful edit." , E.Message);
                 return "";
             }
         }
@@ -734,9 +735,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch(Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save.",E.Message );
 
             }
         }
@@ -762,9 +763,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save." , E.Message);
 
             }
         }
@@ -790,9 +791,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save.",E.Message );
 
             }
         }
@@ -818,9 +819,9 @@ namespace DatabaseLayer
 
                 }
             }
-            catch
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.");
+                Logger.WriteLog("Unsuccessful Save." , E.Message);
 
             }
         }

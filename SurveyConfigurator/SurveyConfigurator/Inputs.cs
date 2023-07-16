@@ -47,7 +47,7 @@ namespace SurveyConfigurator
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonSave.Enabled = true;
+            
             switch (comboBoxType.SelectedItem.ToString())
             {
                 case SMILEY:
@@ -98,24 +98,27 @@ namespace SurveyConfigurator
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(comboBoxType.Enabled.ToString());
             //if the question already exists we need to update it not create a new one
             //when we're editing the combo box is disabled so thats our flag
-            if (!comboBoxType.Enabled)
+            if (!(comboBoxType.Enabled))
             {
-                Validation.SetText(Id,textBoxText.Text);
+                
                 switch (comboBoxType.SelectedItem.ToString())
                 {
                     case SMILEY:
                         QuestionSmiley.Text = textBoxText.Text;
                         QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
-                        BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley, 0, false);
-                        Validation.SetNumberOfSmileys(Id, this.ucSmiley.NumberOfSmileys);
+
+                        //false is the flag of new question
+                        BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley, Id, false);
+
                         break;
                     case STAR:
                         QuestionStar.Text = textBoxText.Text;
                         QuestionStar.NumberOfStars = ucStar.NumberOfStars;
-                        BusinessLayer.Validation.StarsInputValidation(QuestionStar);
-                        Validation.SetNumberOfStars(Id,  this.ucStar.NumberOfStars);
+                        BusinessLayer.Validation.StarsInputValidation(QuestionStar, Id, false);
+
                         break;
                     case SLIDER:
                         QuestionSlider.Text = textBoxText.Text;
@@ -123,11 +126,10 @@ namespace SurveyConfigurator
                         QuestionSlider.EndValue = ucSlider.EndValue;
                         QuestionSlider.StartCaption = ucSlider.StartCaption;
                         QuestionSlider.EndCaption = ucSlider.EndCaption;
-                        BusinessLayer.Validation.SliderInputValidation(QuestionSlider);
-                        Validation.SetStartValue(Id, ucSlider.StartValue);
-                        Validation.SetEndValue(Id, ucSlider.EndValue);
-                        Validation.SetStartCaption(Id, ucSlider.StartCaption);
-                        Validation.SetEndCaption(Id, ucSlider.EndCaption);
+                        
+
+                        BusinessLayer.Validation.SliderInputValidation(QuestionSlider, Id, false);
+
                         break;
 
                 }
@@ -166,6 +168,11 @@ namespace SurveyConfigurator
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxText_TextChanged(object sender, EventArgs e)
+        {
+            if (!(textBoxText.Text==null)) buttonSave.Enabled = true;
         }
     }
 }

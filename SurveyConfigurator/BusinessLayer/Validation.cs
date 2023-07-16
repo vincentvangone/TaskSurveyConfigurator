@@ -29,7 +29,7 @@ namespace BusinessLayer
 
         //if NewSmileyQuestion is set to true = database excutes insert command
         //if false -> update command
-        public static void SmileyInputValidation(clsQuestionSmiley Question, int Id = 0, bool NewSmileyQuestion = true)
+        public static void SmileyInputValidation(clsQuestionSmiley Question, int Id = 0, bool NewQuestion = true)
         {
             //nested try catch blocks because we validate each one separately
             //check that question type is selected
@@ -57,35 +57,40 @@ namespace BusinessLayer
                         }
 
                         //layer 3 object to save in sql server
-                        if (NewSmileyQuestion)
+                        //NewSmileyQuestion is the flag to know if we should create new question or update previous
+                        if (NewQuestion)
                         {
                             Database StoreSmiley = new Database();
                             StoreSmiley.StoreSmileyQuestion(Question);
                         }
-                        //to use update method
-                        else 
+                        //to update insated of creating new question
+                        //if flag = false -> only change text and number of smileys -> update not insert
+                        else
                         {
-                            Database UpdateSmiley = new Database();
-                            //UpdateSmiley.SetNumberOfSmileys(Id,Question.NumberOfSmileys);
+                            Database.SetText(Id, Question.Text);
+                            Database.SetNumberOfSmileys(Id, Question.NumberOfSmileys);
+                            MessageBox.Show("Question Updated Successfully.");
                         }
+                        
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Enter Valid Number of Smileys (2-5).");
+                        Logger.WriteLog("Invalid Number of Smileys (2-5).", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Text should be specified.");
+                    Logger.WriteLog("Question Type should be specified.", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Type should be specified.");
+                Logger.WriteLog("Question Text should be specified.", E.Message);
+                
             }
         }
 
-        public static void StarsInputValidation(clsQuestionStar Question)
+        public static void StarsInputValidation(clsQuestionStar Question, int Id = 0, bool NewQuestion = true)
         {
             //nested try catch blocks because we validate each one separately
             //check that question type is selected
@@ -113,26 +118,37 @@ namespace BusinessLayer
                             throw new ArithmeticException(nameof(Question.NumberOfStars));
                         }
                         //layer 3 object to save in sql server
-                        Database StoreStar = new Database();
-                        StoreStar.StoreStarQuestion(Question);
+                        //NewSmileyQuestion is the flag to know if we should create new question or update previous
+                        if (NewQuestion)
+                        {
+                            Database StoreStar = new Database();
+                            StoreStar.StoreStarQuestion(Question);
+                        }
+                        //if flag = false -> only change text and number of stars -> update not insert
+                        else
+                        {
+                            Database.SetText(Id, Question.Text);
+                            Database.SetNumberOfStars(Id, Question.NumberOfStars);
+                            MessageBox.Show("Question Updated Successfully.");
+                        }
                     }
-                    catch 
+                    catch (Exception E)
                     {
-                        Logger.WriteLog("Enter Valid Number of Stars (1-10).");
+                        Logger.WriteLog("Invalid Number of Stars (1-10).", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Text should be specified.");
+                    Logger.WriteLog("Question Type should be specified.", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Type should be specified.");
+                Logger.WriteLog("Question Text should be specified.", E.Message);
             }
         }
 
-        public static void SliderInputValidation(clsQuestionSlider Question)
+        public static void SliderInputValidation(clsQuestionSlider Question, int Id = 0, bool NewQuestion = true)
         {
             //nested try catch blocks because we validate each one separately
             //check that question type is selected
@@ -154,14 +170,14 @@ namespace BusinessLayer
                     //this isnt possible to throw an exception but its there for future changes
                     try
                     {
-                        if (Question.StartValue < 0)
+                        if (Question.StartValue < 0 || Question.StartValue > 100)
                         {
                             throw new ArgumentOutOfRangeException(nameof(Question.StartValue));
                         }
 
                         try
                         {
-                            if (Question.EndValue > 100 || Question.EndValue < Question.StartValue)
+                            if (Question.EndValue > 100 || Question.EndValue <= Question.StartValue)
                             {
                                 throw new ArgumentOutOfRangeException(nameof(Question.EndValue));
                             }
@@ -181,37 +197,50 @@ namespace BusinessLayer
                                     }
 
                                     //layer 3 object to save in sql server
-                                    Database StoreSlider = new Database();
-                                    StoreSlider.StoreSliderQuestion(Question);
+                                    //NewSmileyQuestion is the flag to know if we should create new question or update previous
+                                    if (NewQuestion)
+                                    {
+                                        Database StoreSlider = new Database();
+                                        StoreSlider.StoreSliderQuestion(Question);
+                                    }
+                                    else
+                                    {
+                                        Database.SetText(Id, Question.Text);
+                                        Database.SetStartValue(Id, Question.StartValue);    
+                                        Database.SetStartCaption(Id,Question.StartCaption);
+                                        Database.SetEndValue(Id, Question.EndValue);    
+                                        Database.SetEndCaption(Id,Question.EndCaption);
+                                        MessageBox.Show("Question Updated Successfully.");
+                                    }
                                 }
                                 catch (Exception E)
                                 {
-                                    Logger.WriteLog("End Caption Too Long (> 50 characters) ");
+                                    Logger.WriteLog("End Caption Too Long (> 50 characters) ", E.Message);
                                 }
                             }
                             catch (Exception E)
                             {
-                                Logger.WriteLog("Start Caption Too Long (> 50 characters) ");
+                                Logger.WriteLog("Start Caption Too Long (> 50 characters) ", E.Message);
                             }
                         }
                         catch (Exception E)
                         {
-                            Logger.WriteLog("Enter Valid End Value - Less than 100, Greater than start.");
+                            Logger.WriteLog("Invalid End Value - Less than 100, Greater than start.", E.Message);
                         }
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Enter Valid Start Value - > 0");
+                        Logger.WriteLog("Invalid Start Value - Positive number less than 100.", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Text should be specified.");
+                    Logger.WriteLog("Question Type should be specified.", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Type should be specified.");
+                Logger.WriteLog("Question Text should be specified.", E.Message);
             }
         }
 
