@@ -15,6 +15,8 @@ namespace ErrorLogger
         public static void WriteLog(string LogMessage, string Type, string ExtraInfo = "Warning")
         {
             
+            string LogPath = ConfigurationManager.AppSettings["LogPath"];
+            
             using (StreamWriter Writer = File.AppendText(LogPath))
             {
                 //TextWriter w = Writer;
@@ -36,7 +38,7 @@ namespace ErrorLogger
                 Writer.WriteLine("------------------------------------------------------------");
 
             }
-            if(LogMessage != null) { 
+            if(LogMessage != "") { 
                 MessageBox.Show(LogMessage);
             }
         }

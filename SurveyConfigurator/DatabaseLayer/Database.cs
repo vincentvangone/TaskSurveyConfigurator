@@ -213,7 +213,7 @@ namespace DatabaseLayer
                 {
                     Connection.Open();
 
-                    SqlCommand Delete = new SqlCommand("P_View", Connection);
+                    SqlCommand Delete = new SqlCommand(clsConstants.P_VIEW, Connection);
                     Delete.CommandType = CommandType.StoredProcedure;
                     using (var adapter = new SqlDataAdapter(Delete))
                     {
@@ -221,10 +221,7 @@ namespace DatabaseLayer
                         adapter.Fill(table);
                         Logger.WriteLog("",clsConstants.INFORMATION,"Table in main page fetched from database successfully.");
                         return table;
-
-
                     }
-
 
                 }
 
@@ -352,14 +349,14 @@ namespace DatabaseLayer
 
 
                     // Add the output parameter.
-                    GetNumberOfSmileys.Parameters.Add(new SqlParameter("@NumberOfSmileys", SqlDbType.VarChar, 1000));
-                    GetNumberOfSmileys.Parameters["@NumberOfSmileys"].Direction = ParameterDirection.Output;
+                    GetNumberOfSmileys.Parameters.Add(new SqlParameter("@"+clsConstants.NUMBER_OF_SMILEYS, SqlDbType.VarChar, 1000));
+                    GetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Direction = ParameterDirection.Output;
 
 
                     //run previously stored procedure
                     GetNumberOfSmileys.ExecuteNonQuery();
 
-                    return int.Parse(GetNumberOfSmileys.Parameters["@NumberOfSmileys"].Value.ToString());
+                    return int.Parse(GetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value.ToString());
 
                 }
             }
@@ -384,8 +381,8 @@ namespace DatabaseLayer
                     // Add input parameter for the stored procedure and specify what to use as its value.
                     SetNumberOfSmileys.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
                     SetNumberOfSmileys.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetNumberOfSmileys.Parameters.Add(new SqlParameter("@NumberOfSmileys", SqlDbType.Int));
-                    SetNumberOfSmileys.Parameters["@NumberOfSmileys"].Value = NumberOfSmileys;
+                    SetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_SMILEYS, SqlDbType.Int));
+                    SetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value = NumberOfSmileys;
 
                     //run previously stored procedure
                     SetNumberOfSmileys.ExecuteNonQuery();
