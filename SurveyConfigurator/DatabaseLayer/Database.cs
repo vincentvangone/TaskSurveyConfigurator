@@ -13,7 +13,7 @@ namespace DatabaseLayer
 {
     public class Database
     {
-        public static string  CONNECTION = "Data Source="+ConfigurationManager.AppSettings["Server"]+";Initial Catalog = " + ConfigurationManager.AppSettings["Database"] + "; Integrated Security = True;";
+        public static string  CONNECTION = "Data Source="+ConfigurationManager.AppSettings["Server"]+";Initial Catalog = " + ConfigurationManager.AppSettings["Database"] +  "; Integrated Security = True;";
         private int QuestionId;
         public static bool CanConnect()
         {
@@ -25,7 +25,7 @@ namespace DatabaseLayer
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed to connect to database. \nCheck Connection String in App.config file.", clsConstants.ERROR,E.Message);
+                Logger.WriteLog("Failed to connect to database. \nCheck Connection Keys in App.config file.", clsConstants.ERROR,E.Message);
                 return false;
             }
         }

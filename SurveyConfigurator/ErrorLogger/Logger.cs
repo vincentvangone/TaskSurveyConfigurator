@@ -14,9 +14,10 @@ namespace ErrorLogger
     {
         public static void WriteLog(string LogMessage, string Type, string ExtraInfo = "Warning")
         {
-            
+
             string LogPath = ConfigurationManager.AppSettings["LogPath"];
-            
+            //when the file reaches 1 mega -> delete
+            if ((LogPath.Length) / (1024 * 1024) >= 1) File.Delete(LogPath);
             using (StreamWriter Writer = File.AppendText(LogPath))
             {
                 //TextWriter w = Writer;
