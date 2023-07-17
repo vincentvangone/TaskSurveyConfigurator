@@ -58,19 +58,19 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         InsertQuestion.ExecuteNonQuery();
                         Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + (int)InsertQuestion.Parameters["@" + clsConstants.ID].Value);
-                        return 0; //success code
+                        return 1; //success code
                     }
                     catch (Exception E)
                     {
                         Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                        return 1; //failed parameter addition
+                        return -5; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                return -1; //failed to connect
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
 
@@ -104,19 +104,20 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         InsertQuestion.ExecuteNonQuery();
                         Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + (int)InsertQuestion.Parameters["@" + clsConstants.ID].Value);
-                        return 0; //success code
+                        return 1; //success code
                     }
+                  
                     catch (Exception E)
                     {
                         Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                        return 1; //failed parameter addition
+                        return -5; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                return -1; //failed to connect
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
 
@@ -158,24 +159,24 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         InsertQuestion.ExecuteNonQuery();
                         Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" +  InsertQuestion.Parameters["@" + clsConstants.ID].Value );
-                        return 0; //success code
+                        return 1; //success code
                     }
                     catch (Exception E)
                     {
                         Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                        return 1; //failed parameter addition
+                        return -5; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
-                return -1; //failed to connect
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
 
 
-        public static void DeleteQuestion(int Id)
+        public static int DeleteQuestion(int Id)
         {
 
             try
@@ -183,24 +184,32 @@ namespace DatabaseLayer
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
+                    try
+                    {
+                        SqlCommand Delete = new SqlCommand(clsConstants.P_DELETE, Connection);
+                        Delete.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand Delete = new SqlCommand(clsConstants.P_DELETE, Connection);
-                    Delete.CommandType = CommandType.StoredProcedure;
+                        Delete.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        Delete.Parameters["@" + clsConstants.ID].Value = Id;
 
-                    Delete.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
-                    Delete.Parameters["@" + clsConstants.ID].Value = Id;
-
-                    //run previously stored delete procedure
-                    Delete.ExecuteNonQuery();
-                    Logger.WriteLog("Question Deleted successfully.", clsConstants.INFORMATION, "Question ID:" + Id);
+                        //run previously stored delete procedure
+                        Delete.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Delete Question", clsConstants.ERROR, E.Message);
+                        return -6; //failed deletion
+                    }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Delete Failed. Please Try Again.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog("Failed to Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
-            
-               
+
+
         }
 
 
@@ -269,31 +278,39 @@ namespace DatabaseLayer
             }
            
         }
-        public static void SetText(int Id,string Text)
+        public static int SetText(int Id,string Text)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand SetText = new SqlCommand(clsConstants.P_SET_TEXT, Connection);
-                    SetText.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand SetText = new SqlCommand(clsConstants.P_SET_TEXT, Connection);
+                        SetText.CommandType = CommandType.StoredProcedure;
 
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetText.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetText.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetText.Parameters.Add(new SqlParameter("@"+clsConstants.TEXT, SqlDbType.VarChar,1000));
-                    SetText.Parameters["@"+clsConstants.TEXT].Value = Text;
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetText.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetText.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetText.Parameters.Add(new SqlParameter("@" + clsConstants.TEXT, SqlDbType.VarChar, 1000));
+                        SetText.Parameters["@" + clsConstants.TEXT].Value = Text;
 
-                    //run previously stored procedure
-                    SetText.ExecuteNonQuery();
-
+                        //run previously stored procedure
+                        SetText.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-                
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
 
         }
@@ -368,7 +385,7 @@ namespace DatabaseLayer
             }
 
         }
-        public static void SetNumberOfSmileys(int Id, int NumberOfSmileys)
+        public static int SetNumberOfSmileys(int Id, int NumberOfSmileys)
         {
             try
             {
@@ -376,24 +393,32 @@ namespace DatabaseLayer
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand SetNumberOfSmileys = new SqlCommand(clsConstants.P_SET_NUMBER_OF_SMILEYS, Connection);
-                    SetNumberOfSmileys.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand SetNumberOfSmileys = new SqlCommand(clsConstants.P_SET_NUMBER_OF_SMILEYS, Connection);
+                        SetNumberOfSmileys.CommandType = CommandType.StoredProcedure;
 
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetNumberOfSmileys.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetNumberOfSmileys.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_SMILEYS, SqlDbType.Int));
-                    SetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value = NumberOfSmileys;
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetNumberOfSmileys.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_SMILEYS, SqlDbType.Int));
+                        SetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value = NumberOfSmileys;
 
-                    //run previously stored procedure
-                    SetNumberOfSmileys.ExecuteNonQuery();
-
+                        //run previously stored procedure
+                        SetNumberOfSmileys.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
 
 
@@ -435,33 +460,40 @@ namespace DatabaseLayer
             }
 
         }
-        public static void SetNumberOfStars(int Id, int NumberOfStars)
+        public static int SetNumberOfStars(int Id, int NumberOfStars)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand SetNumberOfStars = new SqlCommand(clsConstants.P_SET_NUMBER_OF_STARS, Connection);
-                    SetNumberOfStars.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand SetNumberOfStars = new SqlCommand(clsConstants.P_SET_NUMBER_OF_STARS, Connection);
+                        SetNumberOfStars.CommandType = CommandType.StoredProcedure;
 
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetNumberOfStars.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetNumberOfStars.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetNumberOfStars.Parameters.Add(new SqlParameter("@"+clsConstants.NUMBER_OF_STARS, SqlDbType.Int));
-                    SetNumberOfStars.Parameters["@"+clsConstants.NUMBER_OF_STARS].Value =NumberOfStars;
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetNumberOfStars.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetNumberOfStars.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetNumberOfStars.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_STARS, SqlDbType.Int));
+                        SetNumberOfStars.Parameters["@" + clsConstants.NUMBER_OF_STARS].Value = NumberOfStars;
 
 
-                    //run previously stored procedure
-                    SetNumberOfStars.ExecuteNonQuery();
-
-                    
+                        //run previously stored procedure
+                        SetNumberOfStars.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-               
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
 
@@ -599,13 +631,14 @@ namespace DatabaseLayer
                 return "";
             }
         }
-        public static void SetStartValue(int Id, int StartValue)
+        public static int SetStartValue(int Id, int StartValue)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
+                    try { 
                     SqlCommand SetStartValue = new SqlCommand(clsConstants.P_SET_START_VALUE, Connection);
                     SetStartValue.CommandType = CommandType.StoredProcedure;
 
@@ -619,96 +652,132 @@ namespace DatabaseLayer
                     //run previously stored procedure
                     SetStartValue.ExecuteNonQuery();
 
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
-            catch(Exception E)
+            catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
-        public static void SetEndValue(int Id, int EndValue)
+        public static int SetEndValue(int Id, int EndValue)
+        {
+            try
+            {
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                {
+
+                    Connection.Open();
+                    try
+                    {
+                        SqlCommand SetEndValue = new SqlCommand(clsConstants.P_SET_END_VALUE, Connection);
+                        SetEndValue.CommandType = CommandType.StoredProcedure;
+
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetEndValue.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetEndValue.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetEndValue.Parameters.Add(new SqlParameter("@" + clsConstants.END_VALUE, SqlDbType.Int));
+                        SetEndValue.Parameters["@" + clsConstants.END_VALUE].Value = EndValue;
+
+
+                        //run previously stored procedure
+                        SetEndValue.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
+            }
+
+
+        }
+        public static int SetStartCaption(int Id, string StartCaption)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand SetEndValue = new SqlCommand(clsConstants.P_SET_END_VALUE, Connection);
-                    SetEndValue.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand SetStartCaption = new SqlCommand(clsConstants.P_SET_START_CAPTION, Connection);
+                        SetStartCaption.CommandType = CommandType.StoredProcedure;
 
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetEndValue.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetEndValue.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetEndValue.Parameters.Add(new SqlParameter("@"+clsConstants.END_VALUE, SqlDbType.Int));
-                    SetEndValue.Parameters["@"+clsConstants.END_VALUE].Value = EndValue;
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetStartCaption.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetStartCaption.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetStartCaption.Parameters.Add(new SqlParameter("@" + clsConstants.START_CAPTION, SqlDbType.VarChar, 1000));
+                        SetStartCaption.Parameters["@" + clsConstants.START_CAPTION].Value = StartCaption;
 
 
-                    //run previously stored procedure
-                    SetEndValue.ExecuteNonQuery();
+                        //run previously stored procedure
+                        SetStartCaption.ExecuteNonQuery();
+                        return 1;
+                    }
 
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
+            
             catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
-        public static void SetStartCaption(int Id, string StartCaption)
+        public static int SetEndCaption(int Id, string EndCaption)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand SetStartCaption = new SqlCommand(clsConstants.P_SET_START_CAPTION, Connection);
-                    SetStartCaption.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand SetEndCaption = new SqlCommand(clsConstants.P_SET_END_CAPTION, Connection);
+                        SetEndCaption.CommandType = CommandType.StoredProcedure;
 
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetStartCaption.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetStartCaption.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetStartCaption.Parameters.Add(new SqlParameter("@"+clsConstants.START_CAPTION, SqlDbType.VarChar,1000));
-                    SetStartCaption.Parameters["@"+clsConstants.START_CAPTION].Value = StartCaption;
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        SetEndCaption.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        SetEndCaption.Parameters["@" + clsConstants.ID].Value = Id;
+                        SetEndCaption.Parameters.Add(new SqlParameter("@" + clsConstants.END_CAPTION, SqlDbType.VarChar, 1000));
+                        SetEndCaption.Parameters["@" + clsConstants.END_CAPTION].Value = EndCaption;
 
 
-                    //run previously stored procedure
-                    SetStartCaption.ExecuteNonQuery();
-
+                        //run previously stored procedure
+                        SetEndCaption.ExecuteNonQuery();
+                        return 1;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        return -7; //failed Update
+                    }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-
-            }
-        }
-        public static void SetEndCaption(int Id, string EndCaption)
-        {
-            try
-            {
-                using (SqlConnection Connection = new SqlConnection(CONNECTION))
-                {
-                    Connection.Open();
-                    SqlCommand SetEndCaption = new SqlCommand(clsConstants.P_SET_END_CAPTION, Connection);
-                    SetEndCaption.CommandType = CommandType.StoredProcedure;
-
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    SetEndCaption.Parameters.Add(new SqlParameter("@"+clsConstants.ID, SqlDbType.Int));
-                    SetEndCaption.Parameters["@"+clsConstants.ID].Value = Id;
-                    SetEndCaption.Parameters.Add(new SqlParameter("@"+clsConstants.END_CAPTION, SqlDbType.VarChar, 1000));
-                    SetEndCaption.Parameters["@"+clsConstants.END_CAPTION].Value = EndCaption;
-
-
-                    //run previously stored procedure
-                    SetEndCaption.ExecuteNonQuery();
-
-                }
-            }
-            catch (Exception E)
-            {
-                Logger.WriteLog("Unsuccessful Save.", clsConstants.ERROR, E.Message);
-
+                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                return -3; //failed to connect to database
             }
         }
     }

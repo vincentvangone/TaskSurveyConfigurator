@@ -40,10 +40,7 @@ namespace ErrorLogger
                     Writer.WriteLine();
                     Writer.WriteLine("------------------------------------------------------------");
                 }
-                if (LogMessage != "")
-                {
-                    MessageBox.Show(LogMessage);
-                }
+                
             }
             catch (Exception E)
             {
