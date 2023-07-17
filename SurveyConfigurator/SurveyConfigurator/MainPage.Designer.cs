@@ -106,12 +106,12 @@
             this.dataGridViewQuestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewQuestions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridViewQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewQuestions.Location = new System.Drawing.Point(12, 59);
+            this.dataGridViewQuestions.Location = new System.Drawing.Point(12, 56);
             this.dataGridViewQuestions.Name = "dataGridViewQuestions";
             this.dataGridViewQuestions.ReadOnly = true;
             this.dataGridViewQuestions.RowHeadersWidth = 51;
             this.dataGridViewQuestions.RowTemplate.Height = 24;
-            this.dataGridViewQuestions.Size = new System.Drawing.Size(925, 408);
+            this.dataGridViewQuestions.Size = new System.Drawing.Size(925, 425);
             this.dataGridViewQuestions.TabIndex = 4;
             // 
             // panel1

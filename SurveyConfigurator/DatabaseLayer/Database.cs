@@ -13,10 +13,11 @@ namespace DatabaseLayer
 {
     public class Database
     {
+        public static string  CONNECTION = "Data Source="+ConfigurationManager.AppSettings["Server"]+";Initial Catalog = " + ConfigurationManager.AppSettings["Database"] + "; Integrated Security = True;";
         private int QuestionId;
         public static bool CanConnect()
         {
-            SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            SqlConnection Connection = new SqlConnection(CONNECTION);
             try
             {
                 Connection.Open();
@@ -33,7 +34,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     try
@@ -56,7 +57,7 @@ namespace DatabaseLayer
 
                         //run previously stored procedure
                         InsertQuestion.ExecuteNonQuery();
-                        Logger.WriteLog("Question created successfully.",clsConstants.INFORMATION, "Question ID:" + (int)InsertQuestion.Parameters["@" + clsConstants.ID].Value);
+                        Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + (int)InsertQuestion.Parameters["@" + clsConstants.ID].Value);
                         return 0; //success code
                     }
                     catch (Exception E)
@@ -79,7 +80,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     try
@@ -123,7 +124,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     try
@@ -179,7 +180,7 @@ namespace DatabaseLayer
 
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
 
@@ -209,7 +210,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
 
@@ -238,7 +239,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetText = new SqlCommand(clsConstants.P_GET_TEXT, Connection);
@@ -272,7 +273,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetText = new SqlCommand(clsConstants.P_SET_TEXT, Connection);
@@ -300,7 +301,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetType = new SqlCommand(clsConstants.P_GET_TYPE, Connection);
@@ -337,7 +338,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetNumberOfSmileys = new SqlCommand(clsConstants.P_GET_NUMBER_OF_SMILEYS, Connection);
@@ -372,7 +373,7 @@ namespace DatabaseLayer
             try
             {
 
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetNumberOfSmileys = new SqlCommand(clsConstants.P_SET_NUMBER_OF_SMILEYS, Connection);
@@ -404,7 +405,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetNumberOfStars = new SqlCommand(clsConstants.P_GET_NUMBER_OF_STARS, Connection);
@@ -438,7 +439,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetNumberOfStars = new SqlCommand(clsConstants.P_SET_NUMBER_OF_STARS, Connection);
@@ -469,7 +470,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetStartValue = new SqlCommand(clsConstants.P_GET_START_VALUE, Connection);
@@ -503,7 +504,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetEndValue = new SqlCommand(clsConstants.P_GET_END_VALUE, Connection);
@@ -536,7 +537,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetStartCaption = new SqlCommand(clsConstants.P_GET_START_CAPTION, Connection);
@@ -569,7 +570,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand GetEndCaption = new SqlCommand(clsConstants.P_GET_END_CAPTION, Connection);
@@ -602,7 +603,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetStartValue = new SqlCommand(clsConstants.P_SET_START_VALUE, Connection);
@@ -630,7 +631,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetEndValue = new SqlCommand(clsConstants.P_SET_END_VALUE, Connection);
@@ -658,7 +659,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetStartCaption = new SqlCommand(clsConstants.P_SET_START_CAPTION, Connection);
@@ -686,7 +687,7 @@ namespace DatabaseLayer
         {
             try
             {
-                using (SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
                     SqlCommand SetEndCaption = new SqlCommand(clsConstants.P_SET_END_CAPTION, Connection);
