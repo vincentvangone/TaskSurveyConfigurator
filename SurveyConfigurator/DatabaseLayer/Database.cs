@@ -13,8 +13,8 @@ namespace DatabaseLayer
 {
     public class Database
     {
-        public static string  CONNECTION = "Data Source="+ConfigurationManager.AppSettings["Server"]+";Initial Catalog = " + ConfigurationManager.AppSettings["Database"] +  "; Integrated Security = True;";
-        private int QuestionId;
+        public static string  CONNECTION = "Data Source="+ConfigurationManager.AppSettings["Server"]+";Initial Catalog = " + ConfigurationManager.AppSettings["Database"] +  "; Integrated Security = " + ConfigurationManager.AppSettings["Security"];
+        
         public static bool CanConnect()
         {
             SqlConnection Connection = new SqlConnection(CONNECTION);

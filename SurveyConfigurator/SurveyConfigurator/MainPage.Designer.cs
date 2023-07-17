@@ -34,13 +34,13 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.dataGridViewQuestions = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelButtons = new System.Windows.Forms.Panel();
             this.panelDummy = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelButtons.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelQuestions
@@ -113,20 +113,21 @@
             this.dataGridViewQuestions.RowTemplate.Height = 24;
             this.dataGridViewQuestions.Size = new System.Drawing.Size(925, 425);
             this.dataGridViewQuestions.TabIndex = 4;
+            this.dataGridViewQuestions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQuestions_CellClick);
             // 
-            // panel1
+            // panelButtons
             // 
-            this.panel1.Controls.Add(this.buttonAdd);
-            this.panel1.Controls.Add(this.panelDummy);
-            this.panel1.Controls.Add(this.buttonEdit);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.buttonDelete);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 485);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(15, 5, 15, 15);
-            this.panel1.Size = new System.Drawing.Size(949, 54);
-            this.panel1.TabIndex = 5;
+            this.panelButtons.Controls.Add(this.buttonAdd);
+            this.panelButtons.Controls.Add(this.panelDummy);
+            this.panelButtons.Controls.Add(this.buttonEdit);
+            this.panelButtons.Controls.Add(this.panel3);
+            this.panelButtons.Controls.Add(this.buttonDelete);
+            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelButtons.Location = new System.Drawing.Point(0, 485);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Padding = new System.Windows.Forms.Padding(15, 5, 15, 15);
+            this.panelButtons.Size = new System.Drawing.Size(949, 54);
+            this.panelButtons.TabIndex = 5;
             // 
             // panelDummy
             // 
@@ -144,24 +145,24 @@
             this.panel3.Size = new System.Drawing.Size(10, 34);
             this.panel3.TabIndex = 5;
             // 
-            // panel2
+            // panelTitle
             // 
-            this.panel2.Controls.Add(this.labelQuestions);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(949, 53);
-            this.panel2.TabIndex = 6;
+            this.panelTitle.Controls.Add(this.labelQuestions);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Padding = new System.Windows.Forms.Padding(15);
+            this.panelTitle.Size = new System.Drawing.Size(949, 53);
+            this.panelTitle.TabIndex = 6;
             // 
             // formSurveyConfigurator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 539);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.dataGridViewQuestions);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelButtons);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
@@ -170,9 +171,9 @@
             this.Text = "Survey Configurator";
             this.Load += new System.EventHandler(this.formSurveyConfigurator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelButtons.ResumeLayout(false);
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -184,8 +185,8 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.DataGridView dataGridViewQuestions;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelButtons;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel panelDummy;
         private System.Windows.Forms.Panel panel3;
     }

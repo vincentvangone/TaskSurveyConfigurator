@@ -65,5 +65,67 @@ namespace Utilities
         public const string END_VALUE = "EndValue";
         public const string START_CAPTION = "StartCaption";
         public const string END_CAPTION = "EndCaption";
+
+
+        public static string ErrorStrings(int Code)
+        {
+            if (Code == 1)
+            {
+                return "Success";
+            }
+            else if (Code == -2)
+            {
+                return "Question Type not Selected.";
+            }
+            else if (Code == -3)
+            {
+                return "Failed to connect to database.";
+            }
+            else if (Code == -4)
+            {
+                return "Question Text can't be empty.";
+            }
+            else if (Code == -5)
+            {
+                return "Failed To Add Question";
+            }
+            else if (Code == -6)
+            {
+                return "Failed To Delete Question";
+            }
+            else if (Code == -7)
+            {
+                return "Failed To Update Question";
+            }
+            else if (Code == -20)
+            {
+                return "Invalid Number of Smileys (2-5).";
+            }
+            else if (Code == -21)
+            {
+                return "Invalid Number of Stars (1-10).";
+            }
+            else if (Code == -22)
+            {
+                return "Invalid Start Value (>0).";
+            }
+            else if (Code == -23)
+            {
+                return "Invalid End Value (<100).";
+            }
+            else if (Code == -24)
+            {
+                return "Invalid End Value (Should be greater than start value).";
+            }
+            else if (Code == -25)
+            {
+                return "Start caption too long.";
+            }
+            else if (Code == -26)
+            {
+                return "End caption too long.";
+            }
+            else return "Not Found.";
+        }
     }
 }

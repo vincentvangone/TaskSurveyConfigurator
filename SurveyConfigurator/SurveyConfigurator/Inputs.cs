@@ -108,7 +108,7 @@ namespace SurveyConfigurator
                         QuestionSmiley.Text = textBoxText.Text;
                         QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
                         Code = BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley, Id, false);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -117,7 +117,7 @@ namespace SurveyConfigurator
                         QuestionStar.Text = textBoxText.Text;
                         QuestionStar.NumberOfStars = ucStar.NumberOfStars;
                         Code =BusinessLayer.Validation.StarsInputValidation(QuestionStar,Id,false);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -129,7 +129,7 @@ namespace SurveyConfigurator
                         QuestionSlider.StartCaption = ucSlider.StartCaption;
                         QuestionSlider.EndCaption = ucSlider.EndCaption;
                         Code = BusinessLayer.Validation.SliderInputValidation(QuestionSlider,Id,false);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -145,7 +145,7 @@ namespace SurveyConfigurator
                         QuestionSmiley.Text = textBoxText.Text;
                         QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
                         Code=BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -154,7 +154,7 @@ namespace SurveyConfigurator
                         QuestionStar.Text = textBoxText.Text;
                         QuestionStar.NumberOfStars = ucStar.NumberOfStars;
                         Code=BusinessLayer.Validation.StarsInputValidation(QuestionStar);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -165,7 +165,7 @@ namespace SurveyConfigurator
                         QuestionSlider.StartCaption = ucSlider.StartCaption;
                         QuestionSlider.EndCaption = ucSlider.EndCaption;
                         Code=BusinessLayer.Validation.SliderInputValidation(QuestionSlider);
-                        ErrorCodes(Code);
+                        ErrorMessage(Code);
                         if (Code == 1)
                             this.Close();
                         break;
@@ -185,64 +185,9 @@ namespace SurveyConfigurator
             if (!(textBoxText.Text==null)) buttonSave.Enabled = true;
         }
 
-        public void ErrorCodes(int Code)
+        public void ErrorMessage(int ErrorCode)
         {
-            if (Code == 1)
-            {
-                MessageBox.Show("Success");
-            }
-            else if (Code == -2)
-            {
-                MessageBox.Show("Question Type not Selected.");
-            }
-            else if (Code == -3)
-            {
-                MessageBox.Show("Failed to connect to database.");
-            }
-            else if (Code == -4)
-            {
-                MessageBox.Show("Question Text can't be empty.");
-            }
-            else if (Code == -5)
-            {
-                MessageBox.Show("Failed To Add Question");
-            }
-            else if (Code == -6)
-            {
-                MessageBox.Show("Failed To Delete Question");
-            }
-            else if (Code == -7)
-            {
-                MessageBox.Show("Failed To Update Question");
-            }
-            else if (Code == -20) 
-            {
-                MessageBox.Show("Invalid Number of Smileys (2-5).");
-            }
-            else if (Code == -21)
-            {
-                MessageBox.Show("Invalid Number of Stars (1-10).");
-            }
-            else if (Code == -22)
-            {
-                MessageBox.Show("Invalid Start Value (>0).");
-            }
-            else if (Code == -23)
-            {
-                MessageBox.Show("Invalid End Value (<100).");
-            }
-            else if (Code == -24)
-            {
-                MessageBox.Show("Invalid End Value (Should be greater than start value).");
-            }
-            else if (Code == -25)
-            {
-                MessageBox.Show("Start caption too long.");
-            }
-            else if (Code == -26)
-            {
-                MessageBox.Show("End caption too long.");
-            }
+            MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
         }
     }
 }

@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using BusinessLayer;
 using System.Data.SqlClient;
 using System.Configuration;
+using Utilities;
 
 namespace SurveyConfigurator
 {
@@ -35,12 +36,15 @@ namespace SurveyConfigurator
                 buttonEdit.Enabled = false;
                 buttonDelete.Enabled = false;
             }
-
+            
             ListQuestions();
+            
+            buttonDelete.Enabled = false;
+            buttonEdit.Enabled = false;
         }
 
 
-        //temporary because this isnt working on thee database layer
+    
         public void ListQuestions()
         {
             var DataTable = Validation.ListQuestions();
@@ -77,7 +81,7 @@ namespace SurveyConfigurator
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.OK)
             {
-                Validation.DeleteQuestion(Id);
+               Validation.DeleteQuestion(Id);
             }
             ListQuestions();
         }
@@ -90,6 +94,19 @@ namespace SurveyConfigurator
             Edit.ShowDialog();
 
             ListQuestions();
+        }
+        public void ErrorMessage(int ErrorCode)
+        {
+            System.Windows.Forms.MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
+        }
+
+        private void dataGridViewQuestions_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            buttonDelete.Enabled = true;
+            buttonEdit.Enabled = true;
+
+
         }
     }
 }

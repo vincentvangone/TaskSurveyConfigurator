@@ -192,9 +192,9 @@ namespace BusinessLayer
 
         }
 
-        public static void DeleteQuestion(int Id)
+        public static int DeleteQuestion(int Id)
         {
-            Database.DeleteQuestion(Id);
+           return Database.DeleteQuestion(Id);
         }
         public static string GetType(int Id)
         {
@@ -204,31 +204,31 @@ namespace BusinessLayer
         {
             return Database.GetText(Id);
         }
-        public static void SetText(int Id, string Text)
+        public static int SetText(int Id, string Text)
         {
-            Database.SetText(Id, Text);
+           return Database.SetText(Id, Text);
         }
 
-        public static void StoreQuestion(clsQuestionSmiley q)
+        public static int StoreQuestion(clsQuestionSmiley Question)
         {
-            Database.StoreQuestion(q);
+            return Database.StoreQuestion(Question);
         }
 
         public static int GetNumberOfSmileys(int Id)
         {
             return Database.GetNumberOfSmileys(Id);
         }
-        public static void SetNumberOfSmileys(int Id, int NumberOfSmileys)
+        public static int SetNumberOfSmileys(int Id, int NumberOfSmileys)
         {
-            Database.SetNumberOfSmileys(Id, NumberOfSmileys);
+            return Database.SetNumberOfSmileys(Id, NumberOfSmileys);
         }
         public static int GetNumberOfStars(int Id)
         {
             return Database.GetNumberOfStars(Id);
         }
-        public static void SetNumberOfStars(int Id, int NumberOfStars)
+        public static int SetNumberOfStars(int Id, int NumberOfStars)
         {
-            Database.SetNumberOfStars(Id, NumberOfStars);
+            return Database.SetNumberOfStars(Id, NumberOfStars);
         }
         public static int GetStartValue(int Id)
         {
@@ -246,21 +246,21 @@ namespace BusinessLayer
         {
             return Database.GetEndCaption(Id);
         }
-        public static void SetStartValue(int Id, int StartValue)
+        public static int SetStartValue(int Id, int StartValue)
         {
-            Database.SetStartValue(Id, StartValue);
+            return Database.SetStartValue(Id, StartValue);
         }
-        public static void SetEndValue(int Id, int EndValue)
+        public static int SetEndValue(int Id, int EndValue)
         {
-            Database.SetEndValue(Id, EndValue);
+            return Database.SetEndValue(Id, EndValue);
         }
-        public static void SetStartCaption(int Id, string StartCaption)
+        public static int SetStartCaption(int Id, string StartCaption)
         {
-            Database.SetStartCaption(Id, StartCaption);
+            return Database.SetStartCaption(Id, StartCaption);
         }
-        public static void SetEndCaption(int Id, string EndCaption)
+        public static int SetEndCaption(int Id, string EndCaption)
         {
-            Database.SetEndCaption(Id, EndCaption);
+            return Database.SetEndCaption(Id, EndCaption);
         }
     }
 }
