@@ -72,8 +72,13 @@ namespace SurveyConfigurator
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            //System.Windows.MessageBox.Show(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString());
-            Validation.DeleteQuestion(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[0].Value.ToString()), this.dataGridViewQuestions.SelectedRows[0].Cells[2].Value.ToString());
+            int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[0].Value.ToString());
+
+            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.OK)
+            {
+                Validation.DeleteQuestion(Id);
+            }
             ListQuestions();
         }
 

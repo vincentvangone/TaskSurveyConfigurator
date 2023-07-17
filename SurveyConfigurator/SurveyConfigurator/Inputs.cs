@@ -16,9 +16,6 @@ namespace SurveyConfigurator
 {
     public partial class Inputs : Form
     {
-        public const string SMILEY = "Smiley";
-        public const string STAR = "Star";
-        public const string SLIDER = "Slider";
         private int Id;
 
         public clsQuestionSmiley QuestionSmiley = new clsQuestionSmiley();
@@ -50,16 +47,16 @@ namespace SurveyConfigurator
             
             switch (comboBoxType.SelectedItem.ToString())
             {
-                case SMILEY:
-                    QuestionSmiley.Type = SMILEY;
+                case clsConstants.SMILEY:
+                    QuestionSmiley.Type = clsConstants.SMILEY;
                     AddUserControls(ucSmiley);
                     break;
-                case STAR:
-                    QuestionStar.Type = STAR;
+                case clsConstants.STAR:
+                    QuestionStar.Type = clsConstants.STAR;
                     AddUserControls(ucStar);
                     break;
-                case SLIDER:
-                    QuestionSlider.Type = SLIDER;
+                case clsConstants.SLIDER:
+                    QuestionSlider.Type = clsConstants.SLIDER;
                     AddUserControls(ucSlider);
                     break;
 
@@ -79,13 +76,13 @@ namespace SurveyConfigurator
            
             switch (comboBoxType.SelectedItem.ToString())
             {
-                case SMILEY:
+                case clsConstants.SMILEY:
                     this.ucSmiley.NumberOfSmileys = Validation.GetNumberOfSmileys(Id);
                     break;
-                case STAR:
+                case clsConstants.STAR:
                     this.ucStar.NumberOfStars = Validation.GetNumberOfStars(Id);
                     break;
-                case SLIDER:
+                case clsConstants.SLIDER:
                     this.ucSlider.StartValue = Validation.GetStartValue(Id);
                     this.ucSlider.EndValue = Validation.GetEndValue(Id);
                     this.ucSlider.StartCaption = Validation.GetStartCaption(Id);
@@ -106,7 +103,7 @@ namespace SurveyConfigurator
                 
                 switch (comboBoxType.SelectedItem.ToString())
                 {
-                    case SMILEY:
+                    case clsConstants.SMILEY:
                         QuestionSmiley.Text = textBoxText.Text;
                         QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
 
@@ -114,13 +111,13 @@ namespace SurveyConfigurator
                         BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley, Id, false);
 
                         break;
-                    case STAR:
+                    case clsConstants.STAR:
                         QuestionStar.Text = textBoxText.Text;
                         QuestionStar.NumberOfStars = ucStar.NumberOfStars;
                         BusinessLayer.Validation.StarsInputValidation(QuestionStar, Id, false);
 
                         break;
-                    case SLIDER:
+                    case clsConstants.SLIDER:
                         QuestionSlider.Text = textBoxText.Text;
                         QuestionSlider.StartValue = ucSlider.StartValue;
                         QuestionSlider.EndValue = ucSlider.EndValue;
@@ -138,19 +135,19 @@ namespace SurveyConfigurator
             {
                 switch (comboBoxType.SelectedItem.ToString())
                 {
-                    case SMILEY:
+                    case clsConstants.SMILEY:
                         
                         QuestionSmiley.Text = textBoxText.Text;
                         QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
-                        BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley, 0, true);
+                        BusinessLayer.Validation.SmileyInputValidation(QuestionSmiley);
                         break;
-                    case STAR:
+                    case clsConstants.STAR:
                         
                         QuestionStar.Text = textBoxText.Text;
                         QuestionStar.NumberOfStars = ucStar.NumberOfStars;
                         BusinessLayer.Validation.StarsInputValidation(QuestionStar);
                         break;
-                    case SLIDER:
+                    case clsConstants.SLIDER:
                         QuestionSlider.Text = textBoxText.Text;
                         QuestionSlider.StartValue = ucSlider.StartValue;
                         QuestionSlider.EndValue = ucSlider.EndValue;

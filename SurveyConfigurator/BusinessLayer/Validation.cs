@@ -51,7 +51,7 @@ namespace BusinessLayer
                     //this isnt possible to throw and exception but its there for future changes
                     try
                     {
-                        if (Question.NumberOfSmileys > 5 && Question.NumberOfSmileys < 2)
+                        if (Question.NumberOfSmileys > 5 || Question.NumberOfSmileys < 2)
                         {
                             throw new ArithmeticException(nameof(Question.NumberOfSmileys));
                         }
@@ -60,8 +60,7 @@ namespace BusinessLayer
                         //NewSmileyQuestion is the flag to know if we should create new question or update previous
                         if (NewQuestion)
                         {
-                            Database StoreSmiley = new Database();
-                            StoreSmiley.StoreSmileyQuestion(Question);
+                           Database.StoreQuestion(Question);
                         }
                         //to update insated of creating new question
                         //if flag = false -> only change text and number of smileys -> update not insert
@@ -75,17 +74,17 @@ namespace BusinessLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Invalid Number of Smileys (2-5).", E.Message);
+                        Logger.WriteLog("Invalid Number of Smileys (2-5).", "Error", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Type should be specified.", E.Message);
+                    Logger.WriteLog("Question Type should be specified.", "Error", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Text should be specified.", E.Message);
+                Logger.WriteLog("Question Text should be specified.", "Error", E.Message);
                 
             }
         }
@@ -121,8 +120,7 @@ namespace BusinessLayer
                         //NewSmileyQuestion is the flag to know if we should create new question or update previous
                         if (NewQuestion)
                         {
-                            Database StoreStar = new Database();
-                            StoreStar.StoreStarQuestion(Question);
+                            Database.StoreQuestion(Question);
                         }
                         //if flag = false -> only change text and number of stars -> update not insert
                         else
@@ -134,17 +132,17 @@ namespace BusinessLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Invalid Number of Stars (1-10).", E.Message);
+                        Logger.WriteLog("Invalid Number of Stars (1-10).", "Error", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Type should be specified.", E.Message);
+                    Logger.WriteLog("Question Type should be specified.", "Error", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Text should be specified.", E.Message);
+                Logger.WriteLog("Question Text should be specified.", "Error", E.Message);
             }
         }
 
@@ -200,8 +198,7 @@ namespace BusinessLayer
                                     //NewSmileyQuestion is the flag to know if we should create new question or update previous
                                     if (NewQuestion)
                                     {
-                                        Database StoreSlider = new Database();
-                                        StoreSlider.StoreSliderQuestion(Question);
+                                        Database.StoreQuestion(Question);
                                     }
                                     else
                                     {
@@ -215,38 +212,38 @@ namespace BusinessLayer
                                 }
                                 catch (Exception E)
                                 {
-                                    Logger.WriteLog("End Caption Too Long (> 50 characters) ", E.Message);
+                                    Logger.WriteLog("End Caption Too Long (> 50 characters) ", "Error", E.Message);
                                 }
                             }
                             catch (Exception E)
                             {
-                                Logger.WriteLog("Start Caption Too Long (> 50 characters) ", E.Message);
+                                Logger.WriteLog("Start Caption Too Long (> 50 characters) ", "Error", E.Message);
                             }
                         }
                         catch (Exception E)
                         {
-                            Logger.WriteLog("Invalid End Value - Less than 100, Greater than start.", E.Message);
+                            Logger.WriteLog("Invalid End Value - Less than 100, Greater than start.", "Error", E.Message);
                         }
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Invalid Start Value - Positive number less than 100.", E.Message);
+                        Logger.WriteLog("Invalid Start Value - Positive number less than 100.", "Error", E.Message);
                     }
                 }
                 catch (Exception E)
                 {
-                    Logger.WriteLog("Question Type should be specified.", E.Message);
+                    Logger.WriteLog("Question Type should be specified.", "Error", E.Message);
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Question Text should be specified.", E.Message);
+                Logger.WriteLog("Question Text should be specified.", "Error", E.Message);
             }
         }
 
-        public static void DeleteQuestion(int Id, string Type)
+        public static void DeleteQuestion(int Id)
         {
-            Database.DeleteQuestion(Id, Type);
+            Database.DeleteQuestion(Id);
         }
         public static string GetType(int Id)
         {
@@ -261,6 +258,10 @@ namespace BusinessLayer
             Database.SetText(Id, Text);
         }
        
+        public static void StoreQuestion(clsQuestionSmiley q)
+        {
+            Database.StoreQuestion(q);
+        }
 
         public static int GetNumberOfSmileys(int Id)
         {

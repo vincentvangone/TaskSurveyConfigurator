@@ -59,7 +59,7 @@
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(855, 5);
+            this.buttonAdd.Location = new System.Drawing.Point(656, 5);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(86, 34);
@@ -72,7 +72,7 @@
             // 
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Location = new System.Drawing.Point(951, 5);
+            this.buttonEdit.Location = new System.Drawing.Point(752, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(86, 34);
@@ -85,7 +85,7 @@
             // 
             this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(1047, 5);
+            this.buttonDelete.Location = new System.Drawing.Point(848, 5);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(86, 34);
@@ -111,7 +111,7 @@
             this.dataGridViewQuestions.ReadOnly = true;
             this.dataGridViewQuestions.RowHeadersWidth = 51;
             this.dataGridViewQuestions.RowTemplate.Height = 24;
-            this.dataGridViewQuestions.Size = new System.Drawing.Size(1124, 560);
+            this.dataGridViewQuestions.Size = new System.Drawing.Size(925, 408);
             this.dataGridViewQuestions.TabIndex = 4;
             // 
             // panel1
@@ -122,16 +122,16 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 637);
+            this.panel1.Location = new System.Drawing.Point(0, 485);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15, 5, 15, 15);
-            this.panel1.Size = new System.Drawing.Size(1148, 54);
+            this.panel1.Size = new System.Drawing.Size(949, 54);
             this.panel1.TabIndex = 5;
             // 
             // panelDummy
             // 
             this.panelDummy.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelDummy.Location = new System.Drawing.Point(941, 5);
+            this.panelDummy.Location = new System.Drawing.Point(742, 5);
             this.panelDummy.Name = "panelDummy";
             this.panelDummy.Size = new System.Drawing.Size(10, 34);
             this.panelDummy.TabIndex = 4;
@@ -139,7 +139,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1037, 5);
+            this.panel3.Location = new System.Drawing.Point(838, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 34);
             this.panel3.TabIndex = 5;
@@ -151,14 +151,14 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(1148, 53);
+            this.panel2.Size = new System.Drawing.Size(949, 53);
             this.panel2.TabIndex = 6;
             // 
             // formSurveyConfigurator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 691);
+            this.ClientSize = new System.Drawing.Size(949, 539);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridViewQuestions);
             this.Controls.Add(this.panel1);

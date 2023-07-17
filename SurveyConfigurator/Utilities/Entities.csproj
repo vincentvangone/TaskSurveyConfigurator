@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsConstants.cs" />
     <Compile Include="clsQuestionSlider.cs" />
     <Compile Include="clsQuestionSmiley.cs" />
     <Compile Include="clsQuestionStar.cs" />
