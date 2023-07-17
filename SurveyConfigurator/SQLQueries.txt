@@ -1,0 +1,442 @@
+PRINT N'Creating SurveyConfigurator...';  
+GO 
+IF NOT EXISTS (SELECT * FROM sys.databases where Name='SurveyConfigurator2')
+CREATE DATABASE [SurveyConfigurator2];
+GO 
+--IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name='SurveyConfigurator')
+CREATE SCHEMA [SurveyConfigurator2] 
+AUTHORIZATION [dbo];  
+GO  
+PRINT N'Creating SurveyConfigurator.Question...';  
+GO  
+CREATE TABLE [dbo].[Question] (  
+    [Id]   INT   IDENTITY (1, 1) NOT NULL,  
+    [Text] VARCHAR(1000) NOT NULL,  
+    [Type]    VARCHAR (20)   NOT NULL,  
+    
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuestionSmiley...';  
+GO  
+CREATE TABLE [dbo].[QuestionSmiley] (  
+    [Id] INT      NOT NULL,  
+    [NumberOfSmileys]     INT      NOT NULL  
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuestionStars...';  
+GO  
+CREATE TABLE [dbo].[QuestionStars] (  
+    [Id] INT      NOT NULL,  
+    [NumberOfStars]     INT      NOT NULL  
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuestionSlider...';  
+GO  
+CREATE TABLE [dbo].[QuestionSlider] (  
+    [Id] INT      NOT NULL,  
+    [StartValue]     INT      NOT NULL ,
+    [EndValue]     INT      NOT NULL ,
+    [StartCaption]   VARCHAR(50)      NOT NULL ,
+    [EndCaption]   VARCHAR(50)     NOT NULL
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.PK_Question_Id...';  
+GO  
+ALTER TABLE [dbo].[Question]  
+    ADD CONSTRAINT [PK_Question_Id] PRIMARY KEY CLUSTERED ([Id] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);  
+GO  
+PRINT N'Creating [FK_QuestionSmiley_Question_Id]...';  
+GO  
+ALTER TABLE [dbo].[QuestionSmiley]  
+    ADD CONSTRAINT [FK_QuestionSmiley_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+PRINT N'Creating [FK_QuestionStars_Question_Id]...';  
+GO  
+ALTER TABLE [dbo].[QuestionStars]  
+    ADD CONSTRAINT [FK_QuestionStars_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+PRINT N'Creating [FK_QuestionSlider_Question_Id]...';  
+GO  
+ALTER TABLE [dbo].[QuestionSlider]  
+    ADD CONSTRAINT [FK_QuestionSlider_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+
+GO  
+  PRINT N'Creating View All Questions Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_View')
+DROP PROCEDURE P_View
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_View](
+@Id INT, 
+@Text VARCHAR (1000),  
+@Type VARCHAR(20)  ,
+@StartValue INT,
+@EndValue INT ,
+@StartCaption VARCHAR(50),
+@EndCaption VARCHAR(50),
+@NumberOfStars INT  ,
+@NumberOfSmileys INT)
+
+AS  
+BEGIN  
+	SELECT Question.Id,Text,Type,concat('Number of Smileys: ',NumberOfSmileys) as 'Question Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
+	UNION 
+    SELECT Question.Id,Text,Type,concat('Number of Stars: ', NumberOfStars) as 'Question Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
+    UNION 
+    SELECT Question.Id,Text,Type,concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Question Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
+ 
+END  
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetText')
+DROP PROCEDURE P_GetText
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_GetText](
+@Id INT ,
+@Text VARCHAR(1000) OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @Text = (SELECT Text FROM  [dbo].[Question] 
+     WHERE [dbo].[Question].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetType')
+DROP PROCEDURE P_GetType
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetType(
+@Id INT ,
+@Type VARCHAR(20) OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @Type = (SELECT Type FROM  [dbo].[Question] 
+     WHERE [dbo].[Question].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfSmileys')
+DROP PROCEDURE P_GetNumberOfSmileys
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetNumberOfSmileys(
+@Id INT ,
+@NumberOfSmileys INT OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @NumberOfSmileys = (SELECT NumberOfSmileys FROM  [dbo].[QuestionSmiley] 
+     WHERE [dbo].[QuestionSmiley].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfStars')
+DROP PROCEDURE P_GetNumberOfStars
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetNumberOfStars(
+@Id INT ,
+@NumberOfStars INT OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @NumberOfStars = (SELECT NumberOfStars FROM  [dbo].[QuestionStars] 
+     WHERE [dbo].[QuestionStars].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetText')
+DROP PROCEDURE P_SetText
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetText](
+@Id INT,
+@Text VARCHAR(1000) 
+)
+AS  
+BEGIN 
+UPDATE Question SET  Text=@Text
+     WHERE [dbo].[Question].Id =@Id  
+END  
+GO  
+
+  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetNumberOfSmileys')
+DROP PROCEDURE P_SetNumberOfSmileys
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetNumberOfSmileys](
+@Id INT,
+@NumberOfSmileys INT
+)
+AS  
+BEGIN 
+UPDATE QuestionSmiley SET  NumberOfSmileys=@NumberOfSmileys
+     WHERE [dbo].[QuestionSmiley].Id =@Id  
+END  
+GO  
+
+  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetNumberOfStars')
+DROP PROCEDURE P_SetNumberOfStars
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetNumberOfStars](
+@Id INT,
+@NumberOfStars INT
+)
+AS  
+BEGIN 
+UPDATE QuestionStars SET  NumberOfStars=@NumberOfStars
+     WHERE [dbo].[QuestionStars].Id =@Id  
+END  
+GO  
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartValue')
+DROP PROCEDURE P_GetStartValue
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetStartValue(
+@Id INT ,
+@StartValue INT OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @StartValue = (SELECT StartValue FROM  [dbo].[QuestionSlider] 
+     WHERE [dbo].[QuestionSlider].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndValue')
+DROP PROCEDURE P_GetEndValue
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetEndValue(
+@Id INT ,
+@EndValue INT OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @EndValue = (SELECT EndValue FROM  [dbo].[QuestionSlider] 
+     WHERE [dbo].[QuestionSlider].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartCaption')
+DROP PROCEDURE P_GetStartCaption
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetStartCaption(
+@Id INT ,
+@StartCaption VARCHAR(20) OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @StartCaption = (SELECT StartCaption FROM  [dbo].[QuestionSlider] 
+     WHERE [dbo].[QuestionSlider].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndCaption')
+DROP PROCEDURE P_GetEndCaption
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetEndCaption(
+@Id INT ,
+@EndCaption VARCHAR(20) OUTPUT
+)
+
+AS  
+BEGIN 
+
+SELECT @EndCaption = (SELECT EndCaption FROM  [dbo].[QuestionSlider] 
+     WHERE [dbo].[QuestionSlider].Id = @Id);
+RETURN   @@ERROR
+
+END  
+GO  
+  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetStartValue')
+DROP PROCEDURE P_SetStartValue
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetStartValue](
+@Id INT,
+@StartValue INT
+)
+AS  
+BEGIN 
+UPDATE QuestionSlider SET  StartValue=@StartValue
+     WHERE [dbo].[QuestionSlider].Id =@Id  
+END  
+GO  
+  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetEndValue')
+DROP PROCEDURE P_SetEndValue
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetEndValue](
+@Id INT,
+@EndValue INT
+)
+AS  
+BEGIN 
+UPDATE QuestionSlider SET  EndValue=@EndValue
+     WHERE [dbo].[QuestionSlider].Id =@Id  
+END  
+GO  
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetStartCaption')
+DROP PROCEDURE P_SetStartCaption
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetStartCaption](
+@Id INT,
+@StartCaption VARCHAR(1000)
+)
+AS  
+BEGIN 
+UPDATE QuestionSlider SET  StartCaption=@StartCaption
+     WHERE [dbo].[QuestionSlider].Id =@Id  
+END  
+GO  
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetEndCaption')
+DROP PROCEDURE P_SetEndCaption
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_SetEndCaption](
+@Id INT,
+@EndCaption VARCHAR(1000)
+)
+AS  
+BEGIN 
+UPDATE QuestionSlider SET  EndCaption=@EndCaption
+     WHERE [dbo].[QuestionSlider].Id =@Id  
+END  
+GO  
+
+GO  
+  PRINT N'Creating Delete Questions Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Delete')
+DROP PROCEDURE P_Delete
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_Delete](
+@Id INT
+ 
+)
+AS  
+BEGIN  TRAN
+	DECLARE @Type AS VARCHAR(20)=(SELECT Type FROM [dbo].[Question] 
+     WHERE [dbo].[Question].Id =@Id );
+	
+	 IF @Type='Smiley'
+		DELETE FROM  [dbo].[QuestionSmiley] 
+		 WHERE [dbo].[QuestionSmiley].Id =@Id  
+	ELSE IF @Type='Star'
+		DELETE FROM  [dbo].[QuestionStars] 
+		 WHERE [dbo].[QuestionStars].Id =@Id 
+	ELSE IF @Type='Slider'
+		DELETE FROM  [dbo].[QuestionSlider] 
+		 WHERE [dbo].[QuestionSlider].Id =@Id 
+
+	DELETE FROM  [dbo].[Question] 
+     WHERE [dbo].[Question].Id =@Id 
+
+COMMIT TRAN
+GO  
+
+
+GO  
+  PRINT N'Creating Insert Questions Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Insert')
+DROP PROCEDURE P_Insert
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_Insert](
+@Id INT OUTPUT,
+@Text VARCHAR (1000),  
+@Type VARCHAR(20)  ,
+@StartValue INT=0,
+@EndValue INT=100,
+@StartCaption VARCHAR(50) = '',
+@EndCaption VARCHAR(50) = '',
+@NumberOfStars INT = 10 ,
+@NumberOfSmileys INT = 5
+)
+AS  
+BEGIN  TRAN
+
+	INSERT INTO [dbo].[Question] (Text,Type) VALUES (@Text,@Type);  
+	SET @Id = SCOPE_IDENTITY();  
+	  
+	 IF @Type='Smiley'
+		INSERT INTO  [dbo].[QuestionSmiley] (Id, NumberOfSmileys)   
+		VALUES (@Id, @NumberOfSmileys)  
+	ELSE IF @Type='Star'
+		INSERT INTO  [dbo].[QuestionStars] (Id, NumberOfStars)   
+		VALUES (@Id, @NumberOfStars)  
+	ELSE IF @Type='Slider'
+		INSERT INTO  [dbo].[QuestionSlider] (Id, StartValue , EndValue , StartCaption, EndCaption)   
+		VALUES (@Id, @StartValue , @EndValue , @StartCaption, @EndCaption)  
+
+COMMIT TRAN
+GO  
