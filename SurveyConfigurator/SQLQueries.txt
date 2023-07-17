@@ -1,14 +1,27 @@
 PRINT N'Creating SurveyConfigurator...';  
 GO 
-IF NOT EXISTS (SELECT * FROM sys.databases where Name='SurveyConfigurator2')
-CREATE DATABASE [SurveyConfigurator2];
+IF NOT EXISTS (SELECT * FROM sys.databases where Name='SurveyConfigurator')
+CREATE DATABASE [SurveyConfigurator];
 GO 
 --IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name='SurveyConfigurator')
-CREATE SCHEMA [SurveyConfigurator2] 
-AUTHORIZATION [dbo];  
-GO  
+--CREATE SCHEMA [SurveyConfigurator] 
+--AUTHORIZATION [dbo];  
+--GO  
 PRINT N'Creating SurveyConfigurator.Question...';  
 GO  
+IF EXISTS (SELECT * 
+                 FROM sys.tables 
+                 WHERE   name = 'Question')
+				 BEGIN
+				 IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionSlider')
+					ALTER TABLE [dbo].[QuestionSlider] DROP CONSTRAINT [FK_QuestionSlider_Question_Id]
+				 IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionSmiley')
+					ALTER TABLE [dbo].[QuestionSmiley] DROP CONSTRAINT [FK_QuestionSmiley_Question_Id]
+				 IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionStars')
+					ALTER TABLE [dbo].[QuestionStars] DROP CONSTRAINT [FK_QuestionStars_Question_Id]
+				 DROP TABLE  [dbo].[Question]
+				 
+				 END
 CREATE TABLE [dbo].[Question] (  
     [Id]   INT   IDENTITY (1, 1) NOT NULL,  
     [Text] VARCHAR(1000) NOT NULL,  
@@ -18,6 +31,10 @@ CREATE TABLE [dbo].[Question] (
 GO  
 PRINT N'Creating SurveyConfigurator.QuestionSmiley...';  
 GO  
+IF EXISTS (SELECT * 
+                 FROM sys.tables 
+                 WHERE   name = 'QuestionSmiley')
+				 DROP TABLE  [dbo].[QuestionSmiley]
 CREATE TABLE [dbo].[QuestionSmiley] (  
     [Id] INT      NOT NULL,  
     [NumberOfSmileys]     INT      NOT NULL  
@@ -25,13 +42,21 @@ CREATE TABLE [dbo].[QuestionSmiley] (
 GO  
 PRINT N'Creating SurveyConfigurator.QuestionStars...';  
 GO  
+IF EXISTS (SELECT * 
+                 FROM sys.tables 
+                 WHERE   name = 'QuestionStars')
+				 DROP TABLE  [dbo].[QuestionStars]
 CREATE TABLE [dbo].[QuestionStars] (  
     [Id] INT      NOT NULL,  
     [NumberOfStars]     INT      NOT NULL  
 );  
 GO  
 PRINT N'Creating SurveyConfigurator.QuestionSlider...';  
-GO  
+GO
+IF EXISTS (SELECT * 
+                 FROM sys.tables 
+                 WHERE   name = 'QuestionSlider')
+				 DROP TABLE  [dbo].[QuestionSlider]
 CREATE TABLE [dbo].[QuestionSlider] (  
     [Id] INT      NOT NULL,  
     [StartValue]     INT      NOT NULL ,
@@ -42,21 +67,30 @@ CREATE TABLE [dbo].[QuestionSlider] (
 GO  
 PRINT N'Creating SurveyConfigurator.PK_Question_Id...';  
 GO  
+
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'PRIMARY KEY' AND TABLE_NAME = 'Question') 
+ALTER TABLE Question DROP CONSTRAINT PK_Question_Id;
 ALTER TABLE [dbo].[Question]  
     ADD CONSTRAINT [PK_Question_Id] PRIMARY KEY CLUSTERED ([Id] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);  
 GO  
 PRINT N'Creating [FK_QuestionSmiley_Question_Id]...';  
 GO  
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionSmiley') 
+ALTER TABLE QuestionSmiley DROP CONSTRAINT FK_QuestionSmiley_Question_Id;
 ALTER TABLE [dbo].[QuestionSmiley]  
     ADD CONSTRAINT [FK_QuestionSmiley_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
 PRINT N'Creating [FK_QuestionStars_Question_Id]...';  
 GO  
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionStars') 
+ALTER TABLE QuestionStars DROP CONSTRAINT FK_QuestionStars_Question_Id;
 ALTER TABLE [dbo].[QuestionStars]  
     ADD CONSTRAINT [FK_QuestionStars_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
 PRINT N'Creating [FK_QuestionSlider_Question_Id]...';  
 GO  
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'FOREIGN KEY' AND TABLE_NAME = 'QuestionSlider') 
+ALTER TABLE QuestionSlider DROP CONSTRAINT FK_QuestionSlider_Question_Id;
 ALTER TABLE [dbo].[QuestionSlider]  
     ADD CONSTRAINT [FK_QuestionSlider_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
@@ -69,17 +103,7 @@ DROP PROCEDURE P_View
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].[P_View](
-@Id INT, 
-@Text VARCHAR (1000),  
-@Type VARCHAR(20)  ,
-@StartValue INT,
-@EndValue INT ,
-@StartCaption VARCHAR(50),
-@EndCaption VARCHAR(50),
-@NumberOfStars INT  ,
-@NumberOfSmileys INT)
-
+CREATE PROCEDURE [dbo].[P_View]
 AS  
 BEGIN  
 	SELECT Question.Id,Text,Type,concat('Number of Smileys: ',NumberOfSmileys) as 'Question Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
