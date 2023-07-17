@@ -14,33 +14,40 @@ namespace ErrorLogger
     {
         public static void WriteLog(string LogMessage, string Type, string ExtraInfo = "Warning")
         {
-
-            string LogPath = ConfigurationManager.AppSettings["LogPath"];
-            //when the file reaches 1 mega -> delete
-            if ((LogPath.Length) / (1024 * 1024) >= 1) File.Delete(LogPath);
-            using (StreamWriter Writer = File.AppendText(LogPath))
+            try
             {
-                //TextWriter w = Writer;
-                Writer.Write("\r\nLog Entry : ");
-                Writer.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
-                Writer.WriteLine();
-                Writer.WriteLine("Log Type :");
-                Writer.WriteLine($"{Type}");
-                Writer.WriteLine();
-                Writer.WriteLine("Displayed message :");
-                Writer.WriteLine($"{LogMessage}");
-                Writer.WriteLine();
-                Writer.WriteLine("Extra Info :");
-                Writer.WriteLine($"{ExtraInfo}");
-                Writer.WriteLine();
-                Writer.WriteLine("Call Stack Trace :");
-                Writer.WriteLine($"{Environment.StackTrace}");
-                Writer.WriteLine();
-                Writer.WriteLine("------------------------------------------------------------");
+                string LogPath = ConfigurationManager.AppSettings["LogPath"];
+                //when the file reaches 1 mega -> delete
+                if ((LogPath.Length) / (1024 * 1024) >= 1) File.Delete(LogPath);
 
+                using (StreamWriter Writer = File.AppendText(LogPath))
+                {
+                    //TextWriter w = Writer;
+                    Writer.Write("\r\nLog Entry : ");
+                    Writer.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
+                    Writer.WriteLine();
+                    Writer.WriteLine("Log Type :");
+                    Writer.WriteLine($"{Type}");
+                    Writer.WriteLine();
+                    Writer.WriteLine("Displayed message :");
+                    Writer.WriteLine($"{LogMessage}");
+                    Writer.WriteLine();
+                    Writer.WriteLine("Extra Info :");
+                    Writer.WriteLine($"{ExtraInfo}");
+                    Writer.WriteLine();
+                    Writer.WriteLine("Call Stack Trace :");
+                    Writer.WriteLine($"{Environment.StackTrace}");
+                    Writer.WriteLine();
+                    Writer.WriteLine("------------------------------------------------------------");
+                }
+                if (LogMessage != "")
+                {
+                    MessageBox.Show(LogMessage);
+                }
             }
-            if(LogMessage != "") { 
-                MessageBox.Show(LogMessage);
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
             }
         }
     }
