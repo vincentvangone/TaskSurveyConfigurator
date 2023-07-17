@@ -81,7 +81,7 @@ namespace SurveyConfigurator
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.OK)
             {
-               Validation.DeleteQuestion(Id);
+               ErrorMessage(Validation.DeleteQuestion(Id));
             }
             ListQuestions();
         }
