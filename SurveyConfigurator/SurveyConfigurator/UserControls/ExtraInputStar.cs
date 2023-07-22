@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ErrorLogger;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utilities;
 
 namespace SurveyConfigurator.UserControls
 {
@@ -14,7 +16,14 @@ namespace SurveyConfigurator.UserControls
     {
         public ExtraInputStar()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
         public int NumberOfStars

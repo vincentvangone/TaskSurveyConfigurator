@@ -40,59 +40,5 @@ namespace SurveyConfigurator.UserControls
             get { return textBoxEndCaption.Text; }
             set { textBoxEndCaption.Text = value;}
         }
-        private void textBoxEndCaption_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericStars_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelStartValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelEndValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelStartCaption_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelEndCaption_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxStartCaption_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ExtraInputSlider_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

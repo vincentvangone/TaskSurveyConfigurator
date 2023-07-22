@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Utilities;
 
-namespace ErrorLogger
+namespace Utilities
 {
-    public class clsQuestionSmiley : clsQuestion
+    public class clsQuestionSmiley :clsQuestion
     {
         private int numberOfSmileys;
-
         public int NumberOfSmileys
         {
-            get { return numberOfSmileys; }
+            get { return numberOfSmileys; } 
             set { numberOfSmileys = value; }
         }
+
     }
 }

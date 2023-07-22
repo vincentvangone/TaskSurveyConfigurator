@@ -30,7 +30,10 @@ namespace ErrorLogger
                     Writer.WriteLine($"{Type}");
                     Writer.WriteLine();
                     Writer.WriteLine("Displayed message :");
-                    Writer.WriteLine($"{LogMessage}");
+                    if (LogMessage!="")
+                        Writer.WriteLine($"{LogMessage}");
+                    else
+                        Writer.WriteLine("None");
                     Writer.WriteLine();
                     Writer.WriteLine("Extra Info :");
                     Writer.WriteLine($"{ExtraInfo}");

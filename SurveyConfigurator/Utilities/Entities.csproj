@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConstants.cs" />
+    <Compile Include="clsMergedQuestions.cs" />
     <Compile Include="clsQuestionSlider.cs" />
     <Compile Include="clsQuestionSmiley.cs" />
     <Compile Include="clsQuestionStar.cs" />

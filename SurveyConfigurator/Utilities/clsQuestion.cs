@@ -10,7 +10,13 @@ namespace Utilities
     {
         private string type;
         private string text;
+        private int id;
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public string Type
         {
             get { return type; }

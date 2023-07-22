@@ -50,6 +50,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection.Designer.cs">
+      <DependentUpon>DatabaseConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inputs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     <Compile Include="UserControls\ExtraInputStar.Designer.cs">
       <DependentUpon>ExtraInputStar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatabaseConnection.resx">
+      <DependentUpon>DatabaseConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inputs.resx">
       <DependentUpon>Inputs.cs</DependentUpon>
     </EmbeddedResource>

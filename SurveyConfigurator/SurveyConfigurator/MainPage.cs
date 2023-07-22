@@ -15,6 +15,7 @@ using BusinessLayer;
 using System.Data.SqlClient;
 using System.Configuration;
 using Utilities;
+using System.Security.Cryptography;
 
 namespace SurveyConfigurator
 {
@@ -22,91 +23,168 @@ namespace SurveyConfigurator
     {
         public formSurveyConfigurator()
         {
+            try
+            {
+                InitializeComponent();
 
-            InitializeComponent();
+               
+            }
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
 
 
         }
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
-
-            if (!Validation.CanConnect())
+            try
             {
-                buttonAdd.Enabled = false;
-                buttonEdit.Enabled = false;
+                Form Connect = new DatabaseConnection();
+                Connect.ShowDialog();
+                if (!Logic.CanConnect())
+                {
+
+                    buttonAdd.Enabled = false;
+                    buttonEdit.Enabled = false;
+                    buttonDelete.Enabled = false;
+                    System.Windows.Forms.MessageBox.Show("Cant connect");
+                }
+
+                ViewQuestions();
+
                 buttonDelete.Enabled = false;
+                buttonEdit.Enabled = false;
             }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
+
             
-            ListQuestions();
-            
-            buttonDelete.Enabled = false;
-            buttonEdit.Enabled = false;
         }
 
 
     
-        public void ListQuestions()
+        public void ViewQuestions()
         {
-            var DataTable = Validation.ListQuestions();
+            try
+            {
 
-            //if no questions in the database
-            if (DataTable.Rows.Count==0)
-            {
-                buttonDelete.Enabled = false;
-                buttonEdit.Enabled = false;
+                List<clsMergedQuestions> Questions = Logic.ViewQuestions();
+                //if no questions in the database
+                if (!Questions.Any())
+                {
+                    buttonDelete.Enabled = false;
+                    buttonEdit.Enabled = false;
+                }
+                else
+                {
+                    buttonDelete.Enabled = true;
+                    buttonEdit.Enabled = true;
+
+                    dataGridViewQuestions.DataSource = Questions;
+                    dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dataGridViewQuestions.MultiSelect = false;
+
+                    //rearrange columns
+                    dataGridViewQuestions.Columns["Id"].DisplayIndex = 0;
+                    dataGridViewQuestions.Columns["Type"].DisplayIndex = 1;
+                    dataGridViewQuestions.Columns["Text"].DisplayIndex = 2;
+                    dataGridViewQuestions.Columns["Properties"].DisplayIndex = 3;
+                }
             }
-            else
+            catch (Exception E)
             {
-                buttonDelete.Enabled = true;
-                buttonEdit.Enabled = true;
+                Logger.WriteLog(E.Message,clsConstants.ERROR);
             }
-            dataGridViewQuestions.DataSource = DataTable;
-            dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewQuestions.MultiSelect = false;
         }
 
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            Inputs AddQuestion = new Inputs();
-            AddQuestion.ShowDialog();
-            ListQuestions();
+                Inputs AddQuestion = new Inputs();
+                AddQuestion.ShowDialog();
+                ViewQuestions();
+            }
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message,clsConstants.ERROR);
+            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[0].Value.ToString());
-
-            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.OK)
+            try
             {
-               ErrorMessage(Validation.DeleteQuestion(Id));
+
+                int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString());
+
+                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.OK)
+                {
+                    ErrorMessage(Logic.DeleteQuestion(Id));
+                }
+                ViewQuestions();
             }
-            ListQuestions();
-        }
+             
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
+}
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            Inputs Edit = new Inputs();
-            Edit.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[0].Value.ToString()));
-            Edit.ShowDialog();
+                Inputs Edit = new Inputs();
+                Edit.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()));
+                Edit.ShowDialog();
 
-            ListQuestions();
-        }
+                ViewQuestions();
+            }
+             
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
+}
         public void ErrorMessage(int ErrorCode)
         {
-            System.Windows.Forms.MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
+            //System.Windows.Forms.MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
         }
 
         private void dataGridViewQuestions_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                buttonDelete.Enabled = true;
+                buttonEdit.Enabled = true;
+            }
+             
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
 
-            buttonDelete.Enabled = true;
-            buttonEdit.Enabled = true;
 
+}
 
+        private void pictureBoxConnect_Click(object sender, EventArgs e)
+        {
+            try { 
+            Form Connect = new DatabaseConnection();
+            Connect.ShowDialog();
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
     }
 }

@@ -11,3 +11,16 @@ C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\De
 C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\ErrorLogger.pdb
 C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\Utilities.dll
 C:\Users\nour\Desktop\SurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\Utilities.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\DatabaseLayer.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\ErrorLogger.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\Utilities.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\DatabaseLayer.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\ErrorLogger.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\bin\Debug\Utilities.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\obj\Debug\BusinessLayer.pdb

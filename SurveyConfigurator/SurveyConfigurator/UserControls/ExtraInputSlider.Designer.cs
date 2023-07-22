@@ -53,7 +53,6 @@
             this.labelEndValue.Size = new System.Drawing.Size(89, 21);
             this.labelEndValue.TabIndex = 6;
             this.labelEndValue.Text = "End Value:";
-            this.labelEndValue.Click += new System.EventHandler(this.labelEndValue_Click);
             // 
             // labelStartCaption
             // 
@@ -64,7 +63,6 @@
             this.labelStartCaption.Size = new System.Drawing.Size(114, 21);
             this.labelStartCaption.TabIndex = 8;
             this.labelStartCaption.Text = "Start Caption:";
-            this.labelStartCaption.Click += new System.EventHandler(this.labelStartCaption_Click);
             // 
             // numericStartValue
             // 
@@ -76,7 +74,6 @@
             this.numericStartValue.Name = "numericStartValue";
             this.numericStartValue.Size = new System.Drawing.Size(181, 24);
             this.numericStartValue.TabIndex = 5;
-            this.numericStartValue.ValueChanged += new System.EventHandler(this.numericStars_ValueChanged);
             // 
             // numericEndValue
             // 
@@ -98,7 +95,6 @@
             0,
             0,
             0});
-            this.numericEndValue.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // labelStartValue
             // 
@@ -109,7 +105,6 @@
             this.labelStartValue.Size = new System.Drawing.Size(96, 21);
             this.labelStartValue.TabIndex = 4;
             this.labelStartValue.Text = "Start Value:";
-            this.labelStartValue.Click += new System.EventHandler(this.labelStartValue_Click);
             // 
             // labelEndCaption
             // 
@@ -120,7 +115,6 @@
             this.labelEndCaption.Size = new System.Drawing.Size(106, 21);
             this.labelEndCaption.TabIndex = 10;
             this.labelEndCaption.Text = "End Caption:";
-            this.labelEndCaption.Click += new System.EventHandler(this.labelEndCaption_Click);
             // 
             // textBoxStartCaption
             // 
@@ -132,7 +126,6 @@
             this.textBoxStartCaption.Name = "textBoxStartCaption";
             this.textBoxStartCaption.Size = new System.Drawing.Size(181, 24);
             this.textBoxStartCaption.TabIndex = 11;
-            this.textBoxStartCaption.TextChanged += new System.EventHandler(this.textBoxStartCaption_TextChanged);
             // 
             // textBoxEndCaption
             // 
@@ -144,7 +137,6 @@
             this.textBoxEndCaption.Name = "textBoxEndCaption";
             this.textBoxEndCaption.Size = new System.Drawing.Size(181, 24);
             this.textBoxEndCaption.TabIndex = 12;
-            this.textBoxEndCaption.TextChanged += new System.EventHandler(this.textBoxEndCaption_TextChanged);
             // 
             // panel1
             // 
@@ -178,7 +170,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ExtraInputSlider";
             this.Size = new System.Drawing.Size(772, 157);
-            this.Load += new System.EventHandler(this.ExtraInputSlider_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.numericStartValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericEndValue)).EndInit();
             this.panel1.ResumeLayout(false);
