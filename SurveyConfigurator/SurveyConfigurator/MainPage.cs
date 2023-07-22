@@ -26,8 +26,9 @@ namespace SurveyConfigurator
             try
             {
                 InitializeComponent();
+                Form Connect = new DatabaseConnection();
+                Connect.ShowDialog();
 
-               
             }
             catch(Exception E)
             {
@@ -40,21 +41,22 @@ namespace SurveyConfigurator
         {
             try
             {
-                Form Connect = new DatabaseConnection();
-                Connect.ShowDialog();
+
                 if (!Logic.CanConnect())
                 {
 
                     buttonAdd.Enabled = false;
                     buttonEdit.Enabled = false;
                     buttonDelete.Enabled = false;
-                    System.Windows.Forms.MessageBox.Show("Cant connect");
+                    System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING);
                 }
-
-                ViewQuestions();
-
-                buttonDelete.Enabled = false;
-                buttonEdit.Enabled = false;
+                else
+                {
+                    ViewQuestions();
+                    buttonAdd.Enabled = true;
+                    buttonDelete.Enabled = false;
+                    buttonEdit.Enabled = false;
+                }
             }
             catch (Exception E)
             {
@@ -88,10 +90,10 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.MultiSelect = false;
 
                     //rearrange columns
-                    dataGridViewQuestions.Columns["Id"].DisplayIndex = 0;
-                    dataGridViewQuestions.Columns["Type"].DisplayIndex = 1;
-                    dataGridViewQuestions.Columns["Text"].DisplayIndex = 2;
-                    dataGridViewQuestions.Columns["Properties"].DisplayIndex = 3;
+                    dataGridViewQuestions.Columns[clsConstants.ID].DisplayIndex = 0;
+                    dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
+                    dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
+                    dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
                 }
             }
             catch (Exception E)
@@ -123,7 +125,7 @@ namespace SurveyConfigurator
 
                 int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString());
 
-                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to delete question " + Id + " ?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING + Id + " ?", clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
                     ErrorMessage(Logic.DeleteQuestion(Id));
@@ -177,14 +179,17 @@ namespace SurveyConfigurator
 
         private void pictureBoxConnect_Click(object sender, EventArgs e)
         {
-            try { 
-            Form Connect = new DatabaseConnection();
-            Connect.ShowDialog();
+            try
+            {
+                Form Connect = new DatabaseConnection();
+                Connect.ShowDialog();
+                formSurveyConfigurator_Load(this,null);
             }
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
+            
         }
     }
 }

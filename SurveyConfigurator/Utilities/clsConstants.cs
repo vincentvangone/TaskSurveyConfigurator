@@ -51,6 +51,9 @@ namespace Utilities
         public const string TEXT = "Text";
         public const string TYPE = "Type";
 
+        //MERGED
+        public const string PROPERTIES = "Properties";
+
 
         //SMILEY
         public const string NUMBER_OF_SMILEYS = "NumberOfSmileys";
@@ -81,6 +84,29 @@ namespace Utilities
         public const int INVALID_END_LESS_THAN_START_VALUE = -24;
         public const int INVALID_START_CAPTION = -25;
         public const int INVALID_END_CAPTION = -26;
+
+        //ERROR MESSAGES
+        public const string SUCCESS_STRING = "Success";
+        public const string VIEW_FAILED_STRING = "View Question Procedure Failed.";
+        public const string TYPE_NOT_SELECTED_STRING = "Question Type not Selected.";
+        public const string FAILED_DATABASE_CONNECTION_STRING = "Failed To Connect to Database.";
+        public const string TEXT_NOT_SPECIFIED_STRING = "Question Text can't be empty.";
+        public const string FAILED_NEW_QUESTION_STRING = "Failed To Add Question";
+        public const string FAILED_DELETE_QUESTION_STRING = "Failed To Delete Question";
+        public const string FAILED_EDIT_QUESTION_STRING = "Failed To Edit Question";
+
+        public const string INVALID_NUMBER_OF_SMILEYS_STRING = "Invalid Number of Smileys (2-5).";
+        public const string INVALID_NUMBER_OF_STARS_STRING = "Invalid Number of Stars (1-10).";
+        public const string INVALID_START_VALUE_STRING = "Invalid Start Value (>0).";
+        public const string INVALID_END_VALUE_STRING = "Invalid End Value (<100).";
+        public const string INVALID_END_LESS_THAN_START_VALUE_STRING = "Invalid End Value (Should be greater than start value).";
+        public const string INVALID_START_CAPTION_STRING = "Start caption too long.";
+        public const string INVALID_END_CAPTION_STRING = "End caption too long.";
+
+        public const string EMPTY_SERVER_STRING = "SQL Server can't be empty.";
+        public const string EMPTY_DATABASE_STRING = "SQL Database can't be empty.";
+
+        public const string DELETE_QUESTION_CONFIRM_STRING="Are you sure you want to delete question ";
 
     }
 }

@@ -17,8 +17,8 @@ namespace DatabaseLayer
 {
     public class DatabaseAccess
     {
-        public static string Server;
-        public static string Database;
+        public static string Server { set; get; }
+        public static string Database { set; get; }
         public static string IntegratedSecurity;
         public static string Username;
         public static string Password;
@@ -61,7 +61,7 @@ namespace DatabaseLayer
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed to connect to database. \nCheck Connection Keys in App.config file.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return false;
             }
         }
@@ -94,7 +94,7 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
-                            Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -104,14 +104,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_NEW_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_NEW_QUESTION; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
         }
@@ -146,7 +146,7 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
-                            Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -157,14 +157,14 @@ namespace DatabaseLayer
 
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_NEW_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_NEW_QUESTION; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
         }
@@ -207,7 +207,7 @@ namespace DatabaseLayer
                         //run previously stored procedure
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
-                            Logger.WriteLog("Question created successfully.", clsConstants.INFORMATION, "Question ID:" + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -217,14 +217,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Add Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_NEW_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_NEW_QUESTION; //failed insertion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
         }
@@ -254,14 +254,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Delete Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_DELETE_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_DELETE_QUESTION; //failed deletion
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed to Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
 
@@ -282,7 +282,7 @@ namespace DatabaseLayer
                     {
                         var table = new DataTable();
                         adapter.Fill(table);
-                        Logger.WriteLog("", clsConstants.INFORMATION, "Table in main page fetched from database successfully.");
+                        Logger.WriteLog("", clsConstants.INFORMATION, clsConstants.SUCCESS_STRING);
                         return table;
                     }
 
@@ -291,7 +291,7 @@ namespace DatabaseLayer
             }
             catch (Exception E)
             {
-                Logger.WriteLog("View Procedure failed.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.VIEW_FAILED_STRING, clsConstants.ERROR, E.Message);
                 return null;
             }
         }
@@ -357,14 +357,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Edit Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_EDIT_QUESTION; //failed Update
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
 
@@ -470,14 +470,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_EDIT_QUESTION; //failed Update
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
 
@@ -547,14 +547,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_EDIT_QUESTION; //failed Update
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
         }
@@ -726,14 +726,14 @@ namespace DatabaseLayer
                     }
                     catch (Exception E)
                     {
-                        Logger.WriteLog("Failed To Update Question", clsConstants.ERROR, E.Message);
+                        Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
                         return clsConstants.FAILED_EDIT_QUESTION; //failed Update
                     }
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog("Failed To Connect to Database.", clsConstants.ERROR, E.Message);
+                Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return clsConstants.FAILED_DATABASE_CONNECTION; //failed to connect to database
             }
         }
@@ -758,10 +758,10 @@ namespace DatabaseLayer
                                 {
                                     clsMergedQuestions Question = new clsMergedQuestions
                                     {
-                                        Type = Reader["Type"].ToString(),
-                                        Id = (int)Reader["Id"],
-                                        Text = Reader["Text"].ToString(),
-                                        Properties =  Reader["Question Properties"].ToString()
+                                        Type = Reader[clsConstants.TYPE].ToString(),
+                                        Id = (int)Reader[clsConstants.ID],
+                                        Text = Reader[clsConstants.TEXT].ToString(),
+                                        Properties =  Reader[clsConstants.PROPERTIES].ToString()
                                     };
                                     Questions.Add(Question);
 

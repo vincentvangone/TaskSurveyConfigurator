@@ -19,11 +19,12 @@ namespace SurveyConfigurator
     {
         public DatabaseConnection()
         {
-            try { 
-            InitializeComponent();
-            checkBoxSecurity.Checked = true;
-            textBoxUsername.Enabled = false;
-            textBoxPassword.Enabled = false;
+            try
+            {
+                InitializeComponent();
+                checkBoxSecurity.Checked = true;
+                textBoxUsername.Enabled = false;
+                textBoxPassword.Enabled = false;
             }
             catch (Exception E)
             {
@@ -61,14 +62,22 @@ namespace SurveyConfigurator
         {
             try
             {
-                Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
-                if (Logic.CanConnect())
-                {
-                   this.Close();
-                }
+                if (textBoxServer.Text == "")
+                    System.Windows.Forms.MessageBox.Show(clsConstants.EMPTY_SERVER_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                else if (textBoxDatabase.Text == "")
+                    System.Windows.Forms.MessageBox.Show(clsConstants.EMPTY_DATABASE_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Connection to database failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
+                    if (Logic.CanConnect())
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }
@@ -83,16 +92,20 @@ namespace SurveyConfigurator
         {
             try
             {
-                Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
-                if(Logic.CanConnect())
-                {
-                    System.Windows.Forms.MessageBox.Show("Success connecting to database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                if (textBoxServer.Text == ""|| textBoxDatabase.Text == "")
+                    System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Connection to database failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
+                    if (Logic.CanConnect())
+                    {
+                        System.Windows.Forms.MessageBox.Show(clsConstants.SUCCESS_STRING, clsConstants.SUCCESS_STRING, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                
             }
             catch (Exception E)
             {

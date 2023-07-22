@@ -228,63 +228,39 @@ namespace SurveyConfigurator
 
         public static string ErrorStrings(int Result)
         {
-            if (Result == 1)
+            switch (Result)
             {
-                return "";
+                case clsConstants.SUCCESS:
+                    return "";
+                case clsConstants.TYPE_NOT_SELECTED:
+                    return clsConstants.TYPE_NOT_SELECTED_STRING;
+                case clsConstants.FAILED_DATABASE_CONNECTION:
+                    return clsConstants.FAILED_DATABASE_CONNECTION_STRING;
+                case clsConstants.TEXT_NOT_SPECIFIED:
+                    return clsConstants.TEXT_NOT_SPECIFIED_STRING;
+                case clsConstants.FAILED_NEW_QUESTION:
+                    return clsConstants.FAILED_NEW_QUESTION_STRING;
+                case clsConstants.FAILED_DELETE_QUESTION:
+                    return clsConstants.FAILED_DELETE_QUESTION_STRING;
+                case clsConstants.FAILED_EDIT_QUESTION:
+                    return clsConstants.FAILED_EDIT_QUESTION_STRING;
+                case clsConstants.INVALID_NUMBER_OF_SMILEYS:
+                    return clsConstants.INVALID_NUMBER_OF_SMILEYS_STRING;
+                case clsConstants.INVALID_NUMBER_OF_STARS:
+                    return clsConstants.INVALID_NUMBER_OF_STARS_STRING;
+                case clsConstants.INVALID_START_VALUE:
+                    return clsConstants.INVALID_START_VALUE_STRING;
+                case clsConstants.INVALID_END_VALUE:
+                    return clsConstants.INVALID_END_VALUE_STRING;
+                case clsConstants.INVALID_END_LESS_THAN_START_VALUE:
+                    return clsConstants.INVALID_END_LESS_THAN_START_VALUE_STRING;
+                case clsConstants.INVALID_START_CAPTION:
+                    return clsConstants.INVALID_START_CAPTION_STRING;
+                case clsConstants.INVALID_END_CAPTION:
+                    return clsConstants.INVALID_END_CAPTION_STRING;
+                default:
+                    return "Not Found.";
             }
-            else if (Result == -2)
-            {
-                return "Question Type not Selected.";
-            }
-            else if (Result == -3)
-            {
-                return "Failed to connect to database.";
-            }
-            else if (Result == -4)
-            {
-                return "Question Text can't be empty.";
-            }
-            else if (Result == -5)
-            {
-                return "Failed To Add Question";
-            }
-            else if (Result == -6)
-            {
-                return "Failed To Delete Question";
-            }
-            else if (Result == -7)
-            {
-                return "Failed To Update Question";
-            }
-            else if (Result == -20)
-            {
-                return "Invalid Number of Smileys (2-5).";
-            }
-            else if (Result == -21)
-            {
-                return "Invalid Number of Stars (1-10).";
-            }
-            else if (Result == -22)
-            {
-                return "Invalid Start Value (>0).";
-            }
-            else if (Result == -23)
-            {
-                return "Invalid End Value (<100).";
-            }
-            else if (Result == -24)
-            {
-                return "Invalid End Value (Should be greater than start value).";
-            }
-            else if (Result == -25)
-            {
-                return "Start caption too long.";
-            }
-            else if (Result == -26)
-            {
-                return "End caption too long.";
-            }
-            else return "Not Found.";
         }
     }
 }
