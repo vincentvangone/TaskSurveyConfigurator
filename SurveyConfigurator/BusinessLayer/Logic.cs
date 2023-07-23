@@ -35,14 +35,16 @@ namespace BusinessLayer
                     if (DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)) < 0)
                     {
                         
-                        // Refresh the DataGridView based on the changes
+                        // return 1 to Refresh the DataGridView
                         return 1;
                         
 
                     }
-                    else return 0;
+                    
                 }
+
                 return 0;
+
             }
             catch (Exception E)
             {

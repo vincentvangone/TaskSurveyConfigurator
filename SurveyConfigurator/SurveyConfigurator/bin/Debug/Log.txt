@@ -18675,3 +18675,977 @@ Call Stack Trace :
    at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
 
 ------------------------------------------------------------
+
+Log Entry : 11:18:25 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:26 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:27 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:28 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:29 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:30 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:31 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:32 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:33 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:34 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:35 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:36 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:37 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:38 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:39 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:40 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:41 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:42 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:43 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:44 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:48 AM Sunday, July 23, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id51
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 110
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 97
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 172
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 131
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 11:18:49 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:50 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:51 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:52 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:53 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:54 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:55 AM Sunday, July 23, 2023
+
+Log Type :
+Error
+
+Displayed message :
+String reference not set to an instance of a String.
+Parameter name: s
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at BusinessLayer.Logic.CheckForUpdates() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.CheckForUpdatesLoop() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 51
+   at SurveyConfigurator.formSurveyConfigurator.<.ctor>b__0_0() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 34
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+------------------------------------------------------------
+
+Log Entry : 11:18:59 AM Sunday, July 23, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id52
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 110
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 97
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 172
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 131
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
