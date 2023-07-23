@@ -1,13 +1,17 @@
 ﻿using DatabaseLayer;
 using ErrorLogger;
+using Microsoft.TeamFoundation.Common.Internal;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 using Utilities;
 
@@ -16,20 +20,52 @@ namespace BusinessLayer
     public static class Logic
     {
 
+        private static string LastUpdateTime;
+        
+
+        public static int CheckForUpdates()
+        {
+
+            try
+            {
+                // Check for updates in the shared storage (file)
+                if (File.Exists(DatabaseAccess.LastUpdate))
+                {
+                    string LastDatabaseUpdate = File.ReadAllText(DatabaseAccess.LastUpdate);
+                    if (DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)) < 0)
+                    {
+                        
+                        // Refresh the DataGridView based on the changes
+                        return 1;
+                        
+
+                    }
+                    else return 0;
+                }
+                return 0;
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+                return -1;
+            }
+
+            
+        }
+
+        
+        
+
         public static bool CanConnect()
         {
             return DatabaseAccess.CanConnect();
 
         }
 
-        public static DataTable ListQuestions()
-        {
-            return DatabaseAccess.ListQuestions();
-        }
-
-        //if NewSmileyQuestion is set to true = database excutes insert command
-        //if false -> update command
-        public static int SmileyInputValidation(clsQuestionSmiley Question, int Id = 0)
+        
+        //if id is set to -1 = database excutes insert command
+        //else -> update command
+        public static int SmileyInputValidation(clsQuestionSmiley Question, int Id = -1)
         {
             try
             {
@@ -56,18 +92,25 @@ namespace BusinessLayer
                 //NewSmileyQuestion is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
-                    return DatabaseAccess.NewQuestion(Question);
-
+                    return DatabaseAccess.NewQuestion(Question); 
                 }
+
+                
                 //to update instead of creating new question
                 //if flag = false -> only change text and number of smileys -> update not insert
                 else
                 {
                     int Result = DatabaseAccess.EditText(Id, Question.Text);
-                    if (Result == 1)
+
+
+                    if (Result == clsConstants.SUCCESS)
+                    {
                         return DatabaseAccess.EditQuestionSmiley(Id, Question.NumberOfSmileys);
-                    else
-                        return Result;
+                        
+                        
+                    }
+
+                    else return Result;
                 }
             }
             catch (Exception E)
@@ -83,7 +126,7 @@ namespace BusinessLayer
 
         }
 
-        public static int StarsInputValidation(clsQuestionStar Question, int Id = 0)
+        public static int StarsInputValidation(clsQuestionStar Question, int Id = -1)
         {
             try
             {
@@ -106,20 +149,31 @@ namespace BusinessLayer
                 {
                     return clsConstants.INVALID_NUMBER_OF_STARS;
                 }
+                
                 //layer 3 object to save in sql server
-                //Id is the flag to know if we should create new question or update previous
+                //id is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
                     return DatabaseAccess.NewQuestion(Question);
+                    
+                   
                 }
-                //if id!=-1 -> only change text and number of stars -> update not insert
+
+
+                //to update instead of creating new question
+                //if id!=-1 -> only change text and number of smileys -> update not insert
                 else
                 {
                     int Result = DatabaseAccess.EditText(Id, Question.Text);
-                    if (Result == 1)
+
+
+                    if (Result == clsConstants.SUCCESS)
+                    {
                         return DatabaseAccess.EditQuestionStars(Id, Question.NumberOfStars);
-                    else
-                        return Result;
+                        
+                    }
+                    else  return Result;
+                   
                 }
             }
             catch (Exception E)
@@ -134,7 +188,7 @@ namespace BusinessLayer
 
 
 
-        public static int SliderInputValidation(clsQuestionSlider Question, int Id = 0)
+        public static int SliderInputValidation(clsQuestionSlider Question, int Id = -1)
         {
             try
             {
@@ -178,20 +232,33 @@ namespace BusinessLayer
                     return clsConstants.INVALID_END_CAPTION;
                 }
 
+
                 //layer 3 object to save in sql server
-                //NewSmileyQuestion is the flag to know if we should create new question or update previous
+                //id is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
                     return DatabaseAccess.NewQuestion(Question);
+                    
                 }
+
+
+                //to update instead of creating new question
+                //if id!=-1 -> only change text and number of smileys -> update not insert
                 else
                 {
                     int Result = DatabaseAccess.EditText(Id, Question.Text);
-                    if (Result == 1)
+
+
+                    if (Result == clsConstants.SUCCESS)
+                    {
                         return DatabaseAccess.EditQuestionSlider(Id, Question);
-                    else
-                        return Result;
+                    }
+                    else return Result;
+
                 }
+                
+                    
+                
             }
             catch (Exception E)
             {
@@ -206,6 +273,7 @@ namespace BusinessLayer
         public static int DeleteQuestion(int Id)
         {
             return DatabaseAccess.DeleteQuestion(Id);
+           
         }
         public static string GetType(int Id)
         {
@@ -215,31 +283,14 @@ namespace BusinessLayer
         {
             return DatabaseAccess.GetText(Id);
         }
-        public static int Text(int Id, string Text)
-        {
-            return DatabaseAccess.EditText(Id, Text);
-        }
-
-        public static int NewQuestion(clsQuestionSmiley Question)
-        {
-            return DatabaseAccess.NewQuestion(Question);
-        }
 
         public static int GetNumberOfSmileys(int Id)
         {
             return DatabaseAccess.GetNumberOfSmileys(Id);
         }
-        public static int EditQuestionSmiley(int Id, int NumberOfSmileys)
-        {
-            return DatabaseAccess.EditQuestionSmiley(Id, NumberOfSmileys);
-        }
         public static int GetNumberOfStars(int Id)
         {
             return DatabaseAccess.GetNumberOfStars(Id);
-        }
-        public static int EditQuestionStars(int Id, int NumberOfStars)
-        {
-            return DatabaseAccess.EditQuestionStars(Id, NumberOfStars);
         }
         public static int GetStartValue(int Id)
         {
@@ -261,12 +312,13 @@ namespace BusinessLayer
         public static void SetConnectionString(string Server, string Database, string Username, string Password, bool IntegratedSecurity)
         {
             DatabaseAccess.SetConnectionString(Server, Database, Username, Password, IntegratedSecurity);
-       }
+        }
         public static List<clsMergedQuestions> ViewQuestions()
         {
+            LastUpdateTime = DateTime.Now.ToString();
             return DatabaseAccess.ViewQuestions();
         }
 
-
     }
 }
+

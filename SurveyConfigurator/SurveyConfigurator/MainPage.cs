@@ -16,16 +16,22 @@ using System.Data.SqlClient;
 using System.Configuration;
 using Utilities;
 using System.Security.Cryptography;
+using System.Threading;
+using System.IO;
 
 namespace SurveyConfigurator
 {
     public partial class formSurveyConfigurator : Form
     {
+       
+
         public formSurveyConfigurator()
         {
             try
             {
                 InitializeComponent();
+                // Start a background thread or loop to check for updates
+                Task.Run(() => CheckForUpdatesLoop());
                 Form Connect = new DatabaseConnection();
                 Connect.ShowDialog();
 
@@ -37,6 +43,19 @@ namespace SurveyConfigurator
 
 
         }
+
+        public void CheckForUpdatesLoop()
+        {
+            while (true)
+            {
+                if(Logic.CheckForUpdates()==1)
+                    ViewQuestions();
+
+                //delay to avoid excessive checking and resource usage
+                Thread.Sleep(1000);
+            }
+        }
+
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
             try
@@ -191,5 +210,7 @@ namespace SurveyConfigurator
             }
             
         }
+
+
     }
 }

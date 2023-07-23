@@ -12,6 +12,7 @@ using System.Transactions;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DatabaseLayer
 {
@@ -23,6 +24,17 @@ namespace DatabaseLayer
         public static string Username;
         public static string Password;
         public static string CONNECTION;
+
+
+        // File path to the shared data file to note updates
+        public const string LastUpdate = ".\\LastUpdate.txt";
+        public static void DataUpdatedInDataLayer()
+        {
+            // Update the shared storage (file) to indicate that data is updated
+            File.WriteAllText(LastUpdate, DateTime.Now.ToString());
+        }
+
+
 
         public static void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
         {
@@ -66,6 +78,7 @@ namespace DatabaseLayer
             }
         }
 
+
         public static int NewQuestion(clsQuestionSmiley Question)
         {
             try
@@ -95,6 +108,7 @@ namespace DatabaseLayer
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
                             Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -147,6 +161,7 @@ namespace DatabaseLayer
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
                             Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -208,6 +223,7 @@ namespace DatabaseLayer
                         if (NewQuestion.ExecuteNonQuery() > 0)
                         {
                             Logger.WriteLog(clsConstants.SUCCESS_STRING, clsConstants.INFORMATION, clsConstants.ID + NewQuestion.Parameters["@" + clsConstants.ID].Value);
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS; //success code
                         }
                         else
@@ -248,7 +264,10 @@ namespace DatabaseLayer
 
                         //run previously stored delete procedure
                         if (Delete.ExecuteNonQuery() > 0)
+                        {
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS;
+                        }
                         else
                             return clsConstants.FAILED_DELETE_QUESTION;
                     }
@@ -350,9 +369,12 @@ namespace DatabaseLayer
                         EditText.Parameters["@" + clsConstants.TEXT].Value = Text;
 
                         //run previously stored procedure
-                        if(EditText.ExecuteNonQuery()>=1)
+                        if (EditText.ExecuteNonQuery() >= 1)
+                        {
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS;
-                        else 
+                        }
+                        else
                             return clsConstants.FAILED_EDIT_QUESTION;
                     }
                     catch (Exception E)
@@ -460,8 +482,11 @@ namespace DatabaseLayer
                         EditNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value = NumberOfSmileys;
 
                         //run previously stored procedure
-                        if(EditNumberOfSmileys.ExecuteNonQuery()>0)
+                        if (EditNumberOfSmileys.ExecuteNonQuery() > 0)
+                        {
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS;
+                        }
                         else
                         {
                             return clsConstants.FAILED_EDIT_QUESTION; //failed Update
@@ -541,7 +566,11 @@ namespace DatabaseLayer
 
                         //run previously stored procedure
                         if (EditQuestionStars.ExecuteNonQuery() > 0)
+                        {
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS;
+                        }
+                            
                         else
                             return clsConstants.FAILED_EDIT_QUESTION;
                     }
@@ -720,7 +749,10 @@ namespace DatabaseLayer
 
                         //run previously stored procedure
                         if (EditQuestionSlider.ExecuteNonQuery() > 0)
+                        {
+                            DataUpdatedInDataLayer();
                             return clsConstants.SUCCESS;
+                        }
                         else
                             return clsConstants.FAILED_EDIT_QUESTION;
                     }
