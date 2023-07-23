@@ -13,7 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 //using System.Windows.Forms;
 using System.Xml.Serialization;
-using Entities;
+using Utilities;
 
 namespace BusinessLayer
 {
