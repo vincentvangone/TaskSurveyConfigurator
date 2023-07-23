@@ -183,12 +183,12 @@ END
 GO  
 
   
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetText')
-DROP PROCEDURE P_SetText
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditText')
+DROP PROCEDURE P_EditText
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].[P_SetText](
+CREATE PROCEDURE [dbo].[P_EditText](
 @Id INT,
 @Text VARCHAR(1000) 
 )
@@ -200,12 +200,12 @@ END
 GO  
 
   
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetNumberOfSmileys')
-DROP PROCEDURE P_SetNumberOfSmileys
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSmiley')
+DROP PROCEDURE P_EditQuestionSmiley
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].[P_SetNumberOfSmileys](
+CREATE PROCEDURE [dbo].[P_EditQuestionSmiley](
 @Id INT,
 @NumberOfSmileys INT
 )
@@ -217,12 +217,12 @@ END
 GO  
 
   
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetNumberOfStars')
-DROP PROCEDURE P_SetNumberOfStars
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionStar')
+DROP PROCEDURE P_EditQuestionStar
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].[P_SetNumberOfStars](
+CREATE PROCEDURE [dbo].[P_EditQuestionStar](
 @Id INT,
 @NumberOfStars INT
 )
@@ -315,71 +315,6 @@ RETURN   @@ERROR
 END  
 GO  
   
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetStartValue')
-DROP PROCEDURE P_SetStartValue
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_SetStartValue](
-@Id INT,
-@StartValue INT
-)
-AS  
-BEGIN 
-UPDATE QuestionSlider SET  StartValue=@StartValue
-     WHERE [dbo].[QuestionSlider].Id =@Id  
-END  
-GO  
-  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetEndValue')
-DROP PROCEDURE P_SetEndValue
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_SetEndValue](
-@Id INT,
-@EndValue INT
-)
-AS  
-BEGIN 
-UPDATE QuestionSlider SET  EndValue=@EndValue
-     WHERE [dbo].[QuestionSlider].Id =@Id  
-END  
-GO  
-
-
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetStartCaption')
-DROP PROCEDURE P_SetStartCaption
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_SetStartCaption](
-@Id INT,
-@StartCaption VARCHAR(1000)
-)
-AS  
-BEGIN 
-UPDATE QuestionSlider SET  StartCaption=@StartCaption
-     WHERE [dbo].[QuestionSlider].Id =@Id  
-END  
-GO  
-
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_SetEndCaption')
-DROP PROCEDURE P_SetEndCaption
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_SetEndCaption](
-@Id INT,
-@EndCaption VARCHAR(1000)
-)
-AS  
-BEGIN 
-UPDATE QuestionSlider SET  EndCaption=@EndCaption
-     WHERE [dbo].[QuestionSlider].Id =@Id  
-END  
-GO  
-
 GO  
   PRINT N'Creating Delete Questions Procedure...'; 
 GO  
@@ -450,4 +385,50 @@ BEGIN  TRAN
 		VALUES (@Id, @StartValue , @EndValue , @StartCaption, @EndCaption)  
 
 COMMIT TRAN
+GO  
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSlider')
+DROP PROCEDURE P_EditQuestionSlider
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_EditQuestionSlider](
+@Id INT,
+@StartValue INT,
+@EndValue INT,
+@StartCaption VARCHAR(1000),
+@EndCaption VARCHAR(1000)
+
+)
+
+AS  
+BEGIN 
+UPDATE QuestionSlider SET  StartValue=@StartValue,EndValue=@EndValue, StartCaption=@StartCaption,EndCaption=@EndCaption
+     WHERE [dbo].[QuestionSlider].Id =@Id  
+END  
+GO  
+  
+
+  
+GO  
+  PRINT N'Creating View All Questions Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_View')
+BEGIN
+DROP PROCEDURE P_View
+PRINT N'Dropped Old Procedure...';  
+END
+
+GO
+CREATE PROCEDURE [dbo].[P_View]
+AS  
+BEGIN  
+	SELECT Question.Id,Text,Type,concat('Number of Smileys: ',NumberOfSmileys) as 'Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
+	UNION 
+    SELECT Question.Id,Text,Type,concat('Number of Stars: ', NumberOfStars) as 'Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
+    UNION 
+    SELECT Question.Id,Text,Type,concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
+ 
+END  
 GO  
