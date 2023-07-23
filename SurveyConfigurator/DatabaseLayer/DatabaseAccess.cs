@@ -30,8 +30,15 @@ namespace DatabaseLayer
         public const string LastUpdate = ".\\LastUpdate.txt";
         public static void DataUpdatedInDataLayer()
         {
-            // Update the shared storage (file) to indicate that data is updated
-            File.WriteAllText(LastUpdate, DateTime.Now.ToString());
+            try
+            {
+                // Update the shared storage (file) to indicate that data is updated
+                File.WriteAllText(LastUpdate, DateTime.Now.ToString());
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
 

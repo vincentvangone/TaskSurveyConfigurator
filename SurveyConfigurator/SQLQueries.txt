@@ -81,25 +81,8 @@ IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAIN
 ALTER TABLE [dbo].[QuestionSlider]  
     ADD CONSTRAINT [FK_QuestionSlider_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
-
 GO  
-  PRINT N'Creating View All Questions Procedure...'; 
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_View')
-DROP PROCEDURE P_View
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_View]
-AS  
-BEGIN  
-	SELECT Question.Id,Text,Type,concat('Number of Smileys: ',NumberOfSmileys) as 'Question Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
-	UNION 
-    SELECT Question.Id,Text,Type,concat('Number of Stars: ', NumberOfStars) as 'Question Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
-    UNION 
-    SELECT Question.Id,Text,Type,concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Question Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
- 
-END  
+PRINT N'Creating Get text procedure';  
 GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetText')
 DROP PROCEDURE P_GetText
@@ -120,7 +103,8 @@ RETURN   @@ERROR
 
 END  
 GO  
-
+PRINT N'Creating get type procedure';  
+GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetType')
 DROP PROCEDURE P_GetType
 PRINT N'Dropped Old Procedure...';  
@@ -141,7 +125,8 @@ RETURN   @@ERROR
 END  
 GO  
 
-
+PRINT N'Creating P_GetNumberOfSmileys Procedure...'; 
+ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfSmileys')
 DROP PROCEDURE P_GetNumberOfSmileys
 PRINT N'Dropped Old Procedure...';  
@@ -161,7 +146,8 @@ RETURN   @@ERROR
 
 END  
 GO  
-
+PRINT N'Creating P_GetNumberOfStars Procedure...'; 
+ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfStars')
 DROP PROCEDURE P_GetNumberOfStars
 PRINT N'Dropped Old Procedure...';  
@@ -181,7 +167,8 @@ RETURN   @@ERROR
 
 END  
 GO  
-
+PRINT N'Creating P_EditText Procedure...'; 
+ GO
   
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditText')
 DROP PROCEDURE P_EditText
@@ -196,10 +183,12 @@ AS
 BEGIN 
 UPDATE Question SET  Text=@Text
      WHERE [dbo].[Question].Id =@Id  
+RETURN @@ERROR
 END  
 GO  
 
-  
+  PRINT N'Creating P_EditQuestionSmiley Procedure...'; 
+ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSmiley')
 DROP PROCEDURE P_EditQuestionSmiley
 PRINT N'Dropped Old Procedure...';  
@@ -213,10 +202,12 @@ AS
 BEGIN 
 UPDATE QuestionSmiley SET  NumberOfSmileys=@NumberOfSmileys
      WHERE [dbo].[QuestionSmiley].Id =@Id  
+RETURN @@ERROR
 END  
 GO  
 
-  
+  PRINT N'Creating P_EditQuestionStar Procedure...'; 
+ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionStar')
 DROP PROCEDURE P_EditQuestionStar
 PRINT N'Dropped Old Procedure...';  
@@ -230,10 +221,13 @@ AS
 BEGIN 
 UPDATE QuestionStars SET  NumberOfStars=@NumberOfStars
      WHERE [dbo].[QuestionStars].Id =@Id  
+RETURN @@ERROR
 END  
 GO  
 
-
+GO  
+  PRINT N'Creating P_GetStartValue Procedure...'; 
+ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartValue')
 DROP PROCEDURE P_GetStartValue
 PRINT N'Dropped Old Procedure...';  
@@ -253,7 +247,8 @@ RETURN   @@ERROR
 
 END  
 GO  
-
+  PRINT N'Creating P_GetEndValue Procedure...'; 
+GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndValue')
 DROP PROCEDURE P_GetEndValue
 PRINT N'Dropped Old Procedure...';  
@@ -274,7 +269,8 @@ RETURN   @@ERROR
 END  
 GO  
 
-
+GO  
+  PRINT N'Creating P_GetStartCaption Procedure...'; 
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartCaption')
 DROP PROCEDURE P_GetStartCaption
 PRINT N'Dropped Old Procedure...';  
@@ -293,6 +289,9 @@ SELECT @StartCaption = (SELECT StartCaption FROM  [dbo].[QuestionSlider]
 RETURN   @@ERROR
 
 END  
+
+GO  
+  PRINT N'Creating P_GetEndCaption Procedure...'; 
 GO  
 
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndCaption')
@@ -346,6 +345,7 @@ BEGIN  TRAN
      WHERE [dbo].[Question].Id =@Id 
 
 COMMIT TRAN
+RETURN @@ERROR
 GO  
 
 
@@ -385,9 +385,12 @@ BEGIN  TRAN
 		VALUES (@Id, @StartValue , @EndValue , @StartCaption, @EndCaption)  
 
 COMMIT TRAN
+RETURN @@ERROR
+
+
 GO  
-
-
+  PRINT N'Creating P_EditQuestionSlider Procedure...'; 
+GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSlider')
 DROP PROCEDURE P_EditQuestionSlider
 PRINT N'Dropped Old Procedure...';  
@@ -406,6 +409,7 @@ AS
 BEGIN 
 UPDATE QuestionSlider SET  StartValue=@StartValue,EndValue=@EndValue, StartCaption=@StartCaption,EndCaption=@EndCaption
      WHERE [dbo].[QuestionSlider].Id =@Id  
+RETURN @@ERROR
 END  
 GO  
   
@@ -429,6 +433,6 @@ BEGIN
     SELECT Question.Id,Text,Type,concat('Number of Stars: ', NumberOfStars) as 'Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
     UNION 
     SELECT Question.Id,Text,Type,concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
- 
+ RETURN @@ERROR
 END  
 GO  

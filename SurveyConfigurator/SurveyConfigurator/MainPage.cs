@@ -46,13 +46,20 @@ namespace SurveyConfigurator
 
         public void CheckForUpdatesLoop()
         {
-            while (true)
+            try
             {
-                if(Logic.CheckForUpdates()==1)
-                    ViewQuestions();
+                while (true)
+                {
+                    if (Logic.CheckForUpdates() == 1)
+                        ViewQuestions();
 
-                //delay to avoid excessive checking and resource usage
-                Thread.Sleep(1000);
+                    //delay to avoid excessive checking and resource usage
+                    Thread.Sleep(1000);
+                }
+            }
+            catch(Exception E)
+            {
+                Logger.WriteLog(E.Message,clsConstants.ERROR);
             }
         }
 
