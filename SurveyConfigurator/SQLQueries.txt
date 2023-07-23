@@ -12,14 +12,15 @@ GO
 IF NOT EXISTS (SELECT * 
                  FROM sys.tables 
                  WHERE  name = 'Question')
-				 
+		 
 CREATE TABLE [dbo].[Question] (  
     [Id]   INT   IDENTITY (1, 1) NOT NULL,  
+	[Order]   INT   NOT NULL,  
     [Text] VARCHAR(1000) NOT NULL,  
     [Type]    VARCHAR (20)   NOT NULL,  
-    
+   
 );  
-GO  
+
 PRINT N'Creating SurveyConfigurator.QuestionSmiley...';  
 GO  
 IF NOT EXISTS (SELECT * 
@@ -81,92 +82,113 @@ IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAIN
 ALTER TABLE [dbo].[QuestionSlider]  
     ADD CONSTRAINT [FK_QuestionSlider_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
+ 
+  PRINT N'Creating Insert Questions Procedure...'; 
 GO  
-PRINT N'Creating Get text procedure';  
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetText')
-DROP PROCEDURE P_GetText
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Insert')
+DROP PROCEDURE P_Insert
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].[P_GetText](
-@Id INT ,
-@Text VARCHAR(1000) OUTPUT
+CREATE PROCEDURE [dbo].[P_Insert](
+@Id INT OUTPUT,
+@Text VARCHAR (1000),  
+@Order INT=1,
+@Type VARCHAR(20)  ,
+@StartValue INT=0,
+@EndValue INT=100,
+@StartCaption VARCHAR(50) = '',
+@EndCaption VARCHAR(50) = '',
+@NumberOfStars INT = 10 ,
+@NumberOfSmileys INT = 5
 )
-
 AS  
-BEGIN 
+BEGIN  TRAN
 
-SELECT @Text = (SELECT Text FROM  [dbo].[Question] 
-     WHERE [dbo].[Question].Id = @Id);
-RETURN   @@ERROR
+	INSERT INTO [dbo].[Question] (Text,Type,"Order") VALUES (@Text,@Type,@Order);  
+	SET @Id = SCOPE_IDENTITY();  
+	  
+	 IF @Type='Smiley'
+		INSERT INTO  [dbo].[QuestionSmiley] (Id, NumberOfSmileys)   
+		VALUES (@Id, @NumberOfSmileys)  
+	ELSE IF @Type='Star'
+		INSERT INTO  [dbo].[QuestionStars] (Id, NumberOfStars)   
+		VALUES (@Id, @NumberOfStars)  
+	ELSE IF @Type='Slider'
+		INSERT INTO  [dbo].[QuestionSlider] (Id, StartValue , EndValue , StartCaption, EndCaption)   
+		VALUES (@Id, @StartValue , @EndValue , @StartCaption, @EndCaption)  
 
-END  
+COMMIT TRAN
+RETURN @@ERROR
+
+
 GO  
-PRINT N'Creating get type procedure';  
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetType')
-DROP PROCEDURE P_GetType
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].P_GetType(
-@Id INT ,
-@Type VARCHAR(20) OUTPUT
-)
-
-AS  
-BEGIN 
-
-SELECT @Type = (SELECT Type FROM  [dbo].[Question] 
-     WHERE [dbo].[Question].Id = @Id);
-RETURN   @@ERROR
-
-END  
-GO  
-
-PRINT N'Creating P_GetNumberOfSmileys Procedure...'; 
+   
+PRINT N'Creating P_GetSmileyQuestion Procedure...'; 
  GO
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfSmileys')
-DROP PROCEDURE P_GetNumberOfSmileys
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetSmileyQuestion')
+DROP PROCEDURE P_GetSmileyQuestion
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].P_GetNumberOfSmileys(
-@Id INT ,
-@NumberOfSmileys INT OUTPUT
+CREATE PROCEDURE [dbo].P_GetSmileyQuestion(
+@Id INT 
 )
-
 AS  
 BEGIN 
 
-SELECT @NumberOfSmileys = (SELECT NumberOfSmileys FROM  [dbo].[QuestionSmiley] 
-     WHERE [dbo].[QuestionSmiley].Id = @Id);
+SELECT * FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id WHERE QuestionSmiley.Id=@Id
+	
 RETURN   @@ERROR
 
 END  
 GO  
-PRINT N'Creating P_GetNumberOfStars Procedure...'; 
+
+
+GO    
+PRINT N'Creating P_GetStarQuestion Procedure...'; 
  GO
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetNumberOfStars')
-DROP PROCEDURE P_GetNumberOfStars
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStarQuestion')
+DROP PROCEDURE P_GetStarQuestion
 PRINT N'Dropped Old Procedure...';  
 
 GO
-CREATE PROCEDURE [dbo].P_GetNumberOfStars(
-@Id INT ,
-@NumberOfStars INT OUTPUT
+CREATE PROCEDURE [dbo].P_GetStarQuestion(
+@Id INT 
 )
-
 AS  
 BEGIN 
 
-SELECT @NumberOfStars = (SELECT NumberOfStars FROM  [dbo].[QuestionStars] 
-     WHERE [dbo].[QuestionStars].Id = @Id);
+SELECT * FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id WHERE QuestionStars.Id=@Id
+	
 RETURN   @@ERROR
 
 END  
 GO  
+
+
+GO    
+PRINT N'Creating P_GetSliderQuestion Procedure...'; 
+ GO
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetSliderQuestion')
+DROP PROCEDURE P_GetSliderQuestion
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].P_GetSliderQuestion(
+@Id INT 
+)
+AS  
+BEGIN 
+
+SELECT * FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id WHERE QuestionSlider.Id=@Id
+	
+RETURN   @@ERROR
+
+END  
+GO  
+
+
 PRINT N'Creating P_EditText Procedure...'; 
  GO
   
@@ -205,7 +227,6 @@ UPDATE QuestionSmiley SET  NumberOfSmileys=@NumberOfSmileys
 RETURN @@ERROR
 END  
 GO  
-
   PRINT N'Creating P_EditQuestionStar Procedure...'; 
  GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionStar')
@@ -349,46 +370,6 @@ RETURN @@ERROR
 GO  
 
 
-GO  
-  PRINT N'Creating Insert Questions Procedure...'; 
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Insert')
-DROP PROCEDURE P_Insert
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_Insert](
-@Id INT OUTPUT,
-@Text VARCHAR (1000),  
-@Type VARCHAR(20)  ,
-@StartValue INT=0,
-@EndValue INT=100,
-@StartCaption VARCHAR(50) = '',
-@EndCaption VARCHAR(50) = '',
-@NumberOfStars INT = 10 ,
-@NumberOfSmileys INT = 5
-)
-AS  
-BEGIN  TRAN
-
-	INSERT INTO [dbo].[Question] (Text,Type) VALUES (@Text,@Type);  
-	SET @Id = SCOPE_IDENTITY();  
-	  
-	 IF @Type='Smiley'
-		INSERT INTO  [dbo].[QuestionSmiley] (Id, NumberOfSmileys)   
-		VALUES (@Id, @NumberOfSmileys)  
-	ELSE IF @Type='Star'
-		INSERT INTO  [dbo].[QuestionStars] (Id, NumberOfStars)   
-		VALUES (@Id, @NumberOfStars)  
-	ELSE IF @Type='Slider'
-		INSERT INTO  [dbo].[QuestionSlider] (Id, StartValue , EndValue , StartCaption, EndCaption)   
-		VALUES (@Id, @StartValue , @EndValue , @StartCaption, @EndCaption)  
-
-COMMIT TRAN
-RETURN @@ERROR
-
-
-GO  
   PRINT N'Creating P_EditQuestionSlider Procedure...'; 
 GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSlider')
@@ -428,11 +409,11 @@ GO
 CREATE PROCEDURE [dbo].[P_View]
 AS  
 BEGIN  
-	SELECT Question.Id,Text,Type,concat('Number of Smileys: ',NumberOfSmileys) as 'Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
+	SELECT Question.Id,Text,Type,"Order",concat('Number of Smileys: ',NumberOfSmileys) as 'Properties' FROM QuestionSmiley LEFT JOIN Question ON QuestionSmiley.Id = Question.Id 
 	UNION 
-    SELECT Question.Id,Text,Type,concat('Number of Stars: ', NumberOfStars) as 'Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
+    SELECT Question.Id,Text,Type,"Order",concat('Number of Stars: ', NumberOfStars) as 'Properties' FROM QuestionStars LEFT JOIN Question ON QuestionStars.Id = Question.Id
     UNION 
-    SELECT Question.Id,Text,Type,concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
+    SELECT Question.Id,Text,Type,"Order",concat('Start Value: ',StartValue, '  Start Caption: ', StartCaption,'  End Value: ', EndValue, '  End Caption: ' ,EndCaption) as 'Properties' FROM QuestionSlider LEFT JOIN Question ON QuestionSlider.Id = Question.Id
  RETURN @@ERROR
 END  
 GO  

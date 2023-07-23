@@ -38,7 +38,10 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelDummy = new System.Windows.Forms.Panel();
+            this.labelOrder = new System.Windows.Forms.Label();
+            this.numericUpDownOrder = new System.Windows.Forms.NumericUpDown();
             this.panelButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxText
@@ -49,10 +52,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxText.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxText.Location = new System.Drawing.Point(201, 69);
+            this.textBoxText.Location = new System.Drawing.Point(201, 95);
             this.textBoxText.Multiline = true;
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(564, 104);
+            this.textBoxText.Size = new System.Drawing.Size(564, 78);
             this.textBoxText.TabIndex = 7;
             // 
             // labelText
@@ -62,7 +65,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelText.AutoSize = true;
             this.labelText.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelText.Location = new System.Drawing.Point(20, 69);
+            this.labelText.Location = new System.Drawing.Point(25, 95);
             this.labelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelText.Name = "labelText";
             this.labelText.Size = new System.Drawing.Size(40, 19);
@@ -73,7 +76,7 @@
             // 
             this.labelType.AutoSize = true;
             this.labelType.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.Location = new System.Drawing.Point(20, 21);
+            this.labelType.Location = new System.Drawing.Point(25, 19);
             this.labelType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(45, 19);
@@ -152,11 +155,44 @@
             this.panelDummy.Size = new System.Drawing.Size(12, 34);
             this.panelDummy.TabIndex = 2;
             // 
+            // labelOrder
+            // 
+            this.labelOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelOrder.AutoSize = true;
+            this.labelOrder.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrder.Location = new System.Drawing.Point(25, 57);
+            this.labelOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelOrder.Name = "labelOrder";
+            this.labelOrder.Size = new System.Drawing.Size(54, 19);
+            this.labelOrder.TabIndex = 9;
+            this.labelOrder.Text = "Order:";
+            // 
+            // numericUpDownOrder
+            // 
+            this.numericUpDownOrder.Location = new System.Drawing.Point(199, 57);
+            this.numericUpDownOrder.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownOrder.Name = "numericUpDownOrder";
+            this.numericUpDownOrder.Size = new System.Drawing.Size(565, 22);
+            this.numericUpDownOrder.TabIndex = 10;
+            this.numericUpDownOrder.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Inputs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 442);
+            this.Controls.Add(this.numericUpDownOrder);
+            this.Controls.Add(this.labelOrder);
             this.Controls.Add(this.textBoxText);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.labelText);
@@ -170,6 +206,7 @@
             this.Name = "Inputs";
             this.Text = "AddQuestion";
             this.panelButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +223,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Panel panelDummy;
+        private System.Windows.Forms.Label labelOrder;
+        private System.Windows.Forms.NumericUpDown numericUpDownOrder;
     }
 }

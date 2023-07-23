@@ -17,6 +17,7 @@ namespace SurveyConfigurator
 {
     public partial class DatabaseConnection : Form
     {
+        Logic LogicLayer = new Logic();
         public DatabaseConnection()
         {
             try
@@ -69,8 +70,8 @@ namespace SurveyConfigurator
                     System.Windows.Forms.MessageBox.Show(clsConstants.EMPTY_DATABASE_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
-                    if (Logic.CanConnect())
+                    LogicLayer.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
+                    if (LogicLayer.CanConnect())
                     {
                         this.Close();
                     }
@@ -96,8 +97,8 @@ namespace SurveyConfigurator
                     System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    Logic.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
-                    if (Logic.CanConnect())
+                    LogicLayer.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, checkBoxSecurity.Checked);
+                    if (LogicLayer.CanConnect())
                     {
                         System.Windows.Forms.MessageBox.Show(clsConstants.SUCCESS_STRING, clsConstants.SUCCESS_STRING, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

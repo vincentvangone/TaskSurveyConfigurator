@@ -11,6 +11,7 @@ namespace Utilities
         private string type;
         private string text;
         private int id;
+        private int order;
 
         public int Id
         {
@@ -27,6 +28,12 @@ namespace Utilities
         {
             get { return text; }
             set { text = value; }
+        }
+
+        public int Order
+        {
+            get { return order; }   
+            set { order = value; }
         }
 
     }

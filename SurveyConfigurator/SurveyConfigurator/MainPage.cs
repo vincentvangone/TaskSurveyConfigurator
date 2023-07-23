@@ -23,15 +23,16 @@ namespace SurveyConfigurator
 {
     public partial class formSurveyConfigurator : Form
     {
-       
 
+        Logic LogicLayer = new Logic();
         public formSurveyConfigurator()
         {
             try
             {
                 InitializeComponent();
+               
                 // Start a background thread or loop to check for updates
-                Task.Run(() => CheckForUpdatesLoop());
+                //Task.Run(() => CheckForUpdatesLoop());
                 Form Connect = new DatabaseConnection();
                 Connect.ShowDialog();
 
@@ -44,31 +45,31 @@ namespace SurveyConfigurator
 
         }
 
-        public void CheckForUpdatesLoop()
-        {
-            try
-            {
-                while (true)
-                {
-                    if (Logic.CheckForUpdates() == 1)
-                        ViewQuestions();
+        //public void CheckForUpdatesLoop()
+        //{
+        //    try
+        //    {
+        //        while (true)
+        //        {
+        //            if (LogicLayer.CheckForUpdates() == 1)
+        //                ViewQuestions();
 
-                    //delay to avoid excessive checking and resource usage
-                    Thread.Sleep(1000);
-                }
-            }
-            catch(Exception E)
-            {
-                Logger.WriteLog(E.Message,clsConstants.ERROR);
-            }
-        }
+        //            //delay to avoid excessive checking and resource usage
+        //            Thread.Sleep(1000);
+        //        }
+        //    }
+        //    catch(Exception E)
+        //    {
+        //        Logger.WriteLog(E.Message,clsConstants.ERROR);
+        //    }
+        //}
 
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
             try
             {
 
-                if (!Logic.CanConnect())
+                if (!LogicLayer.CanConnect())
                 {
 
                     buttonAdd.Enabled = false;
@@ -99,7 +100,7 @@ namespace SurveyConfigurator
             try
             {
 
-                List<clsMergedQuestions> Questions = Logic.ViewQuestions();
+                List<clsMergedQuestions> Questions = LogicLayer.ViewQuestions();
                 //if no questions in the database
                 if (!Questions.Any())
                 {
@@ -115,11 +116,13 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     dataGridViewQuestions.MultiSelect = false;
 
-                    //rearrange columns
-                    dataGridViewQuestions.Columns[clsConstants.ID].DisplayIndex = 0;
+                    //rearrange columns and hide id
+                    dataGridViewQuestions.Columns[clsConstants.ID].Visible = false;
+                    dataGridViewQuestions.Columns[clsConstants.ORDER].DisplayIndex = 0;
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
+
                 }
             }
             catch (Exception E)
@@ -134,8 +137,8 @@ namespace SurveyConfigurator
             try
             {
 
-                Inputs AddQuestion = new Inputs();
-                AddQuestion.ShowDialog();
+                Inputs NewQuestion = new Inputs();
+                NewQuestion.ShowDialog();
                 ViewQuestions();
             }
             catch(Exception E)
@@ -154,7 +157,7 @@ namespace SurveyConfigurator
                 DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING + Id + " ?", clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
-                    ErrorMessage(Logic.DeleteQuestion(Id));
+                    ErrorMessage(LogicLayer.DeleteQuestion(Id));
                 }
                 ViewQuestions();
             }
@@ -171,7 +174,7 @@ namespace SurveyConfigurator
             {
 
                 Inputs Edit = new Inputs();
-                Edit.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()));
+                Edit.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()), this.dataGridViewQuestions.SelectedRows[0].Cells[2].Value.ToString());
                 Edit.ShowDialog();
 
                 ViewQuestions();

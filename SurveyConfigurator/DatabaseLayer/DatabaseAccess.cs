@@ -97,6 +97,8 @@ namespace DatabaseLayer
                         NewQuestion.Parameters["@" + clsConstants.TEXT].Value = Question.Text;
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.TYPE, SqlDbType.VarChar, 20));
                         NewQuestion.Parameters["@" + clsConstants.TYPE].Value = Question.Type;
+                        NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ORDER, SqlDbType.Int));
+                        NewQuestion.Parameters["@" + clsConstants.ORDER].Value = Question.Order;
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_SMILEYS, SqlDbType.Int));
                         NewQuestion.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value = Question.NumberOfSmileys;
 
@@ -150,6 +152,8 @@ namespace DatabaseLayer
                         NewQuestion.Parameters["@" + clsConstants.TEXT].Value = Question.Text;
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.TYPE, SqlDbType.VarChar, 20));
                         NewQuestion.Parameters["@" + clsConstants.TYPE].Value = Question.Type;
+                        NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ORDER, SqlDbType.Int));
+                        NewQuestion.Parameters["@" + clsConstants.ORDER].Value = Question.Order;
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_STARS, SqlDbType.Int));
                         NewQuestion.Parameters["@" + clsConstants.NUMBER_OF_STARS].Value = Question.NumberOfStars;
 
@@ -200,9 +204,13 @@ namespace DatabaseLayer
                         // Add input parameter for the stored procedure and specify what to use as its value.
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.TEXT, SqlDbType.VarChar, 1000));
                         NewQuestion.Parameters["@" + clsConstants.TEXT].Value = Question.Text;
+
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.TYPE, SqlDbType.VarChar, 20));
                         NewQuestion.Parameters["@" + clsConstants.TYPE].Value = Question.Type;
-                        // Add input parameter for the stored procedure and specify what to use as its value.
+
+                        NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ORDER, SqlDbType.Int));
+                        NewQuestion.Parameters["@" + clsConstants.ORDER].Value = Question.Order;
+
                         NewQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.START_VALUE, SqlDbType.Int));
                         NewQuestion.Parameters["@" + clsConstants.START_VALUE].Value = Question.StartValue;
 
@@ -287,34 +295,7 @@ namespace DatabaseLayer
 
         }
 
-        public static DataTable ListQuestions()
-        {
-            try
-            {
-                using (SqlConnection Connection = new SqlConnection(CONNECTION))
-                {
-                    Connection.Open();
-
-                    SqlCommand Delete = new SqlCommand(clsConstants.P_VIEW, Connection);
-                    Delete.CommandType = CommandType.StoredProcedure;
-                    using (var adapter = new SqlDataAdapter(Delete))
-                    {
-                        var table = new DataTable();
-                        adapter.Fill(table);
-                        Logger.WriteLog("", clsConstants.INFORMATION, clsConstants.SUCCESS_STRING);
-                        return table;
-                    }
-
-                }
-
-            }
-            catch (Exception E)
-            {
-                Logger.WriteLog(clsConstants.VIEW_FAILED_STRING, clsConstants.ERROR, E.Message);
-                return null;
-            }
-        }
-
+       
         //setters and getters for common inputs - text + type
         public static string GetText(int Id)
         {
@@ -427,41 +408,6 @@ namespace DatabaseLayer
         }
 
 
-        //setters and getters for smiley question properties - NumberOfSmileys
-        public static int GetNumberOfSmileys(int Id)
-        {
-            try
-            {
-                using (SqlConnection Connection = new SqlConnection(CONNECTION))
-                {
-                    Connection.Open();
-                    SqlCommand GetNumberOfSmileys = new SqlCommand(clsConstants.P_GET_NUMBER_OF_SMILEYS, Connection);
-                    GetNumberOfSmileys.CommandType = CommandType.StoredProcedure;
-
-                    // Add input parameter for the stored procedure and specify what to use as its value.
-                    GetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
-                    GetNumberOfSmileys.Parameters["@" + clsConstants.ID].Value = Id;
-
-
-                    // Add the output parameter.
-                    GetNumberOfSmileys.Parameters.Add(new SqlParameter("@" + clsConstants.NUMBER_OF_SMILEYS, SqlDbType.VarChar, 1000));
-                    GetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Direction = ParameterDirection.Output;
-
-
-                    //run previously stored procedure
-                    GetNumberOfSmileys.ExecuteNonQuery();
-
-                    return int.Parse(GetNumberOfSmileys.Parameters["@" + clsConstants.NUMBER_OF_SMILEYS].Value.ToString());
-
-                }
-            }
-            catch (Exception E)
-            {
-                Logger.WriteLog("Unsuccessful edit.", clsConstants.ERROR, E.Message);
-                return 0;
-            }
-
-        }
         public static int EditQuestionSmiley(int Id, int NumberOfSmileys)
         {
             try
@@ -510,15 +456,157 @@ namespace DatabaseLayer
         }
 
 
+        public static int GetSmileyQuestion(clsQuestionSmiley Question)
+        {
+            try
+            {
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand GetQuestion = new SqlCommand(clsConstants.P_GET_SMILEY_QUESTION, Connection);
+                        GetQuestion.CommandType = CommandType.StoredProcedure;
+
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        GetQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        GetQuestion.Parameters["@" + clsConstants.ID].Value = Question.Id;
+
+                        using (SqlDataReader Reader = GetQuestion.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                Question.Type = Reader[clsConstants.TYPE].ToString();
+                                Question.Id = (int)Reader[clsConstants.ID];
+                                Question.Text = Reader[clsConstants.TEXT].ToString();
+                                Question.Order = (int)Reader[clsConstants.ORDER];
+                                Question.NumberOfSmileys = (int)Reader[clsConstants.NUMBER_OF_SMILEYS];
+
+
+                            }
+                        }
+                        return clsConstants.SUCCESS;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
+                        return clsConstants.FAILED_DATABASE_CONNECTION;
+                    }
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
+                return clsConstants.FAILED_EDIT_QUESTION;
+            }
+
+        }
         //setters and getters for stars question properties - NumberOfStars
-        public static int GetNumberOfStars(int Id)
+        public static int GetStarsQuestion(clsQuestionStar Question)
+        {
+            try
+            {
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand GetQuestion = new SqlCommand(clsConstants.P_GET_STAR_QUESTION, Connection);
+                        GetQuestion.CommandType = CommandType.StoredProcedure;
+
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        GetQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        GetQuestion.Parameters["@" + clsConstants.ID].Value = Question.Id;
+
+                        using (SqlDataReader Reader = GetQuestion.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                Question.Type = Reader[clsConstants.TYPE].ToString();
+                                Question.Id = (int)Reader[clsConstants.ID];
+                                Question.Text = Reader[clsConstants.TEXT].ToString();
+                                Question.Order = (int)Reader[clsConstants.ORDER];
+                                Question.NumberOfStars = (int)Reader[clsConstants.NUMBER_OF_STARS];
+
+
+                            }
+                        }
+                        return clsConstants.SUCCESS;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
+                        return clsConstants.FAILED_DATABASE_CONNECTION;
+                    }
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
+                return clsConstants.FAILED_EDIT_QUESTION;
+            }
+
+        }
+
+
+        public static int GetSliderQuestion(clsQuestionSlider Question)
+        {
+            try
+            {
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                {
+                    try
+                    {
+                        Connection.Open();
+                        SqlCommand GetQuestion = new SqlCommand(clsConstants.P_GET_SLIDER_QUESTION, Connection);
+                        GetQuestion.CommandType = CommandType.StoredProcedure;
+
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        GetQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.ID, SqlDbType.Int));
+                        GetQuestion.Parameters["@" + clsConstants.ID].Value = Question.Id;
+
+                        using (SqlDataReader Reader = GetQuestion.ExecuteReader())
+                        {
+                            while (Reader.Read())
+                            {
+                                Question.Type = Reader[clsConstants.TYPE].ToString();
+                                Question.Id = (int)Reader[clsConstants.ID];
+                                Question.Text = Reader[clsConstants.TEXT].ToString();
+                                Question.Order = (int)Reader[clsConstants.ORDER];
+                                Question.StartValue = (int)Reader[clsConstants.START_VALUE];
+                                Question.EndValue = (int)Reader[clsConstants.END_VALUE];
+                                Question.StartCaption = Reader[clsConstants.START_CAPTION].ToString();
+                                Question.EndCaption = Reader[clsConstants.END_CAPTION].ToString();
+
+
+
+                            }
+                        }
+                        return clsConstants.SUCCESS;
+                    }
+                    catch (Exception E)
+                    {
+                        Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
+                        return clsConstants.FAILED_DATABASE_CONNECTION;
+                    }
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(clsConstants.FAILED_EDIT_QUESTION_STRING, clsConstants.ERROR, E.Message);
+                return clsConstants.FAILED_EDIT_QUESTION;
+            }
+
+        }
+
+        public static int GetNumberOfStarss(int Id)
         {
             try
             {
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     Connection.Open();
-                    SqlCommand GetNumberOfStars = new SqlCommand(clsConstants.P_GET_NUMBER_OF_STARS, Connection);
+                    SqlCommand GetNumberOfStars = new SqlCommand(clsConstants.P_GET_STARS_QUESTION, Connection);
                     GetNumberOfStars.CommandType = CommandType.StoredProcedure;
 
                     // Add input parameter for the stored procedure and specify what to use as its value.
@@ -545,6 +633,8 @@ namespace DatabaseLayer
             }
 
         }
+
+
         public static int EditQuestionStars(int Id, int NumberOfStars)
         {
             try
@@ -793,6 +883,7 @@ namespace DatabaseLayer
                                         Type = Reader[clsConstants.TYPE].ToString(),
                                         Id = (int)Reader[clsConstants.ID],
                                         Text = Reader[clsConstants.TEXT].ToString(),
+                                        Order = (int)Reader[clsConstants.ORDER],
                                         Properties =  Reader[clsConstants.PROPERTIES].ToString()
                                     };
                                     Questions.Add(Question);

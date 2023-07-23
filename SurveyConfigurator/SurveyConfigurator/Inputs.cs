@@ -2,6 +2,7 @@
 using ErrorLogger;
 using SurveyConfigurator.UserControls;
 using System;
+//using System.Windows.Controls;
 using System.Windows.Forms;
 using Utilities;
 
@@ -10,6 +11,8 @@ namespace SurveyConfigurator
     public partial class Inputs : Form
     {
         private int Id;
+
+        Logic LogicLayer = new Logic();
 
         public clsQuestionSmiley QuestionSmiley = new clsQuestionSmiley();
         public clsQuestionStar QuestionStar = new clsQuestionStar();
@@ -77,31 +80,42 @@ namespace SurveyConfigurator
         }
 
 
-        public void Edit(int Id)
+        public void Edit(int Id,string Type)
         {
             try
             {
                 //set Id to the sent one so we can use it in the other functions
-                this.Id = Id;
+                
 
                 this.Text = "Edit Question";
-                textBoxText.Text = Logic.GetText(Id);
-                comboBoxType.SelectedItem = Logic.GetType(Id);
+                //textBoxText.Text = LogicLayer.GetText(Id);
+                comboBoxType.SelectedItem = Type;
                 comboBoxType.Enabled = false;
 
                 switch (comboBoxType.SelectedItem.ToString())
                 {
                     case clsConstants.SMILEY:
-                        this.ucSmiley.NumberOfSmileys = Logic.GetNumberOfSmileys(Id);
+                        QuestionSmiley.Id= Id;
+                        LogicLayer.GetSmileyQuestion(QuestionSmiley);
+                        textBoxText.Text = QuestionSmiley.Text;
+                        numericUpDownOrder.Value = QuestionSmiley.Order;
+                        this.ucSmiley.NumberOfSmileys = QuestionSmiley.NumberOfSmileys;
                         break;
                     case clsConstants.STAR:
-                        this.ucStar.NumberOfStars = Logic.GetNumberOfStars(Id);
+                        QuestionStar.Id = Id;
+                        LogicLayer.GetStarsQuestion(QuestionStar);
+                        textBoxText.Text = QuestionStar.Text;
+                        numericUpDownOrder.Value = QuestionStar.Order;
+                        this.ucStar.NumberOfStars = QuestionStar.NumberOfStars;
                         break;
                     case clsConstants.SLIDER:
-                        this.ucSlider.StartValue = Logic.GetStartValue(Id);
-                        this.ucSlider.EndValue = Logic.GetEndValue(Id);
-                        this.ucSlider.StartCaption = Logic.GetStartCaption(Id);
-                        this.ucSlider.EndCaption = Logic.GetEndCaption(Id);
+                        QuestionSlider.Id = Id;
+                        LogicLayer.GetSliderQuestion(QuestionSlider);
+                        textBoxText.Text = QuestionSlider.Text;
+                        this.ucSlider.StartValue = QuestionSlider.StartValue;
+                        this.ucSlider.EndValue = QuestionSlider.EndValue;
+                        this.ucSlider.StartCaption = QuestionSlider.StartCaption;
+                        this.ucSlider.EndCaption = QuestionSlider.EndCaption;
                         break;
 
                 }
@@ -128,30 +142,33 @@ namespace SurveyConfigurator
                     switch (comboBoxType.SelectedItem.ToString())
                     {
                         case clsConstants.SMILEY:
+                            QuestionSmiley.Order = (int)numericUpDownOrder.Value;
                             QuestionSmiley.Text = textBoxText.Text;
                             QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
-                            Result = BusinessLayer.Logic.SmileyInputValidation(QuestionSmiley, Id);
+                            Result = LogicLayer.SmileyInputValidation(QuestionSmiley, Id);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();
                             break;
 
                         case clsConstants.STAR:
+                            QuestionStar.Order = (int)numericUpDownOrder.Value;
                             QuestionStar.Text = textBoxText.Text;
                             QuestionStar.NumberOfStars = ucStar.NumberOfStars;
-                            Result = BusinessLayer.Logic.StarsInputValidation(QuestionStar, Id);
+                            Result =LogicLayer.StarsInputValidation(QuestionStar, Id);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();
                             break;
 
                         case clsConstants.SLIDER:
+                            QuestionSlider.Order = (int)numericUpDownOrder.Value;
                             QuestionSlider.Text = textBoxText.Text;
                             QuestionSlider.StartValue = ucSlider.StartValue;
                             QuestionSlider.EndValue = ucSlider.EndValue;
                             QuestionSlider.StartCaption = ucSlider.StartCaption;
                             QuestionSlider.EndCaption = ucSlider.EndCaption;
-                            Result = BusinessLayer.Logic.SliderInputValidation(QuestionSlider, Id);
+                            Result = LogicLayer.SliderInputValidation(QuestionSlider, Id);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();
@@ -166,30 +183,31 @@ namespace SurveyConfigurator
                     switch (comboBoxType.SelectedItem.ToString())
                     {
                         case clsConstants.SMILEY:
-
+                            QuestionSmiley.Order = (int)numericUpDownOrder.Value;
                             QuestionSmiley.Text = textBoxText.Text;
                             QuestionSmiley.NumberOfSmileys = ucSmiley.NumberOfSmileys;
-                            Result = BusinessLayer.Logic.SmileyInputValidation(QuestionSmiley, -1);
+                            Result = LogicLayer.SmileyInputValidation(QuestionSmiley, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();
                             break;
                         case clsConstants.STAR:
-
+                            QuestionStar.Order = (int)numericUpDownOrder.Value;
                             QuestionStar.Text = textBoxText.Text;
                             QuestionStar.NumberOfStars = ucStar.NumberOfStars;
-                            Result = BusinessLayer.Logic.StarsInputValidation(QuestionStar, -1);
+                            Result = LogicLayer.StarsInputValidation(QuestionStar, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();
                             break;
                         case clsConstants.SLIDER:
+                            QuestionSlider.Order = (int)numericUpDownOrder.Value;
                             QuestionSlider.Text = textBoxText.Text;
                             QuestionSlider.StartValue = ucSlider.StartValue;
                             QuestionSlider.EndValue = ucSlider.EndValue;
                             QuestionSlider.StartCaption = ucSlider.StartCaption;
                             QuestionSlider.EndCaption = ucSlider.EndCaption;
-                            Result = BusinessLayer.Logic.SliderInputValidation(QuestionSlider, -1);
+                            Result = LogicLayer.SliderInputValidation(QuestionSlider, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
                                 this.Close();

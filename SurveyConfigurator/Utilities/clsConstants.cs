@@ -36,7 +36,10 @@ namespace Utilities
 
         public const string P_GET_NUMBER_OF_SMILEYS = "P_GetNumberOfSmileys";
         public const string P_EDIT_QUESTION_SMILEY = "P_EditQuestionSmiley";
-
+        public const string P_GET_STARS_QUESTION = "P_GetStarsQuestion";
+        public const string P_GET_SMILEY_QUESTION = "P_GetSmileyQuestion";
+        public const string P_GET_STAR_QUESTION = "P_GetStarQuestion";
+        public const string P_GET_SLIDER_QUESTION = "P_GetSliderQuestion";
 
         public const string P_GET_START_CAPTION = "P_GetStartCaption";
         public const string P_GET_END_CAPTION = "P_GetEndCaption";
@@ -50,6 +53,7 @@ namespace Utilities
         public const string ID = "Id";
         public const string TEXT = "Text";
         public const string TYPE = "Type";
+        public const string ORDER = "Order";
 
         //MERGED
         public const string PROPERTIES = "Properties";
@@ -76,6 +80,7 @@ namespace Utilities
         public const int FAILED_NEW_QUESTION = -5;
         public const int FAILED_DELETE_QUESTION = -6;
         public const int FAILED_EDIT_QUESTION = -7;
+        public const int INVALID_QUESTION_ORDER = -8;
 
         public const int INVALID_NUMBER_OF_SMILEYS = -20;
         public const int INVALID_NUMBER_OF_STARS = -21;
@@ -84,6 +89,7 @@ namespace Utilities
         public const int INVALID_END_LESS_THAN_START_VALUE = -24;
         public const int INVALID_START_CAPTION = -25;
         public const int INVALID_END_CAPTION = -26;
+        public const int UNKNOWN_ERROR = -27;
 
         //ERROR MESSAGES
         public const string SUCCESS_STRING = "Success";
@@ -94,6 +100,7 @@ namespace Utilities
         public const string FAILED_NEW_QUESTION_STRING = "Failed To Add Question";
         public const string FAILED_DELETE_QUESTION_STRING = "Failed To Delete Question";
         public const string FAILED_EDIT_QUESTION_STRING = "Failed To Edit Question";
+        public const string INVALID_QUESTION_ORDER_STRING = "Question Order must be positive and greater than zero.";
 
         public const string INVALID_NUMBER_OF_SMILEYS_STRING = "Invalid Number of Smileys (2-5).";
         public const string INVALID_NUMBER_OF_STARS_STRING = "Invalid Number of Stars (1-10).";
