@@ -3,7 +3,7 @@ using ErrorLogger;
 using SurveyConfigurator.UserControls;
 using System;
 using System.Windows.Forms;
-using Utilities;
+using Entities;
 
 namespace SurveyConfigurator
 {

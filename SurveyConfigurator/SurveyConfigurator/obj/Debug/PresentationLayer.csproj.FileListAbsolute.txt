@@ -27,11 +27,9 @@ C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConf
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\SurveyConfigurator.pdb
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\BusinessLayer.dll
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\ErrorLogger.dll
-C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Utilities.dll
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\DatabaseLayer.dll
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\BusinessLayer.pdb
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\ErrorLogger.pdb
-C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Utilities.pdb
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\DatabaseLayer.pdb
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
@@ -48,3 +46,5 @@ C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConf
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\SurveyConfigurator.pdb
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\SurveyConfigurator.DatabaseConnection.resources
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\BusinessLayer.dll.config
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Entities.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Entities.pdb

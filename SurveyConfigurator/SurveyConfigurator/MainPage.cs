@@ -14,7 +14,7 @@ using System.Windows.Forms;
 using BusinessLayer;
 using System.Data.SqlClient;
 using System.Configuration;
-using Utilities;
+using Entities;
 using System.Security.Cryptography;
 using System.Threading;
 using System.IO;
