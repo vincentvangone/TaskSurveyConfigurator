@@ -26,6 +26,7 @@ namespace Utilities
         public const string P_VIEW = "P_View";
         public const string P_DELETE = "P_Delete";
         public const string P_INSERT = "P_Insert";
+        public const string P_EDIT = "P_Edit";
         public const string P_GET_TYPE = "P_GetType";
 
         public const string P_GET_TEXT = "P_GetText";

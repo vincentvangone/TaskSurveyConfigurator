@@ -31205,3 +31205,1142 @@ Call Stack Trace :
    at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
 
 ------------------------------------------------------------
+
+Log Entry : 8:32:55 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id66
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 233
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 258
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 213
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 141
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:33:12 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id67
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 112
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 101
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 192
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 141
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:33:25 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id68
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 112
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 101
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 192
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 141
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:34:01 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id69
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 233
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 258
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 213
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 141
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:38:41 AM Monday, July 24, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 187
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:38:42 AM Monday, July 24, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 187
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 8:38:43 AM Monday, July 24, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.buttonDelete_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 169
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 9:59:46 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id69
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 302
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id)
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e)
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main()
+
+------------------------------------------------------------
+
+Log Entry : 10:02:02 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id69
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 302
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 269
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 174
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:02:39 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id66
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 302
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 269
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 174
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:05:05 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id59
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionStar Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 291
+   at BusinessLayer.Logic.StarsInputValidation(clsQuestionStar Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 180
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 161
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:06:53 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id70
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 112
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 110
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 151
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:07:38 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id53
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 291
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 110
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 151
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:09:11 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id66
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 414
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 252
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 174
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:38:14 AM Monday, July 24, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+The ConnectionString property has not been initialized.
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 74
+   at BusinessLayer.Logic.CanConnect() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 61
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 72
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:38:52 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id1
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 110
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 102
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 192
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 143
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:39:00 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id2
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionStar Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 163
+   at BusinessLayer.Logic.StarsInputValidation(clsQuestionStar Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 161
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 201
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 143
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:39:21 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id3
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 229
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 242
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 213
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 143
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:39:30 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id4
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 110
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 102
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 192
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 143
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:39:40 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id1
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 288
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 110
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 151
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:40:09 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id3
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 410
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 252
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 174
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 10:40:24 AM Monday, July 24, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id4
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 288
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 110
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 151
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 180
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------

@@ -1,6 +1,7 @@
 ﻿using DatabaseLayer;
 using ErrorLogger;
 using Microsoft.TeamFoundation.Common.Internal;
+using Microsoft.VisualStudio.Services.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -106,17 +107,8 @@ namespace BusinessLayer
                 //if flag = false -> only change text and number of smileys -> update not insert
                 else
                 {
-                    int Result = DatabaseAccess.EditText(Id, Question.Text);
+                    return DatabaseAccess.EditQuestion(Question);
 
-
-                    if (Result == clsConstants.SUCCESS)
-                    {
-                        return DatabaseAccess.EditQuestionSmiley(Id, Question.NumberOfSmileys);
-
-
-                    }
-
-                    else return Result;
                 }
             }
             catch (Exception E)
@@ -176,15 +168,7 @@ namespace BusinessLayer
                 //if id!=-1 -> only change text and number of smileys -> update not insert
                 else
                 {
-                    int Result = DatabaseAccess.EditText(Id, Question.Text);
-
-
-                    if (Result == clsConstants.SUCCESS)
-                    {
-                        return DatabaseAccess.EditQuestionStars(Id, Question.NumberOfStars);
-
-                    }
-                    else return Result;
+                    return DatabaseAccess.EditQuestion(Question);
 
                 }
             }
@@ -264,14 +248,9 @@ namespace BusinessLayer
                 //if id!=-1 -> only change text and number of smileys -> update not insert
                 else
                 {
-                    int Result = DatabaseAccess.EditText(Id, Question.Text);
 
+                    return DatabaseAccess.EditQuestion(Question);
 
-                    if (Result == clsConstants.SUCCESS)
-                    {
-                        return DatabaseAccess.EditQuestionSlider(Id, Question);
-                    }
-                    else return Result;
 
                 }
 
@@ -304,36 +283,11 @@ namespace BusinessLayer
             return DatabaseAccess.GetSliderQuestion(Question);
         }
 
+
         public int DeleteQuestion(int Id)
         {
             return DatabaseAccess.DeleteQuestion(Id);
 
-        }
-        public string GetType(int Id)
-        {
-            return DatabaseAccess.GetType(Id);
-        }
-        public string GetText(int Id)
-        {
-            return DatabaseAccess.GetText(Id);
-        }
-
-      
-        public int GetStartValue(int Id)
-        {
-            return DatabaseAccess.GetStartValue(Id);
-        }
-        public int GetEndValue(int Id)
-        {
-            return DatabaseAccess.GetEndValue(Id);
-        }
-        public string GetStartCaption(int Id)
-        {
-            return DatabaseAccess.GetStartCaption(Id);
-        }
-        public string GetEndCaption(int Id)
-        {
-            return DatabaseAccess.GetEndCaption(Id);
         }
 
         public void SetConnectionString(string Server, string Database, string Username, string Password, bool IntegratedSecurity)

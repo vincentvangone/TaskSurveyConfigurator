@@ -115,6 +115,8 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.DataSource = Questions;
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     dataGridViewQuestions.MultiSelect = false;
+                    dataGridViewQuestions.Columns[clsConstants.ORDER].SortMode = DataGridViewColumnSortMode.Automatic;
+
 
                     //rearrange columns and hide id
                     dataGridViewQuestions.Columns[clsConstants.ID].Visible = false;

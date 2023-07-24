@@ -124,6 +124,52 @@ RETURN @@ERROR
 
 GO  
    
+   GO  
+ 
+  PRINT N'Creating Edit Questions Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Edit')
+DROP PROCEDURE P_Edit
+PRINT N'Dropped Old Procedure...';  
+
+GO
+CREATE PROCEDURE [dbo].[P_Edit](
+@Id INT,
+@Text VARCHAR (1000),  
+@Order INT=1,
+@Type VARCHAR(20),
+@StartValue INT=0,
+@EndValue INT=100,
+@StartCaption VARCHAR(50) = '',
+@EndCaption VARCHAR(50) = '',
+@NumberOfStars INT = 10 ,
+@NumberOfSmileys INT = 5
+)
+AS  
+BEGIN  TRAN
+
+	UPDATE Question SET  Text=@Text,"Order"=@Order
+     WHERE [dbo].[Question].Id =@Id  
+ 
+	 
+	  
+	 IF @Type='Smiley'
+		 UPDATE QuestionSmiley SET  NumberOfSmileys=@NumberOfSmileys
+		 WHERE [dbo].[QuestionSmiley].Id =@Id  
+	ELSE IF @Type='Star'
+		UPDATE QuestionStars SET  NumberOfStars=@NumberOfStars
+		 WHERE [dbo].[QuestionStars].Id =@Id  
+	ELSE IF @Type='Slider'
+	UPDATE [QuestionSlider] SET  StartValue=@StartValue , EndValue= @EndValue , StartCaption=@StartCaption, EndCaption=@EndCaption
+		 WHERE [dbo].[QuestionSlider].Id =@Id  
+		 
+
+COMMIT TRAN
+RETURN @@ERROR
+
+
+GO  
+
 PRINT N'Creating P_GetSmileyQuestion Procedure...'; 
  GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetSmileyQuestion')
@@ -188,152 +234,6 @@ RETURN   @@ERROR
 END  
 GO  
 
-
-PRINT N'Creating P_EditText Procedure...'; 
- GO
-  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditText')
-DROP PROCEDURE P_EditText
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_EditText](
-@Id INT,
-@Text VARCHAR(1000) 
-)
-AS  
-BEGIN 
-UPDATE Question SET  Text=@Text
-     WHERE [dbo].[Question].Id =@Id  
-RETURN @@ERROR
-END  
-GO  
-
-  PRINT N'Creating P_EditQuestionSmiley Procedure...'; 
- GO
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSmiley')
-DROP PROCEDURE P_EditQuestionSmiley
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_EditQuestionSmiley](
-@Id INT,
-@NumberOfSmileys INT
-)
-AS  
-BEGIN 
-UPDATE QuestionSmiley SET  NumberOfSmileys=@NumberOfSmileys
-     WHERE [dbo].[QuestionSmiley].Id =@Id  
-RETURN @@ERROR
-END  
-GO  
-  PRINT N'Creating P_EditQuestionStar Procedure...'; 
- GO
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionStar')
-DROP PROCEDURE P_EditQuestionStar
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_EditQuestionStar](
-@Id INT,
-@NumberOfStars INT
-)
-AS  
-BEGIN 
-UPDATE QuestionStars SET  NumberOfStars=@NumberOfStars
-     WHERE [dbo].[QuestionStars].Id =@Id  
-RETURN @@ERROR
-END  
-GO  
-
-GO  
-  PRINT N'Creating P_GetStartValue Procedure...'; 
- GO
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartValue')
-DROP PROCEDURE P_GetStartValue
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].P_GetStartValue(
-@Id INT ,
-@StartValue INT OUTPUT
-)
-
-AS  
-BEGIN 
-
-SELECT @StartValue = (SELECT StartValue FROM  [dbo].[QuestionSlider] 
-     WHERE [dbo].[QuestionSlider].Id = @Id);
-RETURN   @@ERROR
-
-END  
-GO  
-  PRINT N'Creating P_GetEndValue Procedure...'; 
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndValue')
-DROP PROCEDURE P_GetEndValue
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].P_GetEndValue(
-@Id INT ,
-@EndValue INT OUTPUT
-)
-
-AS  
-BEGIN 
-
-SELECT @EndValue = (SELECT EndValue FROM  [dbo].[QuestionSlider] 
-     WHERE [dbo].[QuestionSlider].Id = @Id);
-RETURN   @@ERROR
-
-END  
-GO  
-
-GO  
-  PRINT N'Creating P_GetStartCaption Procedure...'; 
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetStartCaption')
-DROP PROCEDURE P_GetStartCaption
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].P_GetStartCaption(
-@Id INT ,
-@StartCaption VARCHAR(20) OUTPUT
-)
-
-AS  
-BEGIN 
-
-SELECT @StartCaption = (SELECT StartCaption FROM  [dbo].[QuestionSlider] 
-     WHERE [dbo].[QuestionSlider].Id = @Id);
-RETURN   @@ERROR
-
-END  
-
-GO  
-  PRINT N'Creating P_GetEndCaption Procedure...'; 
-GO  
-
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetEndCaption')
-DROP PROCEDURE P_GetEndCaption
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].P_GetEndCaption(
-@Id INT ,
-@EndCaption VARCHAR(20) OUTPUT
-)
-
-AS  
-BEGIN 
-
-SELECT @EndCaption = (SELECT EndCaption FROM  [dbo].[QuestionSlider] 
-     WHERE [dbo].[QuestionSlider].Id = @Id);
-RETURN   @@ERROR
-
-END  
-GO  
   
 GO  
   PRINT N'Creating Delete Questions Procedure...'; 
@@ -368,32 +268,6 @@ BEGIN  TRAN
 COMMIT TRAN
 RETURN @@ERROR
 GO  
-
-
-  PRINT N'Creating P_EditQuestionSlider Procedure...'; 
-GO  
-IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_EditQuestionSlider')
-DROP PROCEDURE P_EditQuestionSlider
-PRINT N'Dropped Old Procedure...';  
-
-GO
-CREATE PROCEDURE [dbo].[P_EditQuestionSlider](
-@Id INT,
-@StartValue INT,
-@EndValue INT,
-@StartCaption VARCHAR(1000),
-@EndCaption VARCHAR(1000)
-
-)
-
-AS  
-BEGIN 
-UPDATE QuestionSlider SET  StartValue=@StartValue,EndValue=@EndValue, StartCaption=@StartCaption,EndCaption=@EndCaption
-     WHERE [dbo].[QuestionSlider].Id =@Id  
-RETURN @@ERROR
-END  
-GO  
-  
 
   
 GO  

@@ -96,26 +96,29 @@ namespace SurveyConfigurator
                 {
                     case clsConstants.SMILEY:
                         QuestionSmiley.Id= Id;
+                        QuestionSmiley.Type = clsConstants.SMILEY;
                         LogicLayer.GetSmileyQuestion(QuestionSmiley);
                         textBoxText.Text = QuestionSmiley.Text;
                         numericUpDownOrder.Value = QuestionSmiley.Order;
-                        this.ucSmiley.NumberOfSmileys = QuestionSmiley.NumberOfSmileys;
+                        ucSmiley.NumberOfSmileys = QuestionSmiley.NumberOfSmileys;
                         break;
                     case clsConstants.STAR:
                         QuestionStar.Id = Id;
+                        QuestionStar.Type = clsConstants.STAR;
                         LogicLayer.GetStarsQuestion(QuestionStar);
                         textBoxText.Text = QuestionStar.Text;
                         numericUpDownOrder.Value = QuestionStar.Order;
-                        this.ucStar.NumberOfStars = QuestionStar.NumberOfStars;
+                        ucStar.NumberOfStars = QuestionStar.NumberOfStars;
                         break;
                     case clsConstants.SLIDER:
                         QuestionSlider.Id = Id;
+                        this.QuestionSlider.Type = clsConstants.SLIDER;
                         LogicLayer.GetSliderQuestion(QuestionSlider);
                         textBoxText.Text = QuestionSlider.Text;
-                        this.ucSlider.StartValue = QuestionSlider.StartValue;
-                        this.ucSlider.EndValue = QuestionSlider.EndValue;
-                        this.ucSlider.StartCaption = QuestionSlider.StartCaption;
-                        this.ucSlider.EndCaption = QuestionSlider.EndCaption;
+                        ucSlider.StartValue = QuestionSlider.StartValue;
+                        ucSlider.EndValue = QuestionSlider.EndValue;
+                        ucSlider.StartCaption = QuestionSlider.StartCaption;
+                        ucSlider.EndCaption = QuestionSlider.EndCaption;
                         break;
 
                 }
