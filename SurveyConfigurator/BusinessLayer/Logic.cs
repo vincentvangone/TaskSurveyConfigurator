@@ -12,6 +12,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Forms;
 //using System.Windows.Forms;
 using System.Xml.Serialization;
 using Utilities;
@@ -20,45 +22,67 @@ namespace BusinessLayer
 {
     public class Logic
     {
-
-        private string LastUpdateTime;
-
-
-        public int CheckForUpdates()
+        private DatabaseAccess DatabaseLayer = new DatabaseAccess();
+        private string lastUpdatetIme = "";
+        private System.Threading.Timer timer; 
+        public string LastUpdateTime
         {
-
-            try
-            {
-                // Check for updates in the shared storage (file)
-                if (File.Exists(DatabaseAccess.LastUpdate))
-                {
-                    string LastDatabaseUpdate = File.ReadAllText(DatabaseAccess.LastUpdate);
-                    if (DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)) < 0)
-                    {
-
-                        // return 1 to Refresh the DataGridView
-                        return 1;
-
-
-                    }
-
-                }
-
-                return 0;
-
-            }
-            catch (Exception E)
-            {
-                Logger.WriteLog(E.Message, clsConstants.ERROR);
-                return -1;
-            }
-
+            set { lastUpdatetIme = value; }
+            get { return lastUpdatetIme; }
+        }
+        
+        public Logic()
+        {
+             
+            // Start a background thread or loop to check for updates
+            timer = new System.Threading.Timer(CheckForUpdatesLoop, null, 0, 1000);//Task.Run(() => CheckForUpdatesLoop());
 
         }
 
+         
+        
+        public void CheckForUpdatesLoop(object state)
+        {
+            try
+            {
+                if (LastUpdateTime == "");
+
+                else { 
+                   // while (true)
+                    //{
+
+                        string LastDatabaseUpdate =  DatabaseLayer.GetLastUpdate();
+                   
+                    if (LastDatabaseUpdate != "")
+                        {
+                        //MessageBox.Show(LastUpdateTime);
+                        //MessageBox.Show(LastDatabaseUpdate);
+                        if (DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)) < 0)
+                            {
+                           // MessageBox.Show(LastUpdateTime);
+                            //MessageBox.Show(LastDatabaseUpdate);
+                            //Refresh the DataGridView
+                            ViewQuestions();
+
+
+                            }
+                        }
+
+                        //delay to avoid excessive checking and resource usage
+                        //Thread.Sleep(1000);
+                    }
+            }
+            catch (Exception E)
+            {
+                //Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
+        }
+
+       
+
         public bool CanConnect()
         {
-            return DatabaseAccess.CanConnect();
+            return  DatabaseLayer.CanConnect();
 
         }
 
@@ -99,7 +123,7 @@ namespace BusinessLayer
                 //NewSmileyQuestion is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
-                    return DatabaseAccess.NewQuestion(Question);
+                    return  DatabaseLayer.NewQuestion(Question);
                 }
 
 
@@ -107,14 +131,14 @@ namespace BusinessLayer
                 //if flag = false -> only change text and number of smileys -> update not insert
                 else
                 {
-                    return DatabaseAccess.EditQuestion(Question);
+                    return  DatabaseLayer.EditQuestion(Question);
 
                 }
             }
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
-                if (Id == -1) return clsConstants.FAILED_EDIT_QUESTION;
+                if (Id != -1) return clsConstants.FAILED_EDIT_QUESTION;
                 else return clsConstants.FAILED_NEW_QUESTION;
             }
 
@@ -158,7 +182,7 @@ namespace BusinessLayer
                 //id is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
-                    return DatabaseAccess.NewQuestion(Question);
+                    return  DatabaseLayer.NewQuestion(Question);
 
 
                 }
@@ -168,14 +192,14 @@ namespace BusinessLayer
                 //if id!=-1 -> only change text and number of smileys -> update not insert
                 else
                 {
-                    return DatabaseAccess.EditQuestion(Question);
+                    return  DatabaseLayer.EditQuestion(Question);
 
                 }
             }
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
-                if (Id == -1) return clsConstants.FAILED_EDIT_QUESTION;
+                if (Id != -1) return clsConstants.FAILED_EDIT_QUESTION;
                 else return clsConstants.FAILED_NEW_QUESTION;
             }
 
@@ -239,7 +263,7 @@ namespace BusinessLayer
                 //id is the flag to know if we should create new question or update previous
                 if (Id == -1)
                 {
-                    return DatabaseAccess.NewQuestion(Question);
+                    return  DatabaseLayer.NewQuestion(Question);
 
                 }
 
@@ -249,7 +273,7 @@ namespace BusinessLayer
                 else
                 {
 
-                    return DatabaseAccess.EditQuestion(Question);
+                    return  DatabaseLayer.EditQuestion(Question);
 
 
                 }
@@ -260,7 +284,7 @@ namespace BusinessLayer
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
-                if (Id == -1) return clsConstants.FAILED_EDIT_QUESTION;
+                if (Id != -1) return clsConstants.FAILED_EDIT_QUESTION;
                 else return clsConstants.FAILED_NEW_QUESTION;
             }
 
@@ -269,35 +293,35 @@ namespace BusinessLayer
 
         public int GetSmileyQuestion(clsQuestionSmiley Question)
         {
-            return DatabaseAccess.GetSmileyQuestion(Question);
+            return  DatabaseLayer.GetSmileyQuestion(Question);
         }
 
         public int GetStarsQuestion(clsQuestionStar Question)
         {
-            return DatabaseAccess.GetStarsQuestion(Question);
+            return  DatabaseLayer.GetStarQuestion(Question);
         }
 
 
         public int GetSliderQuestion(clsQuestionSlider Question)
         {
-            return DatabaseAccess.GetSliderQuestion(Question);
+            return  DatabaseLayer.GetSliderQuestion(Question);
         }
 
 
         public int DeleteQuestion(int Id)
         {
-            return DatabaseAccess.DeleteQuestion(Id);
+            return  DatabaseLayer.DeleteQuestion(Id);
 
         }
 
         public void SetConnectionString(string Server, string Database, string Username, string Password, bool IntegratedSecurity)
         {
-            DatabaseAccess.SetConnectionString(Server, Database, Username, Password, IntegratedSecurity);
+             DatabaseLayer.SetConnectionString(Server, Database, Username, Password, IntegratedSecurity);
         }
         public List<clsMergedQuestions> ViewQuestions()
         {
-            LastUpdateTime = DateTime.Now.ToString();
-            return DatabaseAccess.ViewQuestions();
+            
+            return  DatabaseLayer.ViewQuestions();
         }
 
     }

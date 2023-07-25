@@ -4,37 +4,103 @@ using System.Data.SqlClient;
 using ErrorLogger;
 using System.Data;
 using Utilities;
-//using System.Windows.Forms;
+using System.Windows.Forms;
 using System.IO;
+using System.Globalization;
 
 namespace DatabaseLayer
 {
     public class DatabaseAccess
     {
-        public static string Server { set; get; }
-        public static string Database { set; get; }
-        public static string IntegratedSecurity;
-        public static string Username;
-        public static string Password;
-        public static string CONNECTION;
+        public string Server { set; get; }
+        public string Database { set; get; }
+        public string IntegratedSecurity;
+        public string Username;
+        public string Password;
+        public static string CONNECTION="";
 
-
-        // File path to the shared data file to note updates
-        public const string LastUpdate = ".\\LastUpdate.txt";
-        public static void DataUpdatedInDataLayer()
+        //this is to stop the connection loop on GetLastUpdate before the connection form is submitted 
+        private bool DatabaseChangeFlag = false;
+        
+        public   void DataUpdatedInDataLayer()
         {
             try
             {
-                // Update the shared storage (file) to indicate that data is updated
-                File.WriteAllText(LastUpdate, DateTime.Now.ToString());
+                using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                {
+                    Connection.Open();
+                    try
+                    {
+
+                        SqlCommand UpdateTime = new SqlCommand(clsConstants.P_LAST_UPDATE, Connection);
+                        UpdateTime.CommandType = CommandType.StoredProcedure;
+
+                        // Add input parameter for the stored procedure and specify what to use as its value.
+                        UpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar,30));
+                        UpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
+                        // Update the LastUpdate to indicate that data is updated
+                        UpdateTime.ExecuteNonQuery(); 
+                         
+                    }
+                    catch (Exception E)
+                    {
+                       //Logger.WriteLog(E.Message, clsConstants.ERROR);
+                    }
+                }
             }
             catch (Exception E)
             {
-                Logger.WriteLog(E.Message, clsConstants.ERROR);
+                //Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message); 
             }
         }
+         
+        public   string GetLastUpdate()
+        {
+            try
+            {
+                if (DatabaseChangeFlag)
+                {
+                    using (SqlConnection Connection = new SqlConnection(CONNECTION))
+                    {
+                        Connection.Open();
+                        try
+                        {
 
-        public static void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
+                            SqlCommand GetUpdateTime = new SqlCommand(clsConstants.P_GET_LAST_UPDATE, Connection);
+                            GetUpdateTime.CommandType = CommandType.StoredProcedure;
+
+
+                            // Add the output parameter.
+                            GetUpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar, 30));
+                            GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Direction = ParameterDirection.Output;
+
+
+                            //run previously stored procedure
+                            GetUpdateTime.ExecuteNonQuery();
+                           // MessageBox.Show( GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value.ToString());
+
+                            return GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value.ToString();
+
+
+                        }
+                        catch (Exception E)
+                        {
+                           // Logger.WriteLog(E.Message, clsConstants.ERROR);
+                            return "";
+                        }
+                    }
+                }
+                else return "";
+             }
+            catch (Exception E)
+            {
+                // Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
+                return "";
+            } 
+        }
+
+
+        public   void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
         {
             try
             {
@@ -61,12 +127,13 @@ namespace DatabaseLayer
 
         }
 
-        public static bool CanConnect()
+        public   bool CanConnect()
         {
             try
             {
                 SqlConnection Connection = new SqlConnection(CONNECTION);
                 Connection.Open();
+                Connection.Close();
                 return true;
             }
             catch (Exception E)
@@ -77,7 +144,7 @@ namespace DatabaseLayer
         }
 
         //3 overriden functions to create new question depending on the question type
-        public static int NewQuestion(clsQuestionSmiley Question)
+        public   int NewQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -130,7 +197,7 @@ namespace DatabaseLayer
             }
         }
 
-        public static int NewQuestion(clsQuestionStar Question)
+        public   int NewQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -184,7 +251,7 @@ namespace DatabaseLayer
             }
         }
 
-        public static int NewQuestion(clsQuestionSlider Question)
+        public   int NewQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -253,7 +320,7 @@ namespace DatabaseLayer
 
         //3 overriden functions to edit previously created questions depending on the question type
 
-        public static int EditQuestion(clsQuestionSmiley Question)
+        public   int EditQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -309,7 +376,7 @@ namespace DatabaseLayer
             }
         }
 
-        public static int EditQuestion(clsQuestionStar Question)
+        public   int EditQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -365,7 +432,7 @@ namespace DatabaseLayer
             }
         }
 
-        public static int EditQuestion(clsQuestionSlider Question)
+        public   int EditQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -403,7 +470,7 @@ namespace DatabaseLayer
                         EditQuestion.Parameters.Add(new SqlParameter("@" + clsConstants.END_CAPTION, SqlDbType.VarChar, 50));
                         EditQuestion.Parameters["@" + clsConstants.END_CAPTION].Value = Question.EndCaption;
 
-                       
+
                         //run previously stored procedure
                         if (EditQuestion.ExecuteNonQuery() > 0)
                         {
@@ -413,7 +480,7 @@ namespace DatabaseLayer
                         }
                         else
                         {
-                            
+
                             return clsConstants.FAILED_EDIT_QUESTION;
                         }
                     }
@@ -431,7 +498,7 @@ namespace DatabaseLayer
             }
         }
 
-        public static int DeleteQuestion(int Id)
+        public   int DeleteQuestion(int Id)
         {
 
             try
@@ -472,7 +539,7 @@ namespace DatabaseLayer
 
         }
 
-        public static int GetSmileyQuestion(clsQuestionSmiley Question)
+        public   int GetSmileyQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -518,7 +585,7 @@ namespace DatabaseLayer
 
         }
 
-        public static int GetStarsQuestion(clsQuestionStar Question)
+        public   int GetStarQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -564,7 +631,7 @@ namespace DatabaseLayer
 
         }
 
-        public static int GetSliderQuestion(clsQuestionSlider Question)
+        public   int GetSliderQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -614,24 +681,26 @@ namespace DatabaseLayer
 
         }
 
-        
-        public static List<clsMergedQuestions> ViewQuestions()
+
+        public   List<clsMergedQuestions> ViewQuestions()
         {
             List<clsMergedQuestions> Questions = new List<clsMergedQuestions>();
             try
             {
-
+                
+                DatabaseChangeFlag = true;
+                DataUpdatedInDataLayer();
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))
                 {
                     try
                     {
-                        
+
                         using (SqlCommand ViewQuestions = new SqlCommand(clsConstants.P_VIEW, Connection))
                         {
                             Connection.Open();
                             using (SqlDataReader Reader = ViewQuestions.ExecuteReader())
                             {
-                                while(Reader.Read())
+                                while (Reader.Read())
                                 {
                                     clsMergedQuestions Question = new clsMergedQuestions
                                     {
@@ -639,7 +708,7 @@ namespace DatabaseLayer
                                         Id = (int)Reader[clsConstants.ID],
                                         Text = Reader[clsConstants.TEXT].ToString(),
                                         Order = (int)Reader[clsConstants.ORDER],
-                                        Properties =  Reader[clsConstants.PROPERTIES].ToString()
+                                        Properties = Reader[clsConstants.PROPERTIES].ToString()
                                     };
                                     Questions.Add(Question);
 
@@ -658,7 +727,7 @@ namespace DatabaseLayer
             }
             catch (Exception E)
             {
-                Logger.WriteLog(E.Message,clsConstants.ERROR);
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
                 return Questions;
             }
         }

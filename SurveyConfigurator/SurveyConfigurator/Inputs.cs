@@ -85,7 +85,7 @@ namespace SurveyConfigurator
             try
             {
                 //set Id to the sent one so we can use it in the other functions
-                
+                this.Id = Id;
 
                 this.Text = "Edit Question";
                 //textBoxText.Text = LogicLayer.GetText(Id);
@@ -114,6 +114,7 @@ namespace SurveyConfigurator
                         QuestionSlider.Id = Id;
                         this.QuestionSlider.Type = clsConstants.SLIDER;
                         LogicLayer.GetSliderQuestion(QuestionSlider);
+                        numericUpDownOrder.Value = QuestionSlider.Order;
                         textBoxText.Text = QuestionSlider.Text;
                         ucSlider.StartValue = QuestionSlider.StartValue;
                         ucSlider.EndValue = QuestionSlider.EndValue;

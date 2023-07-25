@@ -18,58 +18,40 @@ using Utilities;
 using System.Security.Cryptography;
 using System.Threading;
 using System.IO;
+using System.Globalization;
 
 namespace SurveyConfigurator
 {
     public partial class formSurveyConfigurator : Form
     {
 
-        Logic LogicLayer = new Logic();
+        private Logic LogicLayer = new Logic();
         public formSurveyConfigurator()
         {
             try
             {
                 InitializeComponent();
+
                
-                // Start a background thread or loop to check for updates
-                //Task.Run(() => CheckForUpdatesLoop());
                 Form Connect = new DatabaseConnection();
                 Connect.ShowDialog();
-
+                
+                //formSurveyConfigurator_Load(this, null);
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
 
 
         }
-
-        //public void CheckForUpdatesLoop()
-        //{
-        //    try
-        //    {
-        //        while (true)
-        //        {
-        //            if (LogicLayer.CheckForUpdates() == 1)
-        //                ViewQuestions();
-
-        //            //delay to avoid excessive checking and resource usage
-        //            Thread.Sleep(1000);
-        //        }
-        //    }
-        //    catch(Exception E)
-        //    {
-        //        Logger.WriteLog(E.Message,clsConstants.ERROR);
-        //    }
-        //}
-
+         
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
             try
             {
-
-                if (!LogicLayer.CanConnect())
+               
+                if (!this.LogicLayer.CanConnect())
                 {
 
                     buttonAdd.Enabled = false;
@@ -99,8 +81,8 @@ namespace SurveyConfigurator
         {
             try
             {
-
-                List<clsMergedQuestions> Questions = LogicLayer.ViewQuestions();
+                this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
+                List <clsMergedQuestions> Questions = this.LogicLayer.ViewQuestions();
                 //if no questions in the database
                 if (!Questions.Any())
                 {
@@ -124,7 +106,7 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
-
+                   
                 }
             }
             catch (Exception E)
@@ -159,7 +141,7 @@ namespace SurveyConfigurator
                 DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING + Id + " ?", clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
-                    ErrorMessage(LogicLayer.DeleteQuestion(Id));
+                    ErrorMessage(this.LogicLayer.DeleteQuestion(Id));
                 }
                 ViewQuestions();
             }

@@ -6,7 +6,19 @@ CREATE DATABASE [SurveyConfigurator];
 GO 
 USE [SurveyConfigurator]
 GO
+ --last updated time stamp table (single row at all times)
  
+PRINT N'Creating SurveyConfigurator.LastUpdate...';  
+GO  
+IF NOT EXISTS (SELECT * 
+                 FROM sys.tables 
+                 WHERE  name = 'LastUpdate')
+		 
+CREATE TABLE [dbo].[LastUpdate] (  
+    
+    [UpdateTime] VARCHAR(30) NOT NULL 
+   
+);  
 PRINT N'Creating SurveyConfigurator.Question...';  
 GO  
 IF NOT EXISTS (SELECT * 
@@ -82,8 +94,42 @@ IF NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAIN
 ALTER TABLE [dbo].[QuestionSlider]  
     ADD CONSTRAINT [FK_QuestionSlider_Question_Id] FOREIGN KEY ([Id]) REFERENCES [dbo].[Question] ([Id]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
 GO  
- 
-  PRINT N'Creating Insert Questions Procedure...'; 
+
+PRINT N'Creating P_LastUpdate Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_LastUpdate')
+DROP PROCEDURE P_LastUpdate
+GO
+CREATE PROCEDURE [dbo].[P_LastUpdate](
+@UpdateTime VARCHAR(30)
+)
+AS  
+BEGIN  TRAN
+
+	DELETE FROM LastUpdate;
+	INSERT INTO [dbo].[LastUpdate] (UpdateTime) VALUES (@UpdateTime)
+
+COMMIT TRAN
+RETURN @@ERROR
+GO  
+
+
+PRINT N'Creating P_GetLastUpdate Procedure...'; 
+GO  
+IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetLastUpdate')
+DROP PROCEDURE P_GetLastUpdate
+GO
+CREATE PROCEDURE [dbo].[P_GetLastUpdate](
+@UpdateTime VARCHAR(30) OUTPUT
+)
+AS  
+BEGIN
+	SET @UpdateTime = (SELECT * FROM [LastUpdate]  )
+END
+RETURN @@ERROR
+GO  
+
+PRINT N'Creating Insert Questions Procedure...'; 
 GO  
 IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_Insert')
 DROP PROCEDURE P_Insert
@@ -124,7 +170,7 @@ RETURN @@ERROR
 
 GO  
    
-   GO  
+GO  
  
   PRINT N'Creating Edit Questions Procedure...'; 
 GO  

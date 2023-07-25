@@ -21,34 +21,23 @@ namespace Utilities
         public const string INFORMATION = "Information";
         public const string WARNING = "Warning";
 
+        //Update procedure parameters
+        public const string UPDATE_TIME = "UpdateTime";
 
         //PROCEDURE NAMES
+        public const string P_LAST_UPDATE = "P_LastUpdate";
+        public const string P_GET_LAST_UPDATE = "P_GetLastUpdate";
+
         public const string P_VIEW = "P_View";
         public const string P_DELETE = "P_Delete";
         public const string P_INSERT = "P_Insert";
         public const string P_EDIT = "P_Edit";
-        public const string P_GET_TYPE = "P_GetType";
-
-        public const string P_GET_TEXT = "P_GetText";
-        public const string P_EDIT_TEXT = "P_EditText";
-
-        public const string P_GET_NUMBER_OF_STARS = "P_GetNumberOfStars";
-        public const string P_EDIT_QUESTION_STARS = "P_EditQuestionStar";
-
-        public const string P_GET_NUMBER_OF_SMILEYS = "P_GetNumberOfSmileys";
-        public const string P_EDIT_QUESTION_SMILEY = "P_EditQuestionSmiley";
-        public const string P_GET_STARS_QUESTION = "P_GetStarsQuestion";
+        
         public const string P_GET_SMILEY_QUESTION = "P_GetSmileyQuestion";
         public const string P_GET_STAR_QUESTION = "P_GetStarQuestion";
         public const string P_GET_SLIDER_QUESTION = "P_GetSliderQuestion";
 
-        public const string P_GET_START_CAPTION = "P_GetStartCaption";
-        public const string P_GET_END_CAPTION = "P_GetEndCaption";
-        public const string P_GET_START_VALUE = "P_GetStartValue";
-        public const string P_GET_END_VALUE = "P_GetEndValue";
-        public const string P_EDIT_SLIDER = "P_EditQuestionSlider";
-
-        public const string P_VIEW_QUESTIONS_SMILEY = "P_ViewQuestionsSmiley";
+       
 
         //QUESTION ATTRIBUTES
         public const string ID = "Id";
@@ -58,7 +47,6 @@ namespace Utilities
 
         //MERGED
         public const string PROPERTIES = "Properties";
-
 
         //SMILEY
         public const string NUMBER_OF_SMILEYS = "NumberOfSmileys";
@@ -93,6 +81,8 @@ namespace Utilities
         public const int UNKNOWN_ERROR = -27;
 
         //ERROR MESSAGES
+        public const string TIMESTAMP_UPDATE_FAILED = "Timestamp update in database failed.";
+
         public const string SUCCESS_STRING = "Success";
         public const string VIEW_FAILED_STRING = "View Question Procedure Failed.";
         public const string TYPE_NOT_SELECTED_STRING = "Question Type not Selected.";
@@ -113,7 +103,6 @@ namespace Utilities
 
         public const string EMPTY_SERVER_STRING = "SQL Server can't be empty.";
         public const string EMPTY_DATABASE_STRING = "SQL Database can't be empty.";
-
         public const string DELETE_QUESTION_CONFIRM_STRING="Are you sure you want to delete question ";
 
     }
