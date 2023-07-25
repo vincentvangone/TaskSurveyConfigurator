@@ -37,8 +37,9 @@ namespace Utilities
         public const string P_GET_STAR_QUESTION = "P_GetStarQuestion";
         public const string P_GET_SLIDER_QUESTION = "P_GetSliderQuestion";
 
-       
-
+        //CONNECTION STRING
+        public const string SET_CONNECTION_WINDOWS_AUTH = "Data Source={0};Initial Catalog ={1}; Integrated Security = {2}";
+        public const string SET_CONNECTION_SQL_AUTH = "Data Source={0};Initial Catalog ={1};User Id={3}; Password={4}";
         //QUESTION ATTRIBUTES
         public const string ID = "Id";
         public const string TEXT = "Text";

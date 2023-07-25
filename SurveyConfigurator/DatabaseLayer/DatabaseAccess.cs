@@ -7,6 +7,9 @@ using Utilities;
 using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
+using System.Configuration;
+using System.Text;
+using System.Xml;
 
 namespace DatabaseLayer
 {
@@ -17,12 +20,14 @@ namespace DatabaseLayer
         public string IntegratedSecurity;
         public string Username;
         public string Password;
-        public static string CONNECTION="";
+        public static string CONNECTION = ConfigurationManager.ConnectionStrings["CONNECTION"].ToString();
 
         //this is to stop the connection loop on GetLastUpdate before the connection form is submitted 
         private bool DatabaseChangeFlag = false;
-        
-        public   void DataUpdatedInDataLayer()
+
+
+
+        public void DataUpdatedInDataLayer()
         {
             try
             {
@@ -36,15 +41,16 @@ namespace DatabaseLayer
                         UpdateTime.CommandType = CommandType.StoredProcedure;
 
                         // Add input parameter for the stored procedure and specify what to use as its value.
-                        UpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar,30));
+                        UpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar, 30));
                         UpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
                         // Update the LastUpdate to indicate that data is updated
-                        UpdateTime.ExecuteNonQuery(); 
-                         
+                        UpdateTime.ExecuteNonQuery();
+
+
                     }
                     catch (Exception E)
                     {
-                       //Logger.WriteLog(E.Message, clsConstants.ERROR);
+                        //Logger.WriteLog(E.Message, clsConstants.ERROR);
                     }
                 }
             }
@@ -53,8 +59,10 @@ namespace DatabaseLayer
                 //Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message); 
             }
         }
-         
-        public   string GetLastUpdate()
+
+
+
+        public string GetLastUpdate()
         {
             try
             {
@@ -77,7 +85,7 @@ namespace DatabaseLayer
 
                             //run previously stored procedure
                             GetUpdateTime.ExecuteNonQuery();
-                           // MessageBox.Show( GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value.ToString());
+                            // MessageBox.Show( GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value.ToString());
 
                             return GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value.ToString();
 
@@ -85,39 +93,61 @@ namespace DatabaseLayer
                         }
                         catch (Exception E)
                         {
-                           // Logger.WriteLog(E.Message, clsConstants.ERROR);
+                            // Logger.WriteLog(E.Message, clsConstants.ERROR);
                             return "";
                         }
                     }
                 }
                 else return "";
-             }
+            }
             catch (Exception E)
             {
                 // Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return "";
-            } 
+            }
         }
 
 
-        public   void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
+        public void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
         {
             try
             {
+                
                 Server = tServer;
                 Database = tDatabase;
+                string Connection;
                 if (tIntegratedSecurity)
                 {
                     IntegratedSecurity = "True";
-                    CONNECTION = String.Format("Data Source={0};Initial Catalog ={1}; Integrated Security = {2}", Server, Database, IntegratedSecurity);
+                    //Constructing connection string from the inputs
+                    Connection = string.Format(clsConstants.SET_CONNECTION_WINDOWS_AUTH, Server, Database, IntegratedSecurity);
                 }
                 else
                 {
                     IntegratedSecurity = "False";
                     Username = tUsername;
                     Password = tPassword;
-                    CONNECTION = String.Format("Data Source={0};Initial Catalog ={1};User Id={3}; Password={4}", Server, Database, Username, Password);
+                    Connection = string.Format(clsConstants.SET_CONNECTION_SQL_AUTH, Server, Database, Username, Password);
                 }
+
+                //updating APP.config file
+                XmlDocument XmlDoc = new XmlDocument();
+                //to refresh connection string each time else it will use  previous connection string
+                //Loading the Config file
+                XmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+                foreach (XmlElement xElement in XmlDoc.DocumentElement)
+                {
+                    if (xElement.Name == "connectionStrings")
+                    {
+                        //setting the coonection string
+                        xElement.FirstChild.Attributes[2].Value = Connection;
+                    }
+                }
+                //writing the connection string in config file
+                XmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+                ConfigurationManager.RefreshSection("connectionStrings");
+                CONNECTION = ConfigurationManager.ConnectionStrings["CONNECTION"].ToString();
+
             }
             catch (Exception E)
             {
@@ -127,24 +157,34 @@ namespace DatabaseLayer
 
         }
 
-        public   bool CanConnect()
+        public SqlConnection Connection;
+        public bool CanConnect(string TestConnectionString="")
         {
             try
             {
-                SqlConnection Connection = new SqlConnection(CONNECTION);
+                
+
+                if (TestConnectionString == "")
+                    Connection = new SqlConnection(CONNECTION);
+                else
+                     Connection = new SqlConnection(TestConnectionString);
                 Connection.Open();
                 Connection.Close();
                 return true;
             }
             catch (Exception E)
             {
+                Connection.Close();
                 Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return false;
             }
+            
+            
+
         }
 
         //3 overriden functions to create new question depending on the question type
-        public   int NewQuestion(clsQuestionSmiley Question)
+        public int NewQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -197,7 +237,7 @@ namespace DatabaseLayer
             }
         }
 
-        public   int NewQuestion(clsQuestionStar Question)
+        public int NewQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -251,7 +291,7 @@ namespace DatabaseLayer
             }
         }
 
-        public   int NewQuestion(clsQuestionSlider Question)
+        public int NewQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -320,7 +360,7 @@ namespace DatabaseLayer
 
         //3 overriden functions to edit previously created questions depending on the question type
 
-        public   int EditQuestion(clsQuestionSmiley Question)
+        public int EditQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -376,7 +416,7 @@ namespace DatabaseLayer
             }
         }
 
-        public   int EditQuestion(clsQuestionStar Question)
+        public int EditQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -432,7 +472,7 @@ namespace DatabaseLayer
             }
         }
 
-        public   int EditQuestion(clsQuestionSlider Question)
+        public int EditQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -498,7 +538,7 @@ namespace DatabaseLayer
             }
         }
 
-        public   int DeleteQuestion(int Id)
+        public int DeleteQuestion(int Id)
         {
 
             try
@@ -539,7 +579,7 @@ namespace DatabaseLayer
 
         }
 
-        public   int GetSmileyQuestion(clsQuestionSmiley Question)
+        public int GetSmileyQuestion(clsQuestionSmiley Question)
         {
             try
             {
@@ -585,7 +625,7 @@ namespace DatabaseLayer
 
         }
 
-        public   int GetStarQuestion(clsQuestionStar Question)
+        public int GetStarQuestion(clsQuestionStar Question)
         {
             try
             {
@@ -631,7 +671,7 @@ namespace DatabaseLayer
 
         }
 
-        public   int GetSliderQuestion(clsQuestionSlider Question)
+        public int GetSliderQuestion(clsQuestionSlider Question)
         {
             try
             {
@@ -682,12 +722,12 @@ namespace DatabaseLayer
         }
 
 
-        public   List<clsMergedQuestions> ViewQuestions()
+        public List<clsMergedQuestions> ViewQuestions()
         {
             List<clsMergedQuestions> Questions = new List<clsMergedQuestions>();
             try
             {
-                
+
                 DatabaseChangeFlag = true;
                 DataUpdatedInDataLayer();
                 using (SqlConnection Connection = new SqlConnection(CONNECTION))

@@ -26,17 +26,23 @@ namespace SurveyConfigurator
     {
 
         private Logic LogicLayer = new Logic();
+
+
+
         public formSurveyConfigurator()
         {
             try
             {
                 InitializeComponent();
 
-               
-                Form Connect = new DatabaseConnection();
-                Connect.ShowDialog();
-                
-                //formSurveyConfigurator_Load(this, null);
+                if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString()=="") {
+                    Form Connect = new DatabaseConnection();
+                    Connect.ShowDialog(); }
+
+
+                //subscribe to event 
+                LogicLayer.RequestUIUpdate += Logic_RequestUIUpdate;
+                ViewQuestions();
             }
             catch (Exception E)
             {
@@ -45,15 +51,21 @@ namespace SurveyConfigurator
 
 
         }
-         
+
+        private void Logic_RequestUIUpdate(object sender, EventArgs e)
+        {
+                ViewQuestions();
+        }
+
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
             try
             {
-               
+
                 if (!this.LogicLayer.CanConnect())
                 {
-
+                    dataGridViewQuestions.DataSource = null;
+                    dataGridViewQuestions.Rows.Clear();
                     buttonAdd.Enabled = false;
                     buttonEdit.Enabled = false;
                     buttonDelete.Enabled = false;
@@ -63,8 +75,7 @@ namespace SurveyConfigurator
                 {
                     ViewQuestions();
                     buttonAdd.Enabled = true;
-                    buttonDelete.Enabled = false;
-                    buttonEdit.Enabled = false;
+                    
                 }
             }
             catch (Exception E)
@@ -72,17 +83,18 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
 
-            
+
         }
 
 
-    
+
         public void ViewQuestions()
         {
             try
             {
-                this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
-                List <clsMergedQuestions> Questions = this.LogicLayer.ViewQuestions();
+                Logic.LastUpdateTime = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
+                List<clsMergedQuestions> Questions = this.LogicLayer.ViewQuestions();
+                
                 //if no questions in the database
                 if (!Questions.Any())
                 {
@@ -91,13 +103,14 @@ namespace SurveyConfigurator
                 }
                 else
                 {
+                    
+
                     buttonDelete.Enabled = true;
                     buttonEdit.Enabled = true;
 
                     dataGridViewQuestions.DataSource = Questions;
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     dataGridViewQuestions.MultiSelect = false;
-                    dataGridViewQuestions.Columns[clsConstants.ORDER].SortMode = DataGridViewColumnSortMode.Automatic;
 
 
                     //rearrange columns and hide id
@@ -106,12 +119,12 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
-                   
+
                 }
             }
             catch (Exception E)
             {
-                Logger.WriteLog(E.Message,clsConstants.ERROR);
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
 
@@ -125,9 +138,9 @@ namespace SurveyConfigurator
                 NewQuestion.ShowDialog();
                 ViewQuestions();
             }
-            catch(Exception E)
+            catch (Exception E)
             {
-                Logger.WriteLog(E.Message,clsConstants.ERROR);
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
 
@@ -142,15 +155,16 @@ namespace SurveyConfigurator
                 if (dialogResult == DialogResult.OK)
                 {
                     ErrorMessage(this.LogicLayer.DeleteQuestion(Id));
+                    ViewQuestions();
                 }
-                ViewQuestions();
+                
             }
-             
-            catch(Exception E)
+
+            catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
-}
+        }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -163,12 +177,12 @@ namespace SurveyConfigurator
 
                 ViewQuestions();
             }
-             
-            catch(Exception E)
+
+            catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
-}
+        }
         public void ErrorMessage(int ErrorCode)
         {
             //System.Windows.Forms.MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
@@ -178,33 +192,35 @@ namespace SurveyConfigurator
         {
             try
             {
-                buttonDelete.Enabled = true;
-                buttonEdit.Enabled = true;
+                if (e.RowIndex != -1)
+                {
+                    buttonDelete.Enabled = true;
+                    buttonEdit.Enabled = true;
+                }
             }
-             
-            catch(Exception E)
+
+            catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
 
 
-}
+        }
 
-        private void pictureBoxConnect_Click(object sender, EventArgs e)
+
+        private void buttonConnect_Click(object sender, EventArgs e)
         {
+
             try
             {
                 Form Connect = new DatabaseConnection();
                 Connect.ShowDialog();
-                formSurveyConfigurator_Load(this,null);
+                formSurveyConfigurator_Load(this, null);
             }
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
-            
         }
-
-
     }
 }
