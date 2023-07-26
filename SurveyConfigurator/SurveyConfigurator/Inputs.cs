@@ -23,6 +23,11 @@ namespace SurveyConfigurator
         ExtraInputStar ucStar = new ExtraInputStar();
         ExtraInputSlider ucSlider = new ExtraInputSlider();
 
+
+
+        // Define an event to reload the main form when saved
+        public event EventHandler<EventArgs> E_RequestMainFormUpdate;
+
         public Inputs()
         {
             try
@@ -51,6 +56,16 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
+
+
+
+        protected virtual void OnRequestMainFormUpdate()
+        {
+            // Raise the event to request a UI update in the UI layer
+            E_RequestMainFormUpdate?.Invoke(this, EventArgs.Empty);
+        }
+
+
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -152,7 +167,11 @@ namespace SurveyConfigurator
                             Result = LogicLayer.SmileyInputValidation(QuestionSmiley, Id);
                             ErrorMessage(Result);
                             if (Result == 1)
+                            {
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
+                            
                             break;
 
                         case clsConstants.STAR:
@@ -162,7 +181,11 @@ namespace SurveyConfigurator
                             Result =LogicLayer.StarsInputValidation(QuestionStar, Id);
                             ErrorMessage(Result);
                             if (Result == 1)
+                            {
+                               
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
                             break;
 
                         case clsConstants.SLIDER:
@@ -174,8 +197,10 @@ namespace SurveyConfigurator
                             QuestionSlider.EndCaption = ucSlider.EndCaption;
                             Result = LogicLayer.SliderInputValidation(QuestionSlider, Id);
                             ErrorMessage(Result);
-                            if (Result == 1)
+                            if (Result == 1) {
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
                             break;
 
                     }
@@ -193,7 +218,10 @@ namespace SurveyConfigurator
                             Result = LogicLayer.SmileyInputValidation(QuestionSmiley, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
+                            {
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
                             break;
                         case clsConstants.STAR:
                             QuestionStar.Order = (int)numericUpDownOrder.Value;
@@ -202,7 +230,10 @@ namespace SurveyConfigurator
                             Result = LogicLayer.StarsInputValidation(QuestionStar, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
+                            {
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
                             break;
                         case clsConstants.SLIDER:
                             QuestionSlider.Order = (int)numericUpDownOrder.Value;
@@ -214,7 +245,10 @@ namespace SurveyConfigurator
                             Result = LogicLayer.SliderInputValidation(QuestionSlider, -1);
                             ErrorMessage(Result);
                             if (Result == 1)
+                            {
+                                OnRequestMainFormUpdate();
                                 this.Close();
+                            }
                             break;
 
                     }
@@ -242,46 +276,61 @@ namespace SurveyConfigurator
 
         public void ErrorMessage(int ErrorCode)
         {
-            string Result= ErrorStrings(ErrorCode);
-            if (Result != "") 
-                MessageBox.Show(Result,clsConstants.ERROR,MessageBoxButtons.OK,MessageBoxIcon.Error);
+            try
+            {
+                string Result = ErrorStrings(ErrorCode);
+                if (Result != "")
+                    MessageBox.Show(Result, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
 
         public static string ErrorStrings(int Result)
         {
-            switch (Result)
+            try
             {
-                case clsConstants.SUCCESS:
-                    return "";
-                case clsConstants.TYPE_NOT_SELECTED:
-                    return clsConstants.TYPE_NOT_SELECTED_STRING;
-                case clsConstants.FAILED_DATABASE_CONNECTION:
-                    return clsConstants.FAILED_DATABASE_CONNECTION_STRING;
-                case clsConstants.TEXT_NOT_SPECIFIED:
-                    return clsConstants.TEXT_NOT_SPECIFIED_STRING;
-                case clsConstants.FAILED_NEW_QUESTION:
-                    return clsConstants.FAILED_NEW_QUESTION_STRING;
-                case clsConstants.FAILED_DELETE_QUESTION:
-                    return clsConstants.FAILED_DELETE_QUESTION_STRING;
-                case clsConstants.FAILED_EDIT_QUESTION:
-                    return clsConstants.FAILED_EDIT_QUESTION_STRING;
-                case clsConstants.INVALID_NUMBER_OF_SMILEYS:
-                    return clsConstants.INVALID_NUMBER_OF_SMILEYS_STRING;
-                case clsConstants.INVALID_NUMBER_OF_STARS:
-                    return clsConstants.INVALID_NUMBER_OF_STARS_STRING;
-                case clsConstants.INVALID_START_VALUE:
-                    return clsConstants.INVALID_START_VALUE_STRING;
-                case clsConstants.INVALID_END_VALUE:
-                    return clsConstants.INVALID_END_VALUE_STRING;
-                case clsConstants.INVALID_END_LESS_THAN_START_VALUE:
-                    return clsConstants.INVALID_END_LESS_THAN_START_VALUE_STRING;
-                case clsConstants.INVALID_START_CAPTION:
-                    return clsConstants.INVALID_START_CAPTION_STRING;
-                case clsConstants.INVALID_END_CAPTION:
-                    return clsConstants.INVALID_END_CAPTION_STRING;
-                default:
-                    return "Not Found.";
+                switch (Result)
+                {
+                    case clsConstants.SUCCESS:
+                        return "";
+                    case clsConstants.TYPE_NOT_SELECTED:
+                        return clsConstants.TYPE_NOT_SELECTED_STRING;
+                    case clsConstants.FAILED_DATABASE_CONNECTION:
+                        return clsConstants.FAILED_DATABASE_CONNECTION_STRING;
+                    case clsConstants.TEXT_NOT_SPECIFIED:
+                        return clsConstants.TEXT_NOT_SPECIFIED_STRING;
+                    case clsConstants.FAILED_NEW_QUESTION:
+                        return clsConstants.FAILED_NEW_QUESTION_STRING;
+                    case clsConstants.FAILED_DELETE_QUESTION:
+                        return clsConstants.FAILED_DELETE_QUESTION_STRING;
+                    case clsConstants.FAILED_EDIT_QUESTION:
+                        return clsConstants.FAILED_EDIT_QUESTION_STRING;
+                    case clsConstants.INVALID_NUMBER_OF_SMILEYS:
+                        return clsConstants.INVALID_NUMBER_OF_SMILEYS_STRING;
+                    case clsConstants.INVALID_NUMBER_OF_STARS:
+                        return clsConstants.INVALID_NUMBER_OF_STARS_STRING;
+                    case clsConstants.INVALID_START_VALUE:
+                        return clsConstants.INVALID_START_VALUE_STRING;
+                    case clsConstants.INVALID_END_VALUE:
+                        return clsConstants.INVALID_END_VALUE_STRING;
+                    case clsConstants.INVALID_END_LESS_THAN_START_VALUE:
+                        return clsConstants.INVALID_END_LESS_THAN_START_VALUE_STRING;
+                    case clsConstants.INVALID_START_CAPTION:
+                        return clsConstants.INVALID_START_CAPTION_STRING;
+                    case clsConstants.INVALID_END_CAPTION:
+                        return clsConstants.INVALID_END_CAPTION_STRING;
+                    default:
+                        return "Not Found.";
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+                return clsConstants.ERROR;
             }
         }
     }

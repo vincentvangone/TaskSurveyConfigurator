@@ -104,7 +104,10 @@ namespace Utilities
 
         public const string EMPTY_SERVER_STRING = "SQL Server can't be empty.";
         public const string EMPTY_DATABASE_STRING = "SQL Database can't be empty.";
-        public const string DELETE_QUESTION_CONFIRM_STRING="Are you sure you want to delete question ";
+
+
+        public const string DELETE_QUESTION_CONFIRM_STRING="Are you sure you want to delete the selected question?";
+        public const string DELAY_MESSAGE = "This might take a couple of moments.";
 
     }
 }

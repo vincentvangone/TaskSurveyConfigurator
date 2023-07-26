@@ -24,12 +24,12 @@ namespace BusinessLayer
     {
         private DatabaseAccess DatabaseLayer = new DatabaseAccess();
         private string lastUpdateTime = "";
-        private System.Threading.Timer timer;
+        private System.Threading.Timer CheckForUpdatesTimer;
 
 
 
         // Define an event to request a UI update from the UI layer
-        public event EventHandler<EventArgs> RequestUIUpdate;
+        public event EventHandler<EventArgs> E_RequestUIUpdate;
          
         public string LastUpdateTime
         {
@@ -40,7 +40,7 @@ namespace BusinessLayer
         public Logic()
         { 
             // Start a background thread or loop to check for updates
-            timer = new System.Threading.Timer(CheckForUpdatesLoop, null, 0, 1000);//Task.Run(() => CheckForUpdatesLoop());
+            CheckForUpdatesTimer = new System.Threading.Timer(CheckForUpdatesLoop, null, 0, 1000);//Task.Run(() => CheckForUpdatesLoop());
 
         }
 
@@ -48,7 +48,7 @@ namespace BusinessLayer
         protected virtual void OnRequestUIUpdate()
         {
             // Raise the event to request a UI update in the UI layer
-            RequestUIUpdate?.Invoke(this, EventArgs.Empty);
+            E_RequestUIUpdate?.Invoke(this, EventArgs.Empty);
         }
 
 

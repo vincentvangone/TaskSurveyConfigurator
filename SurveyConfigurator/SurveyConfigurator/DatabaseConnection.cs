@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using System.Windows.Forms;
@@ -18,6 +20,10 @@ namespace SurveyConfigurator
     public partial class DatabaseConnection : Form
     {
         Logic LogicLayer = new Logic();
+
+        //reload main to set connection
+        public event EventHandler<EventArgs> E_ResetConnection;
+
         public DatabaseConnection()
         {
             try
@@ -33,6 +39,15 @@ namespace SurveyConfigurator
             }
         }
 
+
+
+        protected virtual void OnResetConnection()
+        {
+            // Raise the event to request a UI update in the UI layer
+            E_ResetConnection?.Invoke(this, EventArgs.Empty);
+        }
+
+
         private void buttonConnect_Click(object sender, EventArgs e)
         {
             try
@@ -45,7 +60,8 @@ namespace SurveyConfigurator
                 else
                 {
                     LogicLayer.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, radioButtonIntegratedSecurity.Checked);
-                    this.Close();
+                    OnResetConnection();
+                    
                 }
 
             }
@@ -56,6 +72,7 @@ namespace SurveyConfigurator
             }
         }
 
+
         private void buttonTest_Click(object sender, EventArgs e)
         {
             try
@@ -65,6 +82,8 @@ namespace SurveyConfigurator
                     MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
+                    MessageBox.Show(clsConstants.DELAY_MESSAGE);
+                    Cursor.Current = Cursors.WaitCursor;
                     if (radioButtonIntegratedSecurity.Checked)
                     {
                         //Constructing connection string from the inputs
@@ -78,17 +97,19 @@ namespace SurveyConfigurator
                     
                     if (LogicLayer.CanConnect(TestConnectionString))
                     {
+                        Cursor.Current = Cursors.WaitCursor;
                         MessageBox.Show(clsConstants.SUCCESS_STRING, clsConstants.SUCCESS_STRING, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
+                        Cursor.Current = Cursors.WaitCursor;
                         MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception E)
             {
-
+                Cursor.Current = Cursors.WaitCursor;
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }

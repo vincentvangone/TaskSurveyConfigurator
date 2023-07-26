@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+ 
 using System.Windows.Forms;
 using BusinessLayer;
 using System.Data.SqlClient;
@@ -19,15 +19,17 @@ using System.Security.Cryptography;
 using System.Threading;
 using System.IO;
 using System.Globalization;
+using System.Security.AccessControl;
 
 namespace SurveyConfigurator
 {
     public partial class formSurveyConfigurator : Form
     {
-
+        private DatabaseConnection Connectionform=new DatabaseConnection();
+        private Inputs InputsForm = new Inputs();
+        private Inputs InputsEditForm = new Inputs();
         private Logic LogicLayer = new Logic();
-
-
+        private List<clsMergedQuestions> Questions;
 
         public formSurveyConfigurator()
         {
@@ -40,8 +42,11 @@ namespace SurveyConfigurator
                     Connect.ShowDialog(); }
 
 
-                //subscribe to event 
-                LogicLayer.RequestUIUpdate += Logic_RequestUIUpdate;
+                //subscribe to events
+                Connectionform.E_ResetConnection += DatabaseConnection_ResetConnection;
+                InputsForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
+                InputsEditForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
+                LogicLayer.E_RequestUIUpdate += Logic_RequestUIUpdate;
                 ViewQuestions();
             }
             catch (Exception E)
@@ -52,9 +57,22 @@ namespace SurveyConfigurator
 
         }
 
+        private void DatabaseConnection_ResetConnection(object sender, EventArgs e)
+        {
+            Connectionform.Close();
+            MessageBox.Show(clsConstants.DELAY_MESSAGE);
+            Cursor.Current = Cursors.WaitCursor;
+            formSurveyConfigurator_Load(this, null);
+        }
+
         private void Logic_RequestUIUpdate(object sender, EventArgs e)
         {
                 ViewQuestions();
+        }
+
+        private void Inputs_RequestMainFormUpdate(object sender, EventArgs e)
+        {
+            ViewQuestions();
         }
 
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
@@ -64,6 +82,7 @@ namespace SurveyConfigurator
 
                 if (!this.LogicLayer.CanConnect())
                 {
+                    Cursor.Current = Cursors.Default;
                     dataGridViewQuestions.DataSource = null;
                     dataGridViewQuestions.Rows.Clear();
                     buttonAdd.Enabled = false;
@@ -73,6 +92,7 @@ namespace SurveyConfigurator
                 }
                 else
                 {
+                    Cursor.Current = Cursors.Default;
                     ViewQuestions();
                     buttonAdd.Enabled = true;
                     
@@ -93,7 +113,7 @@ namespace SurveyConfigurator
             try
             {
                 this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
-                List<clsMergedQuestions> Questions = this.LogicLayer.ViewQuestions();
+                Questions = this.LogicLayer.ViewQuestions();
                 
                 //if no questions in the database
                 if (!Questions.Any())
@@ -132,11 +152,8 @@ namespace SurveyConfigurator
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
-            {
-
-                Inputs NewQuestion = new Inputs();
-                NewQuestion.ShowDialog();
-                ViewQuestions();
+            { 
+                InputsForm.ShowDialog();
             }
             catch (Exception E)
             {
@@ -151,11 +168,10 @@ namespace SurveyConfigurator
 
                 int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString());
 
-                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING + Id + " ?", clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING , clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
-                    ErrorMessage(this.LogicLayer.DeleteQuestion(Id));
-                    ViewQuestions();
+                    ErrorMessage(this.LogicLayer.DeleteQuestion(Id)); 
                 }
                 
             }
@@ -169,13 +185,9 @@ namespace SurveyConfigurator
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             try
-            {
-
-                Inputs Edit = new Inputs();
-                Edit.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()), this.dataGridViewQuestions.SelectedRows[0].Cells[2].Value.ToString());
-                Edit.ShowDialog();
-
-                ViewQuestions();
+            { 
+                InputsEditForm.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()), this.dataGridViewQuestions.SelectedRows[0].Cells[2].Value.ToString());
+                InputsEditForm.ShowDialog();
             }
 
             catch (Exception E)
@@ -207,15 +219,65 @@ namespace SurveyConfigurator
 
         }
 
+        private void dataGridViewQuestions_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        { 
+            if (Questions != null)
+            {
+                if (e.ColumnIndex == 0)
+                {
+                    Questions = Questions.OrderBy(obj => obj.Properties).ToList();
+                }
+                else if (e.ColumnIndex == 2)
+                {
+                    Questions = Questions.OrderBy(obj => obj.Type).ToList();
+                }
+                else if (e.ColumnIndex == 3)
+                {
+                    Questions = Questions.OrderBy(obj => obj.Text).ToList();
+                }
+                else if (e.ColumnIndex == 4)
+                {
+                    Questions = Questions.OrderBy(obj => obj.Order).ToList();
+                }
+                dataGridViewQuestions.DataSource = null;
+                dataGridViewQuestions.DataSource = Questions;
+                dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridViewQuestions.MultiSelect = false;
+
+
+                //rearrange columns and hide id
+                dataGridViewQuestions.Columns[clsConstants.ID].Visible = false;
+                dataGridViewQuestions.Columns[clsConstants.ORDER].DisplayIndex = 0;
+                dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
+                dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
+                dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
+
+            }
+
+            //if (data != null)
+            //{
+            //    // Check which column was clicked
+            //    if (e.ColumnIndex == yourColumnIndex)
+            //    {
+            //        // Implement your custom sorting logic here based on the clicked column
+            //        // For example, to sort by Name ascending:
+            //        data = data.OrderBy(obj => obj.Name).ToList();
+
+            //        // Refresh the DataGridView with the sorted data
+            //        dataGridView1.DataSource = null;
+            //        dataGridView1.DataSource = data;
+            //    }
+            //}
+        }
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
 
             try
             {
-                Form Connect = new DatabaseConnection();
-                Connect.ShowDialog();
-                formSurveyConfigurator_Load(this, null);
+
+                Connectionform.ShowDialog();
+                 
             }
             catch (Exception E)
             {

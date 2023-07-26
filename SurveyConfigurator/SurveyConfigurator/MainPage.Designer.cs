@@ -114,6 +114,7 @@
             this.dataGridViewQuestions.Size = new System.Drawing.Size(841, 375);
             this.dataGridViewQuestions.TabIndex = 4;
             this.dataGridViewQuestions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQuestions_CellClick);
+            this.dataGridViewQuestions.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewQuestions_ColumnHeaderMouseClick);
             // 
             // panelButtons
             // 

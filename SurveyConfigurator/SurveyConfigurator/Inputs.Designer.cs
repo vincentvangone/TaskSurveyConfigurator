@@ -55,7 +55,7 @@
             this.textBoxText.Location = new System.Drawing.Point(201, 95);
             this.textBoxText.Multiline = true;
             this.textBoxText.Name = "textBoxText";
-            this.textBoxText.Size = new System.Drawing.Size(564, 78);
+            this.textBoxText.Size = new System.Drawing.Size(541, 89);
             this.textBoxText.TabIndex = 7;
             // 
             // labelText
@@ -99,23 +99,23 @@
             this.comboBoxType.Location = new System.Drawing.Point(201, 19);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(564, 27);
+            this.comboBoxType.Size = new System.Drawing.Size(541, 27);
             this.comboBoxType.TabIndex = 4;
             this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
             // panelExtraInputs
             // 
             this.panelExtraInputs.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelExtraInputs.Location = new System.Drawing.Point(0, 182);
+            this.panelExtraInputs.Location = new System.Drawing.Point(0, 193);
             this.panelExtraInputs.Name = "panelExtraInputs";
-            this.panelExtraInputs.Size = new System.Drawing.Size(785, 186);
+            this.panelExtraInputs.Size = new System.Drawing.Size(762, 186);
             this.panelExtraInputs.TabIndex = 8;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(678, 20);
+            this.buttonCancel.Location = new System.Drawing.Point(655, 20);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(87, 34);
             this.buttonCancel.TabIndex = 0;
@@ -127,7 +127,7 @@
             // 
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonSave.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(579, 20);
+            this.buttonSave.Location = new System.Drawing.Point(556, 20);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(87, 34);
             this.buttonSave.TabIndex = 1;
@@ -141,16 +141,16 @@
             this.panelButtons.Controls.Add(this.panelDummy);
             this.panelButtons.Controls.Add(this.buttonCancel);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtons.Location = new System.Drawing.Point(0, 368);
+            this.panelButtons.Location = new System.Drawing.Point(0, 379);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Padding = new System.Windows.Forms.Padding(20);
-            this.panelButtons.Size = new System.Drawing.Size(785, 74);
+            this.panelButtons.Size = new System.Drawing.Size(762, 74);
             this.panelButtons.TabIndex = 2;
             // 
             // panelDummy
             // 
             this.panelDummy.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelDummy.Location = new System.Drawing.Point(666, 20);
+            this.panelDummy.Location = new System.Drawing.Point(643, 20);
             this.panelDummy.Name = "panelDummy";
             this.panelDummy.Size = new System.Drawing.Size(12, 34);
             this.panelDummy.TabIndex = 2;
@@ -171,6 +171,9 @@
             // 
             // numericUpDownOrder
             // 
+            this.numericUpDownOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownOrder.Location = new System.Drawing.Point(199, 57);
             this.numericUpDownOrder.Minimum = new decimal(new int[] {
             1,
@@ -178,7 +181,7 @@
             0,
             0});
             this.numericUpDownOrder.Name = "numericUpDownOrder";
-            this.numericUpDownOrder.Size = new System.Drawing.Size(565, 22);
+            this.numericUpDownOrder.Size = new System.Drawing.Size(542, 22);
             this.numericUpDownOrder.TabIndex = 10;
             this.numericUpDownOrder.Value = new decimal(new int[] {
             1,
@@ -190,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 442);
+            this.ClientSize = new System.Drawing.Size(762, 453);
             this.Controls.Add(this.numericUpDownOrder);
             this.Controls.Add(this.labelOrder);
             this.Controls.Add(this.textBoxText);
@@ -202,7 +205,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 600);
-            this.MinimumSize = new System.Drawing.Size(663, 410);
+            this.MinimumSize = new System.Drawing.Size(780, 440);
             this.Name = "Inputs";
             this.Text = "AddQuestion";
             this.panelButtons.ResumeLayout(false);
