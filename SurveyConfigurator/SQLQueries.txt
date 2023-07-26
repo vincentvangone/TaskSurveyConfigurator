@@ -16,7 +16,7 @@ IF NOT EXISTS (SELECT *
 		 
 CREATE TABLE [dbo].[LastUpdate] (  
     
-    [UpdateTime] VARCHAR(30) NOT NULL 
+    [UpdateTime] DateTime NOT NULL 
    
 );  
 PRINT N'Creating SurveyConfigurator.Question...';  
@@ -101,7 +101,7 @@ IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_LastUpdate')
 DROP PROCEDURE P_LastUpdate
 GO
 CREATE PROCEDURE [dbo].[P_LastUpdate](
-@UpdateTime VARCHAR(30)
+@UpdateTime DateTime
 )
 AS  
 BEGIN  TRAN
@@ -120,7 +120,7 @@ IF EXISTS (SELECT * FROM sys.objects WHERE type='P' AND name='P_GetLastUpdate')
 DROP PROCEDURE P_GetLastUpdate
 GO
 CREATE PROCEDURE [dbo].[P_GetLastUpdate](
-@UpdateTime VARCHAR(30) OUTPUT
+@UpdateTime DateTime OUTPUT
 )
 AS  
 BEGIN

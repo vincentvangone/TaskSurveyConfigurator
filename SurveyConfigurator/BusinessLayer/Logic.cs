@@ -23,7 +23,7 @@ namespace BusinessLayer
     public class Logic
     {
         private DatabaseAccess DatabaseLayer = new DatabaseAccess();
-        private static string lastUpdateTime = "";
+        private string lastUpdateTime = "";
         private System.Threading.Timer timer;
 
 
@@ -31,7 +31,7 @@ namespace BusinessLayer
         // Define an event to request a UI update from the UI layer
         public event EventHandler<EventArgs> RequestUIUpdate;
          
-        public static string LastUpdateTime
+        public string LastUpdateTime
         {
             set { lastUpdateTime = value; }
             get { return lastUpdateTime; }
@@ -68,7 +68,6 @@ namespace BusinessLayer
                     if (LastDatabaseUpdate != "")
                     {
                         //MessageBox.Show(LastUpdateTime);
-                        string x=DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)).ToString();
                         if (DateTime.Compare(DateTime.Parse(LastUpdateTime), DateTime.Parse(LastDatabaseUpdate)) < 0)
                         {
                             // MessageBox.Show(LastUpdateTime);

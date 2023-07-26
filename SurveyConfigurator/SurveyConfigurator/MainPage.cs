@@ -92,7 +92,7 @@ namespace SurveyConfigurator
         {
             try
             {
-                Logic.LastUpdateTime = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
+                this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
                 List<clsMergedQuestions> Questions = this.LogicLayer.ViewQuestions();
                 
                 //if no questions in the database

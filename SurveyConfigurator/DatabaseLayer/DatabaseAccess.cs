@@ -42,7 +42,7 @@ namespace DatabaseLayer
 
                         // Add input parameter for the stored procedure and specify what to use as its value.
                         UpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar, 30));
-                        UpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value = DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("en-us"));
+                        UpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Value = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
                         // Update the LastUpdate to indicate that data is updated
                         UpdateTime.ExecuteNonQuery();
 
@@ -79,7 +79,7 @@ namespace DatabaseLayer
 
 
                             // Add the output parameter.
-                            GetUpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.VarChar, 30));
+                            GetUpdateTime.Parameters.Add(new SqlParameter("@" + clsConstants.UPDATE_TIME, SqlDbType.DateTime));
                             GetUpdateTime.Parameters["@" + clsConstants.UPDATE_TIME].Direction = ParameterDirection.Output;
 
 
@@ -155,15 +155,13 @@ namespace DatabaseLayer
             }
 
 
-        }
-
-        public SqlConnection Connection;
+        } 
         public bool CanConnect(string TestConnectionString="")
         {
             try
             {
-                
 
+                SqlConnection Connection;
                 if (TestConnectionString == "")
                     Connection = new SqlConnection(CONNECTION);
                 else
@@ -173,8 +171,7 @@ namespace DatabaseLayer
                 return true;
             }
             catch (Exception E)
-            {
-                Connection.Close();
+            { 
                 Logger.WriteLog(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, E.Message);
                 return false;
             }
