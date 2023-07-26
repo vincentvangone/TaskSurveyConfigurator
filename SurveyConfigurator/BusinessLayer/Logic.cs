@@ -38,9 +38,15 @@ namespace BusinessLayer
         }
 
         public Logic()
-        { 
-            // Start a background thread or loop to check for updates
-            CheckForUpdatesTimer = new System.Threading.Timer(CheckForUpdatesLoop, null, 0, 1000);//Task.Run(() => CheckForUpdatesLoop());
+        {
+            try { 
+            // Start a background timer that will trigger the function to check for updates
+            CheckForUpdatesTimer = new System.Threading.Timer(CheckForUpdates, null, 0, 1000); 
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
 
         }
 
@@ -52,7 +58,7 @@ namespace BusinessLayer
         }
 
 
-        public void CheckForUpdatesLoop(object state)
+        public void CheckForUpdates(object state)
         {
             try
             {
@@ -60,9 +66,7 @@ namespace BusinessLayer
 
                 else
                 {
-                    // while (true)
-                    //{
-
+                    
                     string LastDatabaseUpdate = DatabaseLayer.GetLastUpdate();
 
                     if (LastDatabaseUpdate != "")
@@ -79,13 +83,11 @@ namespace BusinessLayer
                         }
                     }
 
-                    //delay to avoid excessive checking and resource usage
-                    //Thread.Sleep(1000);
                 }
             }
             catch (Exception E)
             {
-                //Logger.WriteLog(E.Message, clsConstants.ERROR);
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
 

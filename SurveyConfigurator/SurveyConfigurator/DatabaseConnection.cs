@@ -144,15 +144,27 @@ namespace SurveyConfigurator
             //if (radioButtonIntegratedSecurity.Checked) radioButtonIntegratedSecurity.Checked = false;
             //radioButtonSQLAuth.Checked = true;
 
-
-            textBoxUsername.Enabled = true;
-            textBoxPassword.Enabled = true;
+            try
+            {
+                textBoxUsername.Enabled = true;
+                textBoxPassword.Enabled = true;
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
 
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            try { 
             this.Close();
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
     }
 }
