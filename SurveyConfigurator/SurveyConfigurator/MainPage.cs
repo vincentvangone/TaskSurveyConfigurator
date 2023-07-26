@@ -30,24 +30,31 @@ namespace SurveyConfigurator
         private Inputs InputsEditForm = new Inputs();
         private Logic LogicLayer = new Logic();
         private List<clsMergedQuestions> Questions;
-
+        private static bool FirstTimeRun = true;
         public formSurveyConfigurator()
         {
             try
             {
                 InitializeComponent();
-
-                if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString()=="") {
-                    Form Connect = new DatabaseConnection();
-                    Connect.ShowDialog(); }
-
-
+                
+                
                 //subscribe to events
                 Connectionform.E_ResetConnection += DatabaseConnection_ResetConnection;
                 InputsForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
                 InputsEditForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
                 LogicLayer.E_RequestUIUpdate += Logic_RequestUIUpdate;
-                ViewQuestions();
+
+
+                if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString() == "")
+                {
+                    Form Connect = new DatabaseConnection();
+                    Connect.ShowDialog();
+                }
+
+
+
+
+               // ViewQuestions();
             }
             catch (Exception E)
             {
@@ -59,20 +66,41 @@ namespace SurveyConfigurator
 
         private void DatabaseConnection_ResetConnection(object sender, EventArgs e)
         {
-            Connectionform.Close();
-            MessageBox.Show(clsConstants.DELAY_MESSAGE);
-            Cursor.Current = Cursors.WaitCursor;
-            formSurveyConfigurator_Load(this, null);
+            try
+            {
+                Connectionform.Close();
+                MessageBox.Show(clsConstants.DELAY_MESSAGE);
+                Cursor.Current = Cursors.WaitCursor;
+                formSurveyConfigurator_Load(this, null);
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
         private void Logic_RequestUIUpdate(object sender, EventArgs e)
         {
+            try
+            {
                 ViewQuestions();
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
         private void Inputs_RequestMainFormUpdate(object sender, EventArgs e)
         {
-            ViewQuestions();
+            try
+            {
+                ViewQuestions();
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
@@ -88,15 +116,20 @@ namespace SurveyConfigurator
                     buttonAdd.Enabled = false;
                     buttonEdit.Enabled = false;
                     buttonDelete.Enabled = false;
-                    System.Windows.Forms.MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING);
+                    label1.Visible = true;
+                    if (FirstTimeRun == false)
+                        MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING);
                 }
                 else
                 {
+                    label1.Visible = false;
                     Cursor.Current = Cursors.Default;
                     ViewQuestions();
                     buttonAdd.Enabled = true;
                     
                 }
+
+                FirstTimeRun = false;
             }
             catch (Exception E)
             {
@@ -171,7 +204,7 @@ namespace SurveyConfigurator
                 DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING , clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
-                    ErrorMessage(this.LogicLayer.DeleteQuestion(Id)); 
+                    this.LogicLayer.DeleteQuestion(Id); 
                 }
                 
             }
@@ -195,11 +228,7 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
-        public void ErrorMessage(int ErrorCode)
-        {
-            //System.Windows.Forms.MessageBox.Show(clsConstants.ErrorStrings(ErrorCode));
-        }
-
+        
         private void dataGridViewQuestions_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -220,54 +249,46 @@ namespace SurveyConfigurator
         }
 
         private void dataGridViewQuestions_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        { 
-            if (Questions != null)
+        {
+            try
             {
-                if (e.ColumnIndex == 0)
+                if (Questions != null)
                 {
-                    Questions = Questions.OrderBy(obj => obj.Properties).ToList();
-                }
-                else if (e.ColumnIndex == 2)
-                {
-                    Questions = Questions.OrderBy(obj => obj.Type).ToList();
-                }
-                else if (e.ColumnIndex == 3)
-                {
-                    Questions = Questions.OrderBy(obj => obj.Text).ToList();
-                }
-                else if (e.ColumnIndex == 4)
-                {
-                    Questions = Questions.OrderBy(obj => obj.Order).ToList();
-                }
-                dataGridViewQuestions.DataSource = null;
-                dataGridViewQuestions.DataSource = Questions;
-                dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dataGridViewQuestions.MultiSelect = false;
+                    if (e.ColumnIndex == 0)
+                    {
+                        Questions = Questions.OrderBy(obj => obj.Properties).ToList();
+                    }
+                    else if (e.ColumnIndex == 2)
+                    {
+                        Questions = Questions.OrderBy(obj => obj.Type).ToList();
+                    }
+                    else if (e.ColumnIndex == 3)
+                    {
+                        Questions = Questions.OrderBy(obj => obj.Text).ToList();
+                    }
+                    else if (e.ColumnIndex == 4)
+                    {
+                        Questions = Questions.OrderBy(obj => obj.Order).ToList();
+                    }
+                    dataGridViewQuestions.DataSource = null;
+                    dataGridViewQuestions.DataSource = Questions;
+                    dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dataGridViewQuestions.MultiSelect = false;
 
 
-                //rearrange columns and hide id
-                dataGridViewQuestions.Columns[clsConstants.ID].Visible = false;
-                dataGridViewQuestions.Columns[clsConstants.ORDER].DisplayIndex = 0;
-                dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
-                dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
-                dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
+                    //rearrange columns and hide id
+                    dataGridViewQuestions.Columns[clsConstants.ID].Visible = false;
+                    dataGridViewQuestions.Columns[clsConstants.ORDER].DisplayIndex = 0;
+                    dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
+                    dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
+                    dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
 
+                }
             }
-
-            //if (data != null)
-            //{
-            //    // Check which column was clicked
-            //    if (e.ColumnIndex == yourColumnIndex)
-            //    {
-            //        // Implement your custom sorting logic here based on the clicked column
-            //        // For example, to sort by Name ascending:
-            //        data = data.OrderBy(obj => obj.Name).ToList();
-
-            //        // Refresh the DataGridView with the sorted data
-            //        dataGridView1.DataSource = null;
-            //        dataGridView1.DataSource = data;
-            //    }
-            //}
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)

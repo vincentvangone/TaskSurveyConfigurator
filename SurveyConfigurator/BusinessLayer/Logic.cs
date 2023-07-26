@@ -95,7 +95,6 @@ namespace BusinessLayer
         {
             try
             {
-
                 return DatabaseLayer.CanConnect(TestConnectionString);
             }
             catch (Exception E)

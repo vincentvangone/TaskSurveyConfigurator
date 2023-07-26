@@ -26863,3 +26863,1084 @@ Call Stack Trace :
    at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
 
 ------------------------------------------------------------
+
+Log Entry : 12:45:00 PM Wednesday, July 26, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id102
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 514
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 296
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 198
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 190
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:46:10 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.DatabaseConnection.buttonTest_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 98
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 279
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:46:33 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 83
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 65
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 279
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:49:20 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 760
+   at BusinessLayer.Logic.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 386
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 117
+   at SurveyConfigurator.formSurveyConfigurator..ctor() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 50
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:49:20 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 83
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:49:46 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 83
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 65
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 280
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:52:48 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 90
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:53:45 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 90
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:54:08 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 90
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 72
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 291
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:54:33 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+Cannot open database "SurevyConfigurator" requested by the login. The login failed.
+Login failed for user 'SEDCO-ONLINE\Nour'.
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 90
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 72
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 291
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 12:55:37 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 99
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 90
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 72
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 291
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:01:27 PM Wednesday, July 26, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id104
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.NewQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 214
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 145
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 218
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonAdd_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 189
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:01:28 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 74
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 300
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:01:54 PM Wednesday, July 26, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id100
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 392
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 153
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 167
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 223
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:02:01 PM Wednesday, July 26, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id102
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSlider Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 514
+   at BusinessLayer.Logic.SliderInputValidation(clsQuestionSlider Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 295
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 198
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 223
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:02:23 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 74
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 300
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:04:24 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:04:58 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 74
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 300
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:06:45 PM Wednesday, July 26, 2023
+
+Log Type :
+Information
+
+Displayed message :
+Success
+
+Extra Info :
+Id99
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.EditQuestion(clsQuestionSmiley Question) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 392
+   at BusinessLayer.Logic.SmileyInputValidation(clsQuestionSmiley Question, Int32 Id) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 153
+   at SurveyConfigurator.Inputs.buttonSave_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Inputs.cs:line 167
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonEdit_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 223
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:07:13 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at SurveyConfigurator.formSurveyConfigurator.DatabaseConnection_ResetConnection(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 74
+   at SurveyConfigurator.DatabaseConnection.OnResetConnection() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 47
+   at SurveyConfigurator.DatabaseConnection.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 63
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 300
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 1:07:15 PM Wednesday, July 26, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Failed To Connect to Database.
+
+Extra Info :
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at DatabaseLayer.DatabaseAccess.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\DatabaseLayer\DatabaseAccess.cs:line 175
+   at BusinessLayer.Logic.CanConnect(String TestConnectionString) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\BusinessLayer\Logic.cs:line 98
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 111
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WmShowWindow(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Control.set_Visible(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------

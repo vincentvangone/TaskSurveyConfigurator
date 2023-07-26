@@ -39,6 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.buttonConnect = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).BeginInit();
             this.panelButtons.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -52,7 +53,8 @@
             this.labelQuestions.Location = new System.Drawing.Point(8, 12);
             this.labelQuestions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelQuestions.Name = "labelQuestions";
-            this.labelQuestions.Size = new System.Drawing.Size(193, 29);
+            this.labelQuestions.Padding = new System.Windows.Forms.Padding(6, 6, 6, 0);
+            this.labelQuestions.Size = new System.Drawing.Size(256, 44);
             this.labelQuestions.TabIndex = 0;
             this.labelQuestions.Text = "Survey Questions";
             // 
@@ -170,11 +172,22 @@
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(318, 213);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 23);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Connect to Database to view";
+            // 
             // formSurveyConfigurator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 497);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.dataGridViewQuestions);
             this.Controls.Add(this.panelButtons);
@@ -190,6 +203,7 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,6 +219,7 @@
         private System.Windows.Forms.Panel panelDummy;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.Label label1;
     }
 }
 
