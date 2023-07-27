@@ -50,7 +50,7 @@
             this.labelEndValue.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEndValue.Location = new System.Drawing.Point(19, 20);
             this.labelEndValue.Name = "labelEndValue";
-            this.labelEndValue.Size = new System.Drawing.Size(89, 21);
+            this.labelEndValue.Size = new System.Drawing.Size(71, 17);
             this.labelEndValue.TabIndex = 6;
             this.labelEndValue.Text = "End Value:";
             // 
@@ -60,7 +60,7 @@
             this.labelStartCaption.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartCaption.Location = new System.Drawing.Point(10, 69);
             this.labelStartCaption.Name = "labelStartCaption";
-            this.labelStartCaption.Size = new System.Drawing.Size(114, 21);
+            this.labelStartCaption.Size = new System.Drawing.Size(91, 17);
             this.labelStartCaption.TabIndex = 8;
             this.labelStartCaption.Text = "Start Caption:";
             // 
@@ -102,7 +102,7 @@
             this.labelStartValue.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStartValue.Location = new System.Drawing.Point(10, 20);
             this.labelStartValue.Name = "labelStartValue";
-            this.labelStartValue.Size = new System.Drawing.Size(96, 21);
+            this.labelStartValue.Size = new System.Drawing.Size(77, 17);
             this.labelStartValue.TabIndex = 4;
             this.labelStartValue.Text = "Start Value:";
             // 
@@ -112,7 +112,7 @@
             this.labelEndCaption.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEndCaption.Location = new System.Drawing.Point(19, 69);
             this.labelEndCaption.Name = "labelEndCaption";
-            this.labelEndCaption.Size = new System.Drawing.Size(106, 21);
+            this.labelEndCaption.Size = new System.Drawing.Size(85, 17);
             this.labelEndCaption.TabIndex = 10;
             this.labelEndCaption.Text = "End Caption:";
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ExtraInputSlider";
             this.Size = new System.Drawing.Size(772, 157);
-           
+            this.Load += new System.EventHandler(this.ExtraInputSlider_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericStartValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericEndValue)).EndInit();
             this.panel1.ResumeLayout(false);

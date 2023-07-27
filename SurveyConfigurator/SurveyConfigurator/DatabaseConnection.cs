@@ -3,6 +3,7 @@ using ErrorLogger;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
@@ -28,10 +29,26 @@ namespace SurveyConfigurator
         {
             try
             {
+
                 InitializeComponent();
-                radioButtonIntegratedSecurity.Checked = true;
-                textBoxUsername.Enabled = false;
-                textBoxPassword.Enabled = false;
+                // ConfigurationManager.RefreshSection("connectionStrings");
+                if (ConfigurationManager.AppSettings["IntegratedSecurity"] == "True")
+                {
+                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
+                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
+                    radioButtonIntegratedSecurity.Checked = true;
+                    textBoxUsername.Enabled = false;
+                    textBoxPassword.Enabled = false;
+                }
+                else
+                {
+                    radioButtonSQLAuth.Checked = true;
+                    textBoxUsername.Enabled = true;
+                    textBoxPassword.Enabled = true;
+                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
+                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
+                }
+
             }
             catch (Exception E)
             {
@@ -40,11 +57,46 @@ namespace SurveyConfigurator
         }
 
 
+        private void DatabaseConnection_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+               // ConfigurationManager.RefreshSection("connectionStrings");
+                if (ConfigurationManager.AppSettings["IntegratedSecurity"] == "True")
+                {
+                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
+                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
+                    radioButtonIntegratedSecurity.Checked = true;
+                    textBoxUsername.Enabled = false;
+                    textBoxPassword.Enabled = false;
+                }
+                else
+                {
+                    radioButtonSQLAuth.Checked = true;
+                    textBoxUsername.Enabled = true;
+                    textBoxPassword.Enabled = true;
+                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
+                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
+                }
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
+        }
 
         protected virtual void OnResetConnection()
         {
-            // Raise the event to request a UI update in the UI layer
-            E_ResetConnection?.Invoke(this, EventArgs.Empty);
+            try
+            {
+                // Raise the event to request a UI update in the UI layer
+                E_ResetConnection?.Invoke(this, EventArgs.Empty);
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
 
@@ -57,9 +109,29 @@ namespace SurveyConfigurator
 
                 else if (textBoxDatabase.Text == "")
                     MessageBox.Show(clsConstants.EMPTY_DATABASE_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!radioButtonIntegratedSecurity.Checked && ((textBoxUsername.Text == "")||(textBoxPassword.Text == "")))
+                    MessageBox.Show(clsConstants.EMPTY_USERNAME_OR_PASSWORD, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    LogicLayer.SetConnectionString(textBoxServer.Text, textBoxDatabase.Text, textBoxUsername.Text, textBoxPassword.Text, radioButtonIntegratedSecurity.Checked);
+                   
+                    bool IntegratedSecurity =radioButtonIntegratedSecurity.Checked;
+                    Configuration AppConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    AppConfig.AppSettings.Settings["Server"].Value = textBoxServer.Text;
+                    AppConfig.AppSettings.Settings["Database"].Value = textBoxDatabase.Text;
+                    AppConfig.AppSettings.Settings["IntegratedSecurity"].Value = "True";
+
+
+                    if (!IntegratedSecurity)
+                    {
+                        AppConfig.AppSettings.Settings["IntegratedSecurity"].Value = "False";
+                        AppConfig.AppSettings.Settings["Username"].Value = textBoxUsername.Text;
+                        AppConfig.AppSettings.Settings["Password"].Value = textBoxPassword.Text;
+                    }
+
+
+                    AppConfig.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("appSettings");
+                    LogicLayer.SetConnectionString();
                     OnResetConnection();
                     
                 }
@@ -78,11 +150,11 @@ namespace SurveyConfigurator
             try
             {
                 string TestConnectionString;
-                if (textBoxServer.Text == "" || textBoxDatabase.Text == "")
+                if ((textBoxServer.Text == "") || (textBoxDatabase.Text == "")|| (!(radioButtonIntegratedSecurity.Checked) &&( (textBoxUsername.Text == "") || (textBoxPassword.Text == ""))))
                     MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING, clsConstants.ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    MessageBox.Show(clsConstants.DELAY_MESSAGE);
+                    
                     Cursor.Current = Cursors.WaitCursor;
                     if (radioButtonIntegratedSecurity.Checked)
                     {
@@ -166,5 +238,7 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
+
+        
     }
 }

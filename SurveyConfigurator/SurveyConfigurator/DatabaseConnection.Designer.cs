@@ -41,9 +41,9 @@
             this.radioButtonIntegratedSecurity = new System.Windows.Forms.RadioButton();
             this.radioButtonSQLAuth = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBoxAuthentication = new System.Windows.Forms.GroupBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.groupBoxAuthentication = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
             this.groupBoxAuthentication.SuspendLayout();
             this.SuspendLayout();
@@ -197,6 +197,26 @@
             this.panel2.Size = new System.Drawing.Size(388, 49);
             this.panel2.TabIndex = 15;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(271, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 29);
+            this.panel1.TabIndex = 13;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(281, 10);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(97, 29);
+            this.buttonCancel.TabIndex = 12;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // groupBoxAuthentication
             // 
             this.groupBoxAuthentication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -214,26 +234,6 @@
             this.groupBoxAuthentication.TabIndex = 16;
             this.groupBoxAuthentication.TabStop = false;
             this.groupBoxAuthentication.Text = "Log onto the server";
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(281, 10);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(97, 29);
-            this.buttonCancel.TabIndex = 12;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(271, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 29);
-            this.panel1.TabIndex = 13;
             // 
             // DatabaseConnection
             // 
@@ -253,6 +253,7 @@
             this.MinimumSize = new System.Drawing.Size(374, 495);
             this.Name = "DatabaseConnection";
             this.Text = "Connection";
+            this.Load += new System.EventHandler(this.DatabaseConnection_Load);
             this.panel2.ResumeLayout(false);
             this.groupBoxAuthentication.ResumeLayout(false);
             this.groupBoxAuthentication.PerformLayout();

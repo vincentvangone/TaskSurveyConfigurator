@@ -41,6 +41,17 @@ namespace SurveyConfigurator
             }
         }
 
+        private void Inputs_Load(object sender, EventArgs e)
+        {
+            if (comboBoxType.Enabled)
+            {
+                comboBoxType.SelectedIndex = 0;
+                numericUpDownOrder.Value = 1;
+                textBoxText.Text = string.Empty;
+            }
+
+        }
+
         //user control addition -> switching panel content depending on user's choice
         private void AddUserControls(UserControl userControl)
         {
@@ -76,14 +87,23 @@ namespace SurveyConfigurator
                     case clsConstants.SMILEY:
                         QuestionSmiley.Type = clsConstants.SMILEY;
                         AddUserControls(ucSmiley);
+                        //resetting form
+                        ucSmiley.NumberOfSmileys = 5;
                         break;
                     case clsConstants.STAR:
                         QuestionStar.Type = clsConstants.STAR;
                         AddUserControls(ucStar);
+                        //resetting form
+                        ucStar.NumberOfStars = 10;
                         break;
                     case clsConstants.SLIDER:
                         QuestionSlider.Type = clsConstants.SLIDER;
                         AddUserControls(ucSlider);
+                        //resetting form
+                        ucSlider.EndCaption = "";
+                        ucSlider.StartCaption = "";
+                        ucSlider.StartValue = 0;
+                        ucSlider.EndValue = 100;
                         break;
 
                 }
@@ -182,7 +202,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                               
                                 OnRequestMainFormUpdate();
                                 this.Close();
                             }
@@ -333,6 +352,8 @@ namespace SurveyConfigurator
                 return clsConstants.ERROR;
             }
         }
+
+        
     }
 }
 

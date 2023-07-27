@@ -40,5 +40,11 @@ namespace SurveyConfigurator.UserControls
             get { return textBoxEndCaption.Text; }
             set { textBoxEndCaption.Text = value;}
         }
+
+        private void ExtraInputSlider_Load(object sender, EventArgs e)
+        {
+           
+           
+        }
     }
 }

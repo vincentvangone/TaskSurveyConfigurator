@@ -20,13 +20,12 @@ namespace DatabaseLayer
         public string IntegratedSecurity;
         public string Username;
         public string Password;
-        public static string CONNECTION = ConfigurationManager.ConnectionStrings["CONNECTION"].ToString();
+        public static string CONNECTION;
 
         //this is to stop the connection loop on GetLastUpdate before the connection form is submitted 
         private bool DatabaseChangeFlag = false;
 
-
-
+       
         public void DataUpdatedInDataLayer()
         {
             try
@@ -108,45 +107,36 @@ namespace DatabaseLayer
         }
 
 
-        public void SetConnectionString(string tServer, string tDatabase, string tUsername, string tPassword, bool tIntegratedSecurity)
+        public void SetConnectionString()
         {
             try
             {
-                
-                Server = tServer;
-                Database = tDatabase;
-                string Connection;
-                if (tIntegratedSecurity)
+
+                // concat the connection string from the keys
+                string Server = ConfigurationManager.AppSettings["Server"];
+                string Database = ConfigurationManager.AppSettings["Database"];
+                string Username = ConfigurationManager.AppSettings["Username"];
+                string Password = ConfigurationManager.AppSettings["Password"];
+               
+
+                if (ConfigurationManager.AppSettings["IntegratedSecurity"] =="True")
                 {
-                    IntegratedSecurity = "True";
                     //Constructing connection string from the inputs
-                    Connection = string.Format(clsConstants.SET_CONNECTION_WINDOWS_AUTH, Server, Database, IntegratedSecurity);
+                    CONNECTION = string.Format(clsConstants.SET_CONNECTION_WINDOWS_AUTH, Server, Database);
                 }
                 else
                 {
-                    IntegratedSecurity = "False";
-                    Username = tUsername;
-                    Password = tPassword;
-                    Connection = string.Format(clsConstants.SET_CONNECTION_SQL_AUTH, Server, Database, Username, Password);
+                    CONNECTION = string.Format(clsConstants.SET_CONNECTION_SQL_AUTH, Server, Database, Username, Password);
                 }
 
-                //updating APP.config file
-                XmlDocument XmlDoc = new XmlDocument();
-                //to refresh connection string each time else it will use  previous connection string
-                //Loading the Config file
-                XmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-                foreach (XmlElement xElement in XmlDoc.DocumentElement)
-                {
-                    if (xElement.Name == "connectionStrings")
-                    {
-                        //setting the coonection string
-                        xElement.FirstChild.Attributes[2].Value = Connection;
-                    }
-                }
-                //writing the connection string in config file
-                XmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-                ConfigurationManager.RefreshSection("connectionStrings");
-                CONNECTION = ConfigurationManager.ConnectionStrings["CONNECTION"].ToString();
+
+                // Save the connection string to the app.config file
+                //Configuration AppConfigConnection = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                //AppConfigConnection.ConnectionStrings.ConnectionStrings["CONNECTION"].ConnectionString = Connection;
+                //AppConfigConnection.Save(ConfigurationSaveMode.Modified);
+                //ConfigurationManager.RefreshSection("connectionStrings");
+                //CONNECTION = Connection;
+
 
             }
             catch (Exception E)
@@ -160,7 +150,7 @@ namespace DatabaseLayer
         {
             try
             {
-
+                //CONNECTION = ConfigurationManager.ConnectionStrings["CONNECTION"].ToString();
                 SqlConnection Connection;
                 if (TestConnectionString == "")
                     Connection = new SqlConnection(CONNECTION);

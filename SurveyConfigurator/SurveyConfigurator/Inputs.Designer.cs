@@ -208,6 +208,7 @@
             this.MinimumSize = new System.Drawing.Size(780, 440);
             this.Name = "Inputs";
             this.Text = "AddQuestion";
+            this.Load += new System.EventHandler(this.Inputs_Load);
             this.panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrder)).EndInit();
             this.ResumeLayout(false);

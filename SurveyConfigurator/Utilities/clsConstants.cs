@@ -9,6 +9,10 @@ namespace Utilities
 {
     public static class clsConstants
     {
+        //LANGUAGES
+        public const string ENGLISH = "English";
+        public const string ARABIC = "العربية";
+
 
         //QUESTION TYPES
         public const string SMILEY = "Smiley";
@@ -38,7 +42,7 @@ namespace Utilities
         public const string P_GET_SLIDER_QUESTION = "P_GetSliderQuestion";
 
         //CONNECTION STRING
-        public const string SET_CONNECTION_WINDOWS_AUTH = "Data Source={0};Initial Catalog ={1}; Integrated Security = {2}";
+        public const string SET_CONNECTION_WINDOWS_AUTH = "Data Source={0};Initial Catalog ={1}; Integrated Security = True;";
         public const string SET_CONNECTION_SQL_AUTH = "Data Source={0};Initial Catalog ={1};User Id={3}; Password={4}";
         //QUESTION ATTRIBUTES
         public const string ID = "Id";
@@ -104,10 +108,11 @@ namespace Utilities
 
         public const string EMPTY_SERVER_STRING = "SQL Server can't be empty.";
         public const string EMPTY_DATABASE_STRING = "SQL Database can't be empty.";
-
+        public const string EMPTY_USERNAME_OR_PASSWORD = "Username or password not entered.";
 
         public const string DELETE_QUESTION_CONFIRM_STRING="Are you sure you want to delete the selected question?";
         public const string DELAY_MESSAGE = "This might take a couple of moments.";
+
 
     }
 }

@@ -30,7 +30,7 @@ namespace BusinessLayer
 
         // Define an event to request a UI update from the UI layer
         public event EventHandler<EventArgs> E_RequestUIUpdate;
-         
+
         public string LastUpdateTime
         {
             set { lastUpdateTime = value; }
@@ -39,9 +39,11 @@ namespace BusinessLayer
 
         public Logic()
         {
-            try { 
-            // Start a background timer that will trigger the function to check for updates
-            CheckForUpdatesTimer = new System.Threading.Timer(CheckForUpdates, null, 0, 1000); 
+            try
+            {
+                DatabaseLayer.SetConnectionString();
+                // Start a background timer that will trigger the function to check for updates
+                CheckForUpdatesTimer = new System.Threading.Timer(CheckForUpdates, null, 0, 1000);
             }
             catch (Exception E)
             {
@@ -62,11 +64,9 @@ namespace BusinessLayer
         {
             try
             {
-                if (LastUpdateTime == "") ;
-
-                else
+                if (LastUpdateTime != "")
                 {
-                    
+
                     string LastDatabaseUpdate = DatabaseLayer.GetLastUpdate();
 
                     if (LastDatabaseUpdate != "")
@@ -82,8 +82,8 @@ namespace BusinessLayer
 
                         }
                     }
-
                 }
+
             }
             catch (Exception E)
             {
@@ -93,7 +93,7 @@ namespace BusinessLayer
 
 
 
-        public bool CanConnect(string TestConnectionString="")
+        public bool CanConnect(string TestConnectionString = "")
         {
             try
             {
@@ -367,11 +367,11 @@ namespace BusinessLayer
                 return clsConstants.UNKNOWN_ERROR;
             }
         }
-        public void SetConnectionString(string Server, string Database, string Username, string Password, bool IntegratedSecurity)
+        public void SetConnectionString()
         {
             try
             {
-                DatabaseLayer.SetConnectionString(Server, Database, Username, Password, IntegratedSecurity);
+                DatabaseLayer.SetConnectionString();
             }
 
             catch (Exception E)
@@ -384,6 +384,7 @@ namespace BusinessLayer
         {
             try
             {
+                LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
                 return DatabaseLayer.ViewQuestions();
             }
 

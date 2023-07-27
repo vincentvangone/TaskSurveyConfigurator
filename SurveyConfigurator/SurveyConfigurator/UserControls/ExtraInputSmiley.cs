@@ -22,5 +22,10 @@ namespace SurveyConfigurator.UserControls
             get { return Convert.ToInt32(numericSmileys.Value); }
             set { numericSmileys.Value = value;}
         }
+
+        private void ExtraInputSmiley_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

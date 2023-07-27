@@ -39,7 +39,7 @@
             this.labelSmileys.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSmileys.Location = new System.Drawing.Point(16, 18);
             this.labelSmileys.Name = "labelSmileys";
-            this.labelSmileys.Size = new System.Drawing.Size(183, 24);
+            this.labelSmileys.Size = new System.Drawing.Size(146, 19);
             this.labelSmileys.TabIndex = 0;
             this.labelSmileys.Text = "Number of Smileys:";
             // 
@@ -48,7 +48,7 @@
             this.numericSmileys.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericSmileys.Font = new System.Drawing.Font("Cascadia Result", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericSmileys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericSmileys.Location = new System.Drawing.Point(201, 17);
             this.numericSmileys.Maximum = new decimal(new int[] {
             5,
@@ -61,7 +61,7 @@
             0,
             0});
             this.numericSmileys.Name = "numericSmileys";
-            this.numericSmileys.Size = new System.Drawing.Size(565, 23);
+            this.numericSmileys.Size = new System.Drawing.Size(565, 22);
             this.numericSmileys.TabIndex = 1;
             this.numericSmileys.Value = new decimal(new int[] {
             2,
@@ -77,6 +77,7 @@
             this.Controls.Add(this.labelSmileys);
             this.Name = "ExtraInputSmiley";
             this.Size = new System.Drawing.Size(778, 137);
+            this.Load += new System.EventHandler(this.ExtraInputSmiley_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSmileys)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

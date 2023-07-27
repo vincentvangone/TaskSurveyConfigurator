@@ -31,5 +31,10 @@ namespace SurveyConfigurator.UserControls
             get { return Convert.ToInt32(numericStars.Value); }
             set { numericStars.Value = value; }
         }
+
+        private void ExtraInputStar_Load(object sender, EventArgs e)
+        {
+            //numericStars.Value = 10;
+        }
     }
 }

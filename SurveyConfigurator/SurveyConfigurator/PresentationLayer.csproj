@@ -94,6 +94,12 @@
     <EmbeddedResource Include="Inputs.resx">
       <DependentUpon>Inputs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.ar.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.en.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>

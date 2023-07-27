@@ -18,14 +18,14 @@ using Utilities;
 using System.Security.Cryptography;
 using System.Threading;
 using System.IO;
-using System.Globalization;
 using System.Security.AccessControl;
+using System.Globalization;
 
 namespace SurveyConfigurator
 {
     public partial class formSurveyConfigurator : Form
     {
-        private DatabaseConnection Connectionform=new DatabaseConnection();
+        private DatabaseConnection Connectionform = new DatabaseConnection();
         private Inputs InputsForm = new Inputs();
         private Inputs InputsEditForm = new Inputs();
         private Logic LogicLayer = new Logic();
@@ -36,8 +36,6 @@ namespace SurveyConfigurator
             try
             {
                 InitializeComponent();
-                
-                
                 //subscribe to events
                 Connectionform.E_ResetConnection += DatabaseConnection_ResetConnection;
                 InputsForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
@@ -45,16 +43,7 @@ namespace SurveyConfigurator
                 LogicLayer.E_RequestUIUpdate += Logic_RequestUIUpdate;
 
 
-                if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString() == "")
-                {
-                    Form Connect = new DatabaseConnection();
-                    Connect.ShowDialog();
-                }
-
-
-
-
-               // ViewQuestions();
+                // ViewQuestions();
             }
             catch (Exception E)
             {
@@ -69,7 +58,6 @@ namespace SurveyConfigurator
             try
             {
                 Connectionform.Close();
-                MessageBox.Show(clsConstants.DELAY_MESSAGE);
                 Cursor.Current = Cursors.WaitCursor;
                 formSurveyConfigurator_Load(this, null);
             }
@@ -107,6 +95,13 @@ namespace SurveyConfigurator
         {
             try
             {
+                
+
+                if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString() == "")
+                {
+
+                    Connectionform.ShowDialog();
+                }
 
                 if (!this.LogicLayer.CanConnect())
                 {
@@ -126,7 +121,7 @@ namespace SurveyConfigurator
                     Cursor.Current = Cursors.Default;
                     ViewQuestions();
                     buttonAdd.Enabled = true;
-                    
+
                 }
 
                 FirstTimeRun = false;
@@ -145,9 +140,9 @@ namespace SurveyConfigurator
         {
             try
             {
-                this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
+                //this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
                 Questions = this.LogicLayer.ViewQuestions();
-                
+
                 //if no questions in the database
                 if (!Questions.Any())
                 {
@@ -156,7 +151,7 @@ namespace SurveyConfigurator
                 }
                 else
                 {
-                    
+
 
                     buttonDelete.Enabled = true;
                     buttonEdit.Enabled = true;
@@ -185,7 +180,7 @@ namespace SurveyConfigurator
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 InputsForm.ShowDialog();
             }
             catch (Exception E)
@@ -201,12 +196,12 @@ namespace SurveyConfigurator
 
                 int Id = int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString());
 
-                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING , clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult dialogResult = System.Windows.Forms.MessageBox.Show(clsConstants.DELETE_QUESTION_CONFIRM_STRING, clsConstants.WARNING, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.OK)
                 {
-                    this.LogicLayer.DeleteQuestion(Id); 
+                    this.LogicLayer.DeleteQuestion(Id);
                 }
-                
+
             }
 
             catch (Exception E)
@@ -218,7 +213,7 @@ namespace SurveyConfigurator
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 InputsEditForm.Edit(int.Parse(this.dataGridViewQuestions.SelectedRows[0].Cells[1].Value.ToString()), this.dataGridViewQuestions.SelectedRows[0].Cells[2].Value.ToString());
                 InputsEditForm.ShowDialog();
             }
@@ -228,7 +223,7 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
-        
+
         private void dataGridViewQuestions_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -296,14 +291,38 @@ namespace SurveyConfigurator
 
             try
             {
-
                 Connectionform.ShowDialog();
-                 
+
             }
             catch (Exception E)
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
+
+
+
+        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxLanguage.SelectedItem.ToString())
+            {
+                case clsConstants.ENGLISH:
+                    RightToLeftLayout = false;
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                    break;
+                case clsConstants.ARABIC:
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar");
+                    RightToLeftLayout = true;
+                    panelButtons.RightToLeft = RightToLeft.Yes;
+                    break;
+            }
+            this.Controls.Clear();
+            InitializeComponent();
+            formSurveyConfigurator_Load(this,null);
+
+            RightToLeftLayout = true;
+            panelButtons.RightToLeft = RightToLeft.Yes;
+        }
     }
 }
+

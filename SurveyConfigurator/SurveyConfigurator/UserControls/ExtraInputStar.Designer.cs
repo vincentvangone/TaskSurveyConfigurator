@@ -66,7 +66,7 @@
             this.labelStars.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStars.Location = new System.Drawing.Point(17, 19);
             this.labelStars.Name = "labelStars";
-            this.labelStars.Size = new System.Drawing.Size(159, 24);
+            this.labelStars.Size = new System.Drawing.Size(127, 19);
             this.labelStars.TabIndex = 2;
             this.labelStars.Text = "Number of Stars:";
             // 
@@ -78,6 +78,7 @@
             this.Controls.Add(this.labelStars);
             this.Name = "ExtraInputStar";
             this.Size = new System.Drawing.Size(659, 135);
+            this.Load += new System.EventHandler(this.ExtraInputStar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericStars)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

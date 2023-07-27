@@ -48,3 +48,9 @@ C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConf
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\BusinessLayer.dll.config
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Utilities.dll
 C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\Utilities.pdb
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\ar\SurveyConfigurator.resources.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\SurveyConfigurator.formSurveyConfigurator.ar.resources
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\ar\SurveyConfigurator.resources.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\SurveyConfigurator.formSurveyConfigurator.en.resources
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\bin\Debug\en\SurveyConfigurator.resources.dll
+C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\obj\Debug\en\SurveyConfigurator.resources.dll
