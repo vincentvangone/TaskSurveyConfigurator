@@ -23,6 +23,11 @@ namespace SurveyConfigurator.UserControls
             set { numericSmileys.Value = value;}
         }
 
+        public void InitializeSmiley()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+        }
         private void ExtraInputSmiley_Load(object sender, EventArgs e)
         {
             

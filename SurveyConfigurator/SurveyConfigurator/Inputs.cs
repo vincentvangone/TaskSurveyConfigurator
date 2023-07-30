@@ -2,9 +2,13 @@
 using ErrorLogger;
 using SurveyConfigurator.UserControls;
 using System;
+using System.Drawing;
+using System.Globalization;
+using System.Threading;
 //using System.Windows.Controls;
 using System.Windows.Forms;
 using Utilities;
+
 
 namespace SurveyConfigurator
 {
@@ -32,8 +36,14 @@ namespace SurveyConfigurator
         {
             try
             {
+                
                 InitializeComponent();
                 comboBoxType.SelectedIndex = 0;
+
+                // Subscribe to the LanguageChanged event in the constructor
+                // When the event is raised, the LanguageChangedHandler method will be called
+
+
             }
             catch (Exception E)
             {
@@ -43,6 +53,7 @@ namespace SurveyConfigurator
 
         private void Inputs_Load(object sender, EventArgs e)
         {
+
             if (comboBoxType.Enabled)
             {
                 comboBoxType.SelectedIndex = 0;
@@ -77,7 +88,28 @@ namespace SurveyConfigurator
         }
 
 
+        public void OnLanguageChanged()
+        {
 
+            if (Thread.CurrentThread.CurrentUICulture.Name == "ar")
+            {
+                RightToLeftLayout = true;
+                this.RightToLeft = RightToLeft.Yes;
+                buttonCancel.Dock = DockStyle.Left;
+                panelDummy.Dock = DockStyle.Left;
+                buttonSave.Dock = DockStyle.Left;
+            }
+            if (Thread.CurrentThread.CurrentUICulture.Name == "en-US")
+            {
+                RightToLeftLayout = false;
+                this.RightToLeft = RightToLeft.No;
+            }
+            this.Controls.Clear();
+            ucSlider.InitializeSlider();
+            ucSmiley.InitializeSmiley();
+            ucStar.InitializeStar();
+            InitializeComponent();
+        }
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -119,6 +151,7 @@ namespace SurveyConfigurator
         {
             try
             {
+                
                 //set Id to the sent one so we can use it in the other functions
                 this.Id = Id;
 
@@ -353,7 +386,17 @@ namespace SurveyConfigurator
             }
         }
 
-        
+        // Event handler for the LanguageChanged event
+        private void LanguageChangedHandler(object sender, EventArgs e)
+        {
+            // Update your localized strings and other language-specific elements here
+            // ...
+
+            // For example, update the text of a label
+            MessageBox.Show(Thread.CurrentThread.CurrentUICulture.Name);
+        }
+
+
     }
 }
 

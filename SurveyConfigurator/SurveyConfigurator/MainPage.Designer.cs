@@ -39,12 +39,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelConnectionCheck = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).BeginInit();
             this.panelButtons.SuspendLayout();
             this.panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelQuestions
@@ -75,9 +78,9 @@
             // 
             // dataGridViewQuestions
             // 
+            resources.ApplyResources(this.dataGridViewQuestions, "dataGridViewQuestions");
             this.dataGridViewQuestions.AllowUserToAddRows = false;
             this.dataGridViewQuestions.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.dataGridViewQuestions, "dataGridViewQuestions");
             this.dataGridViewQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewQuestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewQuestions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
@@ -90,12 +93,12 @@
             // 
             // panelButtons
             // 
+            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Controls.Add(this.buttonAdd);
             this.panelButtons.Controls.Add(this.panelDummy);
             this.panelButtons.Controls.Add(this.buttonEdit);
             this.panelButtons.Controls.Add(this.panel3);
             this.panelButtons.Controls.Add(this.buttonDelete);
-            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Name = "panelButtons";
             // 
             // panelDummy
@@ -117,12 +120,25 @@
             // 
             // panelTitle
             // 
+            resources.ApplyResources(this.panelTitle, "panelTitle");
+            this.panelTitle.Controls.Add(this.pictureBox1);
+            this.panelTitle.Controls.Add(this.panel2);
             this.panelTitle.Controls.Add(this.comboBoxLanguage);
             this.panelTitle.Controls.Add(this.panel1);
             this.panelTitle.Controls.Add(this.labelQuestions);
             this.panelTitle.Controls.Add(this.buttonConnect);
-            resources.ApplyResources(this.panelTitle, "panelTitle");
             this.panelTitle.Name = "panelTitle";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
             // comboBoxLanguage
             // 
@@ -140,17 +156,17 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // label1
+            // labelConnectionCheck
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.labelConnectionCheck, "labelConnectionCheck");
+            this.labelConnectionCheck.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.labelConnectionCheck.Name = "labelConnectionCheck";
             // 
             // formSurveyConfigurator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelConnectionCheck);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.dataGridViewQuestions);
             this.Controls.Add(this.panelButtons);
@@ -160,6 +176,7 @@
             this.panelButtons.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,9 +194,11 @@
         private System.Windows.Forms.Panel panelDummy;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonConnect;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelConnectionCheck;
         private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

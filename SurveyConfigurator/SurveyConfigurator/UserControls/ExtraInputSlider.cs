@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -41,9 +43,14 @@ namespace SurveyConfigurator.UserControls
             set { textBoxEndCaption.Text = value;}
         }
 
+        public void InitializeSlider()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+        }
         private void ExtraInputSlider_Load(object sender, EventArgs e)
         {
-           
+
            
         }
     }

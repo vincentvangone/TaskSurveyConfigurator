@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraInputSmiley));
             this.labelSmileys = new System.Windows.Forms.Label();
             this.numericSmileys = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericSmileys)).BeginInit();
@@ -35,21 +36,12 @@
             // 
             // labelSmileys
             // 
-            this.labelSmileys.AutoSize = true;
-            this.labelSmileys.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSmileys.Location = new System.Drawing.Point(16, 18);
+            resources.ApplyResources(this.labelSmileys, "labelSmileys");
             this.labelSmileys.Name = "labelSmileys";
-            this.labelSmileys.Size = new System.Drawing.Size(146, 19);
-            this.labelSmileys.TabIndex = 0;
-            this.labelSmileys.Text = "Number of Smileys:";
             // 
             // numericSmileys
             // 
-            this.numericSmileys.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericSmileys.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericSmileys.Location = new System.Drawing.Point(201, 17);
+            resources.ApplyResources(this.numericSmileys, "numericSmileys");
             this.numericSmileys.Maximum = new decimal(new int[] {
             5,
             0,
@@ -61,8 +53,6 @@
             0,
             0});
             this.numericSmileys.Name = "numericSmileys";
-            this.numericSmileys.Size = new System.Drawing.Size(565, 22);
-            this.numericSmileys.TabIndex = 1;
             this.numericSmileys.Value = new decimal(new int[] {
             2,
             0,
@@ -71,12 +61,11 @@
             // 
             // ExtraInputSmiley
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.numericSmileys);
             this.Controls.Add(this.labelSmileys);
             this.Name = "ExtraInputSmiley";
-            this.Size = new System.Drawing.Size(778, 137);
             this.Load += new System.EventHandler(this.ExtraInputSmiley_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSmileys)).EndInit();
             this.ResumeLayout(false);

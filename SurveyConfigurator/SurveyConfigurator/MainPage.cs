@@ -20,6 +20,8 @@ using System.Threading;
 using System.IO;
 using System.Security.AccessControl;
 using System.Globalization;
+using SurveyConfigurator.Properties;
+using System.Resources;
 
 namespace SurveyConfigurator
 {
@@ -31,6 +33,9 @@ namespace SurveyConfigurator
         private Logic LogicLayer = new Logic();
         private List<clsMergedQuestions> Questions;
         private static bool FirstTimeRun = true;
+        public event EventHandler LanguageChanged;
+
+
         public formSurveyConfigurator()
         {
             try
@@ -52,6 +57,14 @@ namespace SurveyConfigurator
 
 
         }
+
+
+        protected virtual void OnLanguageChanged(EventArgs e)
+        {
+            // Raise the LanguageChanged event in other forms
+            LanguageChanged?.Invoke(this, e);
+        }
+
 
         private void DatabaseConnection_ResetConnection(object sender, EventArgs e)
         {
@@ -111,20 +124,27 @@ namespace SurveyConfigurator
                     buttonAdd.Enabled = false;
                     buttonEdit.Enabled = false;
                     buttonDelete.Enabled = false;
-                    label1.Visible = true;
+                    labelConnectionCheck.Visible = true;
                     if (FirstTimeRun == false)
                         MessageBox.Show(clsConstants.FAILED_DATABASE_CONNECTION_STRING);
                 }
                 else
                 {
-                    label1.Visible = false;
+                    labelConnectionCheck.Visible = false;
                     Cursor.Current = Cursors.Default;
                     ViewQuestions();
                     buttonAdd.Enabled = true;
-
                 }
-
                 FirstTimeRun = false;
+
+
+               
+
+                // Initialize the resource manager with the appropriate resource file based on the selected language
+                
+            
+
+
             }
             catch (Exception E)
             {
@@ -156,6 +176,13 @@ namespace SurveyConfigurator
                     buttonDelete.Enabled = true;
                     buttonEdit.Enabled = true;
 
+                    if (Thread.CurrentThread.CurrentUICulture.Name == "ar")
+                    {
+                        foreach (clsMergedQuestions Question in Questions){
+                          //Question.TranslatedType();
+                        }
+                    }
+
                     dataGridViewQuestions.DataSource = Questions;
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     dataGridViewQuestions.MultiSelect = false;
@@ -181,6 +208,7 @@ namespace SurveyConfigurator
         {
             try
             {
+
                 InputsForm.ShowDialog();
             }
             catch (Exception E)
@@ -304,24 +332,29 @@ namespace SurveyConfigurator
 
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             switch (comboBoxLanguage.SelectedItem.ToString())
             {
                 case clsConstants.ENGLISH:
+                    
                     RightToLeftLayout = false;
+                    this.RightToLeft = RightToLeft.No;
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
                     break;
                 case clsConstants.ARABIC:
+                    OnLanguageChanged(EventArgs.Empty);
                     Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar");
+
                     RightToLeftLayout = true;
-                    panelButtons.RightToLeft = RightToLeft.Yes;
+                    this.RightToLeft = RightToLeft.Yes;
                     break;
             }
+            InputsForm.OnLanguageChanged();
+            InputsEditForm.OnLanguageChanged();
             this.Controls.Clear();
             InitializeComponent();
             formSurveyConfigurator_Load(this,null);
 
-            RightToLeftLayout = true;
-            panelButtons.RightToLeft = RightToLeft.Yes;
         }
     }
 }

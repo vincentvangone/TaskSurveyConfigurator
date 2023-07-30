@@ -32,6 +32,11 @@ namespace SurveyConfigurator.UserControls
             set { numericStars.Value = value; }
         }
 
+        public void InitializeStar()
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+        }
         private void ExtraInputStar_Load(object sender, EventArgs e)
         {
             //numericStars.Value = 10;

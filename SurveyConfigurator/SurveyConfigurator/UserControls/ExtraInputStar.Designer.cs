@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraInputStar));
             this.numericStars = new System.Windows.Forms.NumericUpDown();
             this.labelStars = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericStars)).BeginInit();
@@ -35,12 +36,8 @@
             // 
             // numericStars
             // 
-            this.numericStars.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.numericStars, "numericStars");
             this.numericStars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericStars.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericStars.Location = new System.Drawing.Point(202, 18);
             this.numericStars.Maximum = new decimal(new int[] {
             10,
             0,
@@ -52,8 +49,6 @@
             0,
             0});
             this.numericStars.Name = "numericStars";
-            this.numericStars.Size = new System.Drawing.Size(440, 27);
-            this.numericStars.TabIndex = 3;
             this.numericStars.Value = new decimal(new int[] {
             10,
             0,
@@ -62,22 +57,16 @@
             // 
             // labelStars
             // 
-            this.labelStars.AutoSize = true;
-            this.labelStars.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStars.Location = new System.Drawing.Point(17, 19);
+            resources.ApplyResources(this.labelStars, "labelStars");
             this.labelStars.Name = "labelStars";
-            this.labelStars.Size = new System.Drawing.Size(127, 19);
-            this.labelStars.TabIndex = 2;
-            this.labelStars.Text = "Number of Stars:";
             // 
             // ExtraInputStar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.numericStars);
             this.Controls.Add(this.labelStars);
             this.Name = "ExtraInputStar";
-            this.Size = new System.Drawing.Size(659, 135);
             this.Load += new System.EventHandler(this.ExtraInputStar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericStars)).EndInit();
             this.ResumeLayout(false);
