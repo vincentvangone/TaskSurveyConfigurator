@@ -12,6 +12,15 @@ namespace Utilities
         //LANGUAGES
         public const string ENGLISH = "English";
         public const string ARABIC = "العربية";
+        public const string AR = "ar";
+        public const string ENG = "en-US";
+
+
+        //INDECES
+        public const int PROPERTIES_COLUMN_INDEX = 0;
+        public const int TYPE_COLUMN_INDEX = 2;
+        public const int TEXT_COLUMN_INDEX = 3;
+        public const int ORDER_COLUMN_INDEX = 4;
 
 
         //QUESTION TYPES

@@ -134,31 +134,31 @@
     <value>النوع:</value>
   </data>
   <data name="panelExtraInputs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 184</value>
+    <value>0, 200</value>
   </data>
   <data name="panelExtraInputs.Size" type="System.Drawing.Size, System.Drawing">
     <value>762, 181</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 53</value>
+    <value>87, 37</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>الغاء</value>
   </data>
   <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 53</value>
+    <value>87, 37</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
   <data name="panelDummy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 53</value>
+    <value>12, 37</value>
   </data>
   <data name="panelButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 365</value>
+    <value>0, 381</value>
   </data>
   <data name="panelButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>762, 93</value>
+    <value>762, 77</value>
   </data>
   <data name="labelOrder.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 19</value>

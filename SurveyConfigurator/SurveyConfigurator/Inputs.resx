@@ -121,15 +121,9 @@
   <data name="comboBoxType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI Light, 9pt</value>
   </data>
-  <data name="comboBoxType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 19</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;panelExtraInputs.Parent" xml:space="preserve">
     <value>$this</value>
@@ -146,8 +140,11 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelOrder.Text" xml:space="preserve">
-    <value>Order:</value>
+  <data name="numericUpDownOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panelExtraInputs.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -161,6 +158,9 @@
   </data>
   <data name="buttonSave.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI, 7.8pt</value>
+  </data>
+  <data name="&gt;&gt;comboBoxType.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="labelType.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 19</value>
@@ -177,17 +177,11 @@
   <data name="labelText.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 19</value>
   </data>
-  <data name="&gt;&gt;panelDummy.Parent" xml:space="preserve">
-    <value>panelButtons</value>
-  </data>
   <data name="comboBoxType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="textBoxText.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="comboBoxType.Items2" xml:space="preserve">
-    <value>Slider</value>
   </data>
   <data name="&gt;&gt;labelText.Name" xml:space="preserve">
     <value>labelText</value>
@@ -222,6 +216,9 @@
   <data name="labelText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI, 9pt</value>
   </data>
+  <data name="&gt;&gt;labelOrder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;labelType.Name" xml:space="preserve">
     <value>labelType</value>
   </data>
@@ -234,8 +231,8 @@
   <data name="&gt;&gt;labelText.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="panelExtraInputs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 193</value>
+  <data name="numericUpDownOrder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="comboBoxType.Size" type="System.Drawing.Size, System.Drawing">
     <value>541, 27</value>
@@ -246,8 +243,14 @@
   <data name="panelExtraInputs.Size" type="System.Drawing.Size, System.Drawing">
     <value>762, 186</value>
   </data>
-  <data name="panelDummy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>643, 20</value>
+  <data name="textBoxText.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panelDummy.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>Save</value>
@@ -276,11 +279,14 @@
   <data name="buttonSave.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 600</value>
+  </data>
   <data name="&gt;&gt;buttonSave.Name" xml:space="preserve">
     <value>buttonSave</value>
   </data>
-  <data name="&gt;&gt;textBoxText.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;buttonSave.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="textBoxText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI Light, 9pt</value>
@@ -291,17 +297,17 @@
   <data name="panelExtraInputs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <data name="comboBoxType.Items" xml:space="preserve">
-    <value>Smiley</value>
-  </data>
-  <data name="labelOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 19</value>
+  <data name="&gt;&gt;textBoxText.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBoxType.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="numericUpDownOrder.Location" type="System.Drawing.Point, System.Drawing">
     <value>199, 57</value>
+  </data>
+  <data name="textBoxText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 89</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
     <value>buttonCancel</value>
@@ -2015,14 +2021,11 @@
   <data name="comboBoxType.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="textBoxText.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="comboBoxType.Items2" xml:space="preserve">
+    <value>Slider</value>
   </data>
   <data name="&gt;&gt;labelText.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelButtons.Name" xml:space="preserve">
-    <value>panelButtons</value>
   </data>
   <data name="&gt;&gt;labelOrder.Name" xml:space="preserve">
     <value>labelOrder</value>
@@ -2032,6 +2035,9 @@
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Inputs</value>
   </data>
   <data name="panelButtons.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>20, 20, 20, 20</value>
@@ -2066,26 +2072,23 @@
   <data name="buttonSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 34</value>
   </data>
-  <data name="textBoxText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="numericUpDownOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="panelDummy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 20</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelButtons.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="labelOrder.Text" xml:space="preserve">
+    <value>Order:</value>
   </data>
   <data name="labelType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Inputs</value>
+  <data name="&gt;&gt;panelButtons.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;panelDummy.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panelButtons.Name" xml:space="preserve">
+    <value>panelButtons</value>
   </data>
   <data name="labelText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -2093,8 +2096,8 @@
   <data name="panelButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <data name="textBoxText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 89</value>
+  <data name="&gt;&gt;panelDummy.Parent" xml:space="preserve">
+    <value>panelButtons</value>
   </data>
   <data name="comboBoxType.Items1" xml:space="preserve">
     <value>Star</value>
@@ -2111,8 +2114,8 @@
   <data name="numericUpDownOrder.Size" type="System.Drawing.Size, System.Drawing">
     <value>542, 22</value>
   </data>
-  <data name="&gt;&gt;comboBoxType.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="comboBoxType.Items" xml:space="preserve">
+    <value>Smiley</value>
   </data>
   <data name="&gt;&gt;panelDummy.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2123,14 +2126,14 @@
   <data name="labelType.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 600</value>
+  <data name="comboBoxType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 19</value>
   </data>
   <data name="&gt;&gt;labelType.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelExtraInputs.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="panelExtraInputs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 193</value>
   </data>
   <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2138,14 +2141,11 @@
   <data name="buttonSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 20</value>
   </data>
-  <data name="&gt;&gt;labelOrder.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textBoxText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="labelOrder.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
-  </data>
-  <data name="numericUpDownOrder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="comboBoxType.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>

@@ -40474,3 +40474,2241 @@ Call Stack Trace :
    at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
 
 ------------------------------------------------------------
+
+Log Entry : 3:07:55 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:07:56 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:07:57 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:08:10 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:08:12 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:08:17 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:08:18 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 372
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:31:39 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 381
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:31:46 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 381
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:31:52 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 381
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:31:57 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 381
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:33:45 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Object reference not set to an instance of an object.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:34:45 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:35:24 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 3:35:40 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:01:23 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 383
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:03:00 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:04:00 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:04:05 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:04:13 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index was outside the bounds of the array.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:05:47 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:06:15 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:07:24 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:08:03 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:08:24 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 200
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 136
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 384
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:28 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:28 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:29 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:30 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:30 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:31 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:52 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:53 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:53 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:54 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:18:54 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+DataGridView control must be bound to an IBindingList object to be sorted.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.dataGridViewQuestions_ColumnHeaderMouseClick(Object sender, DataGridViewCellMouseEventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 334
+   at System.Windows.Forms.DataGridView.OnColumnHeaderMouseClick(DataGridViewCellMouseEventArgs e)
+   at System.Windows.Forms.DataGridView.OnMouseClick(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.DataGridView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:27:51 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.DatabaseConnection.buttonTest_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\DatabaseConnection.cs:line 185
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.RunDialog(Form form)
+   at System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   at System.Windows.Forms.Form.ShowDialog()
+   at SurveyConfigurator.formSurveyConfigurator.buttonConnect_Click(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 373
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnClick(EventArgs e)
+   at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   at System.Windows.Forms.Button.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:38:15 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:39:40 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:40:11 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:41:37 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:42:35 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:43:05 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 414
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:45:40 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 415
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:46:22 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 415
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:46:42 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 415
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:47:41 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 415
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------
+
+Log Entry : 4:47:48 PM Sunday, July 30, 2023
+
+Log Type :
+Error
+
+Displayed message :
+Index (zero based) must be greater than or equal to zero and less than the size of the argument list.
+
+Extra Info :
+Warning
+
+Call Stack Trace :
+   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at ErrorLogger.Logger.WriteLog(String LogMessage, String Type, String ExtraInfo) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\ErrorLogger\Logger.cs:line 42
+   at SurveyConfigurator.formSurveyConfigurator.ViewQuestions() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 203
+   at SurveyConfigurator.formSurveyConfigurator.formSurveyConfigurator_Load(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 139
+   at SurveyConfigurator.formSurveyConfigurator.comboBoxLanguage_SelectedIndexChanged(Object sender, EventArgs e) in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\MainPage.cs:line 415
+   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   at System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.DefWndProc(Message& m)
+   at System.Windows.Forms.Control.WmCommand(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ComboBox.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at SurveyConfigurator.Program.Main() in C:\Users\nour\Desktop\clone\TaskSurveyConfigurator\SurveyConfigurator\SurveyConfigurator\Program.cs:line 19
+
+------------------------------------------------------------

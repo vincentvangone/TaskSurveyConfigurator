@@ -91,7 +91,7 @@ namespace SurveyConfigurator
         public void OnLanguageChanged()
         {
 
-            if (Thread.CurrentThread.CurrentUICulture.Name == "ar")
+            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
             {
                 RightToLeftLayout = true;
                 this.RightToLeft = RightToLeft.Yes;
@@ -99,7 +99,7 @@ namespace SurveyConfigurator
                 panelDummy.Dock = DockStyle.Left;
                 buttonSave.Dock = DockStyle.Left;
             }
-            if (Thread.CurrentThread.CurrentUICulture.Name == "en-US")
+            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.ENG)
             {
                 RightToLeftLayout = false;
                 this.RightToLeft = RightToLeft.No;

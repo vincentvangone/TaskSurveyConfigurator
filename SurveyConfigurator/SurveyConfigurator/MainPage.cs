@@ -22,6 +22,7 @@ using System.Security.AccessControl;
 using System.Globalization;
 using SurveyConfigurator.Properties;
 using System.Resources;
+using System.Windows.Controls.Primitives;
 
 namespace SurveyConfigurator
 {
@@ -35,6 +36,9 @@ namespace SurveyConfigurator
         private static bool FirstTimeRun = true;
         public event EventHandler LanguageChanged;
 
+
+        // Boolean flag to keep track of the sorting order
+        private bool OrderAscending = true;
 
         public formSurveyConfigurator()
         {
@@ -135,16 +139,8 @@ namespace SurveyConfigurator
                     ViewQuestions();
                     buttonAdd.Enabled = true;
                 }
+
                 FirstTimeRun = false;
-
-
-               
-
-                // Initialize the resource manager with the appropriate resource file based on the selected language
-                
-            
-
-
             }
             catch (Exception E)
             {
@@ -176,7 +172,7 @@ namespace SurveyConfigurator
                     buttonDelete.Enabled = true;
                     buttonEdit.Enabled = true;
 
-                    if (Thread.CurrentThread.CurrentUICulture.Name == "ar")
+                    if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
                     {
                         foreach (clsMergedQuestions Question in Questions){
                           //Question.TranslatedType();
@@ -194,6 +190,11 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
+                    TranslateData();
+
+
+
+                    
 
                 }
             }
@@ -203,12 +204,35 @@ namespace SurveyConfigurator
             }
         }
 
+        private void TranslateData()
+        {
+            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
+            {
+                dataGridViewQuestions.Columns[clsConstants.ORDER].HeaderText = Resources.ResourceManager.GetString(clsConstants.ORDER, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                dataGridViewQuestions.Columns[clsConstants.TYPE].HeaderText = Resources.ResourceManager.GetString(clsConstants.TYPE, new CultureInfo(clsConstants.AR));
+                dataGridViewQuestions.Columns[clsConstants.TEXT].HeaderText = Resources.ResourceManager.GetString(clsConstants.TEXT, new CultureInfo(clsConstants.AR));
+                dataGridViewQuestions.Columns[clsConstants.PROPERTIES].HeaderText = Resources.ResourceManager.GetString(clsConstants.PROPERTIES, new CultureInfo(clsConstants.AR));
 
+
+                foreach (DataGridViewRow Row in dataGridViewQuestions.Rows)
+                {
+                    if (Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.SLIDER)
+                    { 
+                        string[] SliderProperties = Row.Cells[clsConstants.PROPERTIES].Value.ToString().Split(' ');
+                        Row.Cells[clsConstants.PROPERTIES].Value=String.Format(Resources.ResourceManager.GetString("SliderProperties", new CultureInfo(clsConstants.AR)), SliderProperties[2], SliderProperties[6], SliderProperties[10], SliderProperties[14]);
+
+                    }
+                    Row.Cells[clsConstants.TYPE].Value = Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)); 
+                }
+
+
+            }
+            
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
             {
-
                 InputsForm.ShowDialog();
             }
             catch (Exception E)
@@ -277,22 +301,49 @@ namespace SurveyConfigurator
             {
                 if (Questions != null)
                 {
-                    if (e.ColumnIndex == 0)
+
+                    // Sort the DataGridView by the clicked column
+                    if (OrderAscending)
                     {
-                        Questions = Questions.OrderBy(obj => obj.Properties).ToList();
+                        if (e.ColumnIndex == clsConstants.PROPERTIES_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderBy(obj => obj.Properties).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.TYPE_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderBy(obj => obj.Type).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.TEXT_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderBy(obj => obj.Text).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.ORDER_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderBy(obj => obj.Order).ToList();
+                        }
+                        OrderAscending = false;
                     }
-                    else if (e.ColumnIndex == 2)
+                    else
                     {
-                        Questions = Questions.OrderBy(obj => obj.Type).ToList();
+                        if (e.ColumnIndex == clsConstants.PROPERTIES_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderByDescending(obj => obj.Properties).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.TYPE_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderByDescending(obj => obj.Type).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.TEXT_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderByDescending(obj => obj.Text).ToList();
+                        }
+                        else if (e.ColumnIndex == clsConstants.ORDER_COLUMN_INDEX)
+                        {
+                            Questions = Questions.OrderByDescending(obj => obj.Order).ToList();
+                        }
+                        OrderAscending = true; // Set the flag for ascending order
                     }
-                    else if (e.ColumnIndex == 3)
-                    {
-                        Questions = Questions.OrderBy(obj => obj.Text).ToList();
-                    }
-                    else if (e.ColumnIndex == 4)
-                    {
-                        Questions = Questions.OrderBy(obj => obj.Order).ToList();
-                    }
+                   
                     dataGridViewQuestions.DataSource = null;
                     dataGridViewQuestions.DataSource = Questions;
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -305,7 +356,7 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
-
+                    TranslateData();
                 }
             }
             catch (Exception E)
@@ -332,29 +383,41 @@ namespace SurveyConfigurator
 
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            switch (comboBoxLanguage.SelectedItem.ToString())
+            try
             {
-                case clsConstants.ENGLISH:
-                    
-                    RightToLeftLayout = false;
-                    this.RightToLeft = RightToLeft.No;
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                    break;
-                case clsConstants.ARABIC:
-                    OnLanguageChanged(EventArgs.Empty);
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar");
+                this.Controls.Clear();
+                
+                
+                switch (comboBoxLanguage.SelectedItem.ToString())
+                {
 
-                    RightToLeftLayout = true;
-                    this.RightToLeft = RightToLeft.Yes;
-                    break;
+                    case clsConstants.ENGLISH:
+
+                        RightToLeftLayout = false;
+                        this.RightToLeft = RightToLeft.No;
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo(clsConstants.ENG);
+                        break;
+                    case clsConstants.ARABIC:
+
+
+                        //MessageBox.Show(Resources.ResourceManager.GetString("Smiley",new CultureInfo(clsConstants.AR)));
+                        OnLanguageChanged(EventArgs.Empty);
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo(clsConstants.AR);
+
+                        RightToLeftLayout = true;
+                        this.RightToLeft = RightToLeft.Yes;
+                        break;
+                }
+                InputsForm.OnLanguageChanged();
+                InputsEditForm.OnLanguageChanged();
+                InitializeComponent();
+                formSurveyConfigurator_Load(this, null);
+
             }
-            InputsForm.OnLanguageChanged();
-            InputsEditForm.OnLanguageChanged();
-            this.Controls.Clear();
-            InitializeComponent();
-            formSurveyConfigurator_Load(this,null);
-
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
     }
 }

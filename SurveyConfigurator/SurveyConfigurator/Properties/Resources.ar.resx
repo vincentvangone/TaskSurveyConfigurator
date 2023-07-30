@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EndCaption" xml:space="preserve">
+    <value>نص النهاية:</value>
+  </data>
+  <data name="EndValue" xml:space="preserve">
+    <value>قيمة النهاية:</value>
+  </data>
+  <data name="NumberOfSmileys" xml:space="preserve">
+    <value>عدد الوجوه:</value>
+  </data>
+  <data name="NumberOfStars" xml:space="preserve">
+    <value>عدد النجوم:</value>
+  </data>
   <data name="Order" xml:space="preserve">
     <value>الترتيب</value>
   </data>
@@ -126,11 +138,20 @@
   <data name="Slider" xml:space="preserve">
     <value>سلايدر؟:)</value>
   </data>
+  <data name="SliderProperties" xml:space="preserve">
+    <value>قيمة البداية: {0} نص البداية: {1} قيمة النهاية: {2} نص النهاية: {3}</value>
+  </data>
   <data name="Smiley" xml:space="preserve">
     <value>وجوه</value>
   </data>
   <data name="Star" xml:space="preserve">
     <value>نجوم</value>
+  </data>
+  <data name="StartCaption" xml:space="preserve">
+    <value>نص البداية:</value>
+  </data>
+  <data name="StartValue" xml:space="preserve">
+    <value>قيمة البداية:</value>
   </data>
   <data name="Text" xml:space="preserve">
     <value>النص</value>

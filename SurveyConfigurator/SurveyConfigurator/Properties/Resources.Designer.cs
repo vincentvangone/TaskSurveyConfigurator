@@ -59,5 +59,14 @@ namespace SurveyConfigurator.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        internal static string Smiley {
+            get {
+                return ResourceManager.GetString("Smiley", resourceCulture);
+            }
+        }
     }
 }
