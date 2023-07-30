@@ -17,10 +17,17 @@ namespace Utilities
 
 
         //INDECES
+        
+        //COLUMNS
         public const int PROPERTIES_COLUMN_INDEX = 0;
         public const int TYPE_COLUMN_INDEX = 2;
         public const int TEXT_COLUMN_INDEX = 3;
         public const int ORDER_COLUMN_INDEX = 4;
+        //STRING SPLIT
+        public const int START_VALUE_INDEX = 2;
+        public const int END_VALUE_INDEX = 10;
+        public const int START_CAPTION_INDEX = 6;
+        public const int END_CAPTION_INDEX = 14;
 
 
         //QUESTION TYPES

@@ -117,17 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="EndCaption" xml:space="preserve">
-    <value>نص النهاية:</value>
-  </data>
-  <data name="EndValue" xml:space="preserve">
-    <value>قيمة النهاية:</value>
-  </data>
   <data name="NumberOfSmileys" xml:space="preserve">
-    <value>عدد الوجوه:</value>
+    <value>عدد الوجوه: {0}</value>
   </data>
   <data name="NumberOfStars" xml:space="preserve">
-    <value>عدد النجوم:</value>
+    <value>عدد النجوم: {0}</value>
   </data>
   <data name="Order" xml:space="preserve">
     <value>الترتيب</value>
@@ -146,12 +140,6 @@
   </data>
   <data name="Star" xml:space="preserve">
     <value>نجوم</value>
-  </data>
-  <data name="StartCaption" xml:space="preserve">
-    <value>نص البداية:</value>
-  </data>
-  <data name="StartValue" xml:space="preserve">
-    <value>قيمة البداية:</value>
   </data>
   <data name="Text" xml:space="preserve">
     <value>النص</value>

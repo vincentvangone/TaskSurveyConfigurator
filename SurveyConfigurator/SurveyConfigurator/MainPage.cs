@@ -216,12 +216,23 @@ namespace SurveyConfigurator
 
                 foreach (DataGridViewRow Row in dataGridViewQuestions.Rows)
                 {
+                    string[] SplitProperties = Row.Cells[clsConstants.PROPERTIES].Value.ToString().Split(' ');
                     if (Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.SLIDER)
                     { 
-                        string[] SliderProperties = Row.Cells[clsConstants.PROPERTIES].Value.ToString().Split(' ');
-                        Row.Cells[clsConstants.PROPERTIES].Value=String.Format(Resources.ResourceManager.GetString("SliderProperties", new CultureInfo(clsConstants.AR)), SliderProperties[2], SliderProperties[6], SliderProperties[10], SliderProperties[14]);
+                        Row.Cells[clsConstants.PROPERTIES].Value=String.Format(Resources.ResourceManager.GetString("SliderProperties", new CultureInfo(clsConstants.AR)), SplitProperties[clsConstants.START_VALUE_INDEX], SplitProperties[clsConstants.START_CAPTION_INDEX], SplitProperties[clsConstants.END_VALUE_INDEX], SplitProperties[clsConstants.END_CAPTION_INDEX]);
 
                     }
+                    else if(Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.SMILEY)
+                    {
+                        Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_SMILEYS, new CultureInfo(clsConstants.AR)),  SplitProperties[3]);
+
+                    }
+                    else if (Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.STAR)
+                    {
+                        Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_STARS, new CultureInfo(clsConstants.AR)),  SplitProperties[3]);
+
+                    }
+
                     Row.Cells[clsConstants.TYPE].Value = Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)); 
                 }
 
