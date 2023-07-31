@@ -67,10 +67,6 @@
             this.comboBoxType.DisplayMember = "Smiley";
             this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            resources.GetString("comboBoxType.Items"),
-            resources.GetString("comboBoxType.Items1"),
-            resources.GetString("comboBoxType.Items2")});
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBoxType_SelectedIndexChanged);
             // 
@@ -95,10 +91,10 @@
             // 
             // panelButtons
             // 
-            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Controls.Add(this.buttonSave);
             this.panelButtons.Controls.Add(this.panelDummy);
             this.panelButtons.Controls.Add(this.buttonCancel);
+            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Name = "panelButtons";
             // 
             // panelDummy

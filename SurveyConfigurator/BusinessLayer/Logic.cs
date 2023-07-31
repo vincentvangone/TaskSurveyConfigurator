@@ -55,8 +55,14 @@ namespace BusinessLayer
 
         protected virtual void OnRequestUIUpdate()
         {
+            try { 
             // Raise the event to request a UI update in the UI layer
             E_RequestUIUpdate?.Invoke(this, EventArgs.Empty);
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
 

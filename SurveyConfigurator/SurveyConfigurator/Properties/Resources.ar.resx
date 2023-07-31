@@ -130,7 +130,7 @@
     <value>ميزات خاصة</value>
   </data>
   <data name="Slider" xml:space="preserve">
-    <value>سلايدر؟:)</value>
+    <value>سلايدر</value>
   </data>
   <data name="SliderProperties" xml:space="preserve">
     <value>قيمة البداية: {0} نص البداية: {1} قيمة النهاية: {2} نص النهاية: {3}</value>
@@ -146,5 +146,14 @@
   </data>
   <data name="Type" xml:space="preserve">
     <value>النوع</value>
+  </data>
+  <data name="سلايدر" xml:space="preserve">
+    <value>Slider</value>
+  </data>
+  <data name="نجوم" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="وجوه" xml:space="preserve">
+    <value>Smiley</value>
   </data>
 </root>

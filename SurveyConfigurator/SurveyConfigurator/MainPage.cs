@@ -46,9 +46,7 @@ namespace SurveyConfigurator
             {
                 InitializeComponent();
                 //subscribe to events
-                Connectionform.E_ResetConnection += DatabaseConnection_ResetConnection;
-                InputsForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
-                InputsEditForm.E_RequestMainFormUpdate += Inputs_RequestMainFormUpdate;
+                Connectionform.E_ResetConnection += DatabaseConnection_ResetConnection; 
                 LogicLayer.E_RequestUIUpdate += Logic_RequestUIUpdate;
 
 
@@ -65,8 +63,14 @@ namespace SurveyConfigurator
 
         protected virtual void OnLanguageChanged(EventArgs e)
         {
+            try { 
             // Raise the LanguageChanged event in other forms
             LanguageChanged?.Invoke(this, e);
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
 
 
@@ -95,24 +99,22 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
         }
-
-        private void Inputs_RequestMainFormUpdate(object sender, EventArgs e)
-        {
-            try
-            {
-                ViewQuestions();
-            }
-            catch (Exception E)
-            {
-                Logger.WriteLog(E.Message, clsConstants.ERROR);
-            }
-        }
+         
 
         private void formSurveyConfigurator_Load(object sender, EventArgs e)
         {
             try
             {
-                
+                //temporarily disabling the event
+                comboBoxLanguage.SelectedIndexChanged -= comboBoxLanguage_SelectedIndexChanged;
+                if(Thread.CurrentThread.CurrentUICulture.Name==clsConstants.AR)
+                    comboBoxLanguage.SelectedItem = clsConstants.ARABIC;
+                else
+                {
+                    comboBoxLanguage.SelectedItem = clsConstants.ENGLISH;
+                }
+                //turning the evnt back on
+                comboBoxLanguage.SelectedIndexChanged += comboBoxLanguage_SelectedIndexChanged;
 
                 if (ConfigurationManager.ConnectionStrings["CONNECTION"].ToString() == "")
                 {
@@ -156,7 +158,6 @@ namespace SurveyConfigurator
         {
             try
             {
-                //this.LogicLayer.LastUpdateTime = DateTime.Now.ToString("M/d/yyyy HH:mm:ss");
                 Questions = this.LogicLayer.ViewQuestions();
 
                 //if no questions in the database
@@ -168,16 +169,8 @@ namespace SurveyConfigurator
                 else
                 {
 
-
                     buttonDelete.Enabled = true;
                     buttonEdit.Enabled = true;
-
-                    if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
-                    {
-                        foreach (clsMergedQuestions Question in Questions){
-                          //Question.TranslatedType();
-                        }
-                    }
 
                     dataGridViewQuestions.DataSource = Questions;
                     dataGridViewQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -190,6 +183,7 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
+
                     TranslateData();
 
 
@@ -206,40 +200,51 @@ namespace SurveyConfigurator
 
         private void TranslateData()
         {
-            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
+            try
             {
-                dataGridViewQuestions.Columns[clsConstants.ORDER].HeaderText = Resources.ResourceManager.GetString(clsConstants.ORDER, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
-                dataGridViewQuestions.Columns[clsConstants.TYPE].HeaderText = Resources.ResourceManager.GetString(clsConstants.TYPE, new CultureInfo(clsConstants.AR));
-                dataGridViewQuestions.Columns[clsConstants.TEXT].HeaderText = Resources.ResourceManager.GetString(clsConstants.TEXT, new CultureInfo(clsConstants.AR));
-                dataGridViewQuestions.Columns[clsConstants.PROPERTIES].HeaderText = Resources.ResourceManager.GetString(clsConstants.PROPERTIES, new CultureInfo(clsConstants.AR));
-
-
-                foreach (DataGridViewRow Row in dataGridViewQuestions.Rows)
+                if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
                 {
-                    string[] SplitProperties = Row.Cells[clsConstants.PROPERTIES].Value.ToString().Split(' ');
-                    if (Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.SLIDER)
-                    { 
-                        Row.Cells[clsConstants.PROPERTIES].Value=String.Format(Resources.ResourceManager.GetString("SliderProperties", new CultureInfo(clsConstants.AR)), SplitProperties[clsConstants.START_VALUE_INDEX], SplitProperties[clsConstants.START_CAPTION_INDEX], SplitProperties[clsConstants.END_VALUE_INDEX], SplitProperties[clsConstants.END_CAPTION_INDEX]);
+                   
 
-                    }
-                    else if(Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.SMILEY)
+                    foreach (DataGridViewRow Row in dataGridViewQuestions.Rows)
                     {
-                        Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_SMILEYS, new CultureInfo(clsConstants.AR)),  SplitProperties[3]);
+                        Row.Cells[clsConstants.TYPE].Value = Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                        string[] SplitProperties = Row.Cells[clsConstants.PROPERTIES].Value.ToString().Split(' ');
+                        if (Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString()) == clsConstants.SLIDER)
+                        {
+                            Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.SLIDER_PROPERTIES, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)), SplitProperties[clsConstants.START_VALUE_INDEX], SplitProperties[clsConstants.START_CAPTION_INDEX], SplitProperties[clsConstants.END_VALUE_INDEX], SplitProperties[clsConstants.END_CAPTION_INDEX]);
 
+                        }
+                        else if (Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString()) == clsConstants.SMILEY)
+                        {
+                            Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_SMILEYS, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)), SplitProperties[clsConstants.SMILEYS_STARS_INDEX]);
+
+                        }
+                        else if (Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString()) == clsConstants.STAR)
+                        {
+                            Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_STARS, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)), SplitProperties[clsConstants.SMILEYS_STARS_INDEX]);
+
+                        }
+
+                       
                     }
-                    else if (Row.Cells[clsConstants.TYPE].Value.ToString() == clsConstants.STAR)
-                    {
-                        Row.Cells[clsConstants.PROPERTIES].Value = String.Format(Resources.ResourceManager.GetString(clsConstants.NUMBER_OF_STARS, new CultureInfo(clsConstants.AR)),  SplitProperties[3]);
+                    
 
-                    }
-
-                    Row.Cells[clsConstants.TYPE].Value = Resources.ResourceManager.GetString(Row.Cells[clsConstants.TYPE].Value.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)); 
                 }
 
+                dataGridViewQuestions.Columns[clsConstants.ORDER_COLUMN_INDEX].HeaderText = Resources.ResourceManager.GetString(clsConstants.ORDER, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                dataGridViewQuestions.Columns[clsConstants.TYPE].HeaderText = Resources.ResourceManager.GetString(clsConstants.TYPE, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                dataGridViewQuestions.Columns[clsConstants.TEXT].HeaderText = Resources.ResourceManager.GetString(clsConstants.TEXT, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                dataGridViewQuestions.Columns[clsConstants.PROPERTIES].HeaderText = Resources.ResourceManager.GetString(clsConstants.PROPERTIES, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
 
             }
-            
+            catch (Exception E)
+            {
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
+            }
         }
+            
+        
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
@@ -367,7 +372,14 @@ namespace SurveyConfigurator
                     dataGridViewQuestions.Columns[clsConstants.TYPE].DisplayIndex = 1;
                     dataGridViewQuestions.Columns[clsConstants.TEXT].DisplayIndex = 2;
                     dataGridViewQuestions.Columns[clsConstants.PROPERTIES].DisplayIndex = 3;
-                    TranslateData();
+
+                    dataGridViewQuestions.Columns[clsConstants.ORDER_COLUMN_INDEX].HeaderText = Resources.ResourceManager.GetString(clsConstants.ORDER, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                    dataGridViewQuestions.Columns[clsConstants.TYPE].HeaderText = Resources.ResourceManager.GetString(clsConstants.TYPE, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                    dataGridViewQuestions.Columns[clsConstants.TEXT].HeaderText = Resources.ResourceManager.GetString(clsConstants.TEXT, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+                    dataGridViewQuestions.Columns[clsConstants.PROPERTIES].HeaderText = Resources.ResourceManager.GetString(clsConstants.PROPERTIES, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+
+
+
                 }
             }
             catch (Exception E)
@@ -390,8 +402,6 @@ namespace SurveyConfigurator
             }
         }
 
-
-
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -412,7 +422,7 @@ namespace SurveyConfigurator
 
 
                         //MessageBox.Show(Resources.ResourceManager.GetString("Smiley",new CultureInfo(clsConstants.AR)));
-                        OnLanguageChanged(EventArgs.Empty);
+                       
                         Thread.CurrentThread.CurrentUICulture = new CultureInfo(clsConstants.AR);
 
                         RightToLeftLayout = true;

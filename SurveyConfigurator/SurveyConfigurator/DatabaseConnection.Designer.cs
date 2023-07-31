@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseConnection));
             this.labelServer = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelDatabase = new System.Windows.Forms.Label();
@@ -50,209 +51,119 @@
             // 
             // labelServer
             // 
-            this.labelServer.AutoSize = true;
-            this.labelServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelServer.Location = new System.Drawing.Point(23, 23);
-            this.labelServer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.labelServer, "labelServer");
             this.labelServer.Name = "labelServer";
-            this.labelServer.Size = new System.Drawing.Size(55, 18);
-            this.labelServer.TabIndex = 0;
-            this.labelServer.Text = "Server:";
             // 
             // labelUsername
             // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(13, 137);
-            this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.labelUsername, "labelUsername");
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(81, 18);
-            this.labelUsername.TabIndex = 1;
-            this.labelUsername.Text = "Username:";
             // 
             // labelDatabase
             // 
-            this.labelDatabase.AutoSize = true;
-            this.labelDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatabase.Location = new System.Drawing.Point(23, 74);
-            this.labelDatabase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.labelDatabase, "labelDatabase");
             this.labelDatabase.Name = "labelDatabase";
-            this.labelDatabase.Size = new System.Drawing.Size(75, 18);
-            this.labelDatabase.TabIndex = 3;
-            this.labelDatabase.Text = "Database:";
             // 
             // textBoxServer
             // 
-            this.textBoxServer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxServer.Location = new System.Drawing.Point(108, 23);
+            resources.ApplyResources(this.textBoxServer, "textBoxServer");
             this.textBoxServer.Name = "textBoxServer";
-            this.textBoxServer.Size = new System.Drawing.Size(264, 24);
-            this.textBoxServer.TabIndex = 4;
             // 
             // textBoxDatabase
             // 
-            this.textBoxDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDatabase.Location = new System.Drawing.Point(108, 70);
+            resources.ApplyResources(this.textBoxDatabase, "textBoxDatabase");
             this.textBoxDatabase.Name = "textBoxDatabase";
-            this.textBoxDatabase.Size = new System.Drawing.Size(264, 24);
-            this.textBoxDatabase.TabIndex = 5;
             // 
             // labelPassword
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(13, 190);
-            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.labelPassword, "labelPassword");
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(79, 18);
-            this.labelPassword.TabIndex = 6;
-            this.labelPassword.Text = "Password:";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(98, 186);
+            resources.ApplyResources(this.textBoxPassword, "textBoxPassword");
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(262, 24);
-            this.textBoxPassword.TabIndex = 7;
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(98, 133);
+            resources.ApplyResources(this.textBoxUsername, "textBoxUsername");
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(262, 24);
-            this.textBoxUsername.TabIndex = 8;
             // 
             // buttonOk
             // 
-            this.buttonOk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(177, 10);
+            resources.ApplyResources(this.buttonOk, "buttonOk");
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(94, 29);
-            this.buttonOk.TabIndex = 9;
-            this.buttonOk.Text = "Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
             // buttonTest
             // 
-            this.buttonTest.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTest.Location = new System.Drawing.Point(10, 10);
+            resources.ApplyResources(this.buttonTest, "buttonTest");
             this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(113, 29);
-            this.buttonTest.TabIndex = 11;
-            this.buttonTest.Text = "Test Connection";
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
             // radioButtonIntegratedSecurity
             // 
-            this.radioButtonIntegratedSecurity.AutoSize = true;
-            this.radioButtonIntegratedSecurity.Location = new System.Drawing.Point(16, 42);
+            resources.ApplyResources(this.radioButtonIntegratedSecurity, "radioButtonIntegratedSecurity");
             this.radioButtonIntegratedSecurity.Name = "radioButtonIntegratedSecurity";
-            this.radioButtonIntegratedSecurity.Size = new System.Drawing.Size(218, 22);
-            this.radioButtonIntegratedSecurity.TabIndex = 12;
             this.radioButtonIntegratedSecurity.TabStop = true;
-            this.radioButtonIntegratedSecurity.Text = "Use Windows Authentication";
             this.radioButtonIntegratedSecurity.UseVisualStyleBackColor = true;
             this.radioButtonIntegratedSecurity.CheckedChanged += new System.EventHandler(this.radioButtonIntegratedSecurity_CheckedChanged);
             // 
             // radioButtonSQLAuth
             // 
-            this.radioButtonSQLAuth.AutoSize = true;
-            this.radioButtonSQLAuth.Location = new System.Drawing.Point(16, 85);
+            resources.ApplyResources(this.radioButtonSQLAuth, "radioButtonSQLAuth");
             this.radioButtonSQLAuth.Name = "radioButtonSQLAuth";
-            this.radioButtonSQLAuth.Size = new System.Drawing.Size(233, 22);
-            this.radioButtonSQLAuth.TabIndex = 13;
             this.radioButtonSQLAuth.TabStop = true;
-            this.radioButtonSQLAuth.Text = "Use SQL Server Authentication";
             this.radioButtonSQLAuth.UseVisualStyleBackColor = true;
             this.radioButtonSQLAuth.CheckedChanged += new System.EventHandler(this.radioButtonSQLAuth_CheckedChanged);
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.buttonOk);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.buttonCancel);
             this.panel2.Controls.Add(this.buttonTest);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 417);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(388, 49);
-            this.panel2.TabIndex = 15;
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(271, 10);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 29);
-            this.panel1.TabIndex = 13;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(281, 10);
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(97, 29);
-            this.buttonCancel.TabIndex = 12;
-            this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // groupBoxAuthentication
             // 
-            this.groupBoxAuthentication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.groupBoxAuthentication, "groupBoxAuthentication");
             this.groupBoxAuthentication.Controls.Add(this.radioButtonSQLAuth);
             this.groupBoxAuthentication.Controls.Add(this.radioButtonIntegratedSecurity);
             this.groupBoxAuthentication.Controls.Add(this.textBoxUsername);
             this.groupBoxAuthentication.Controls.Add(this.textBoxPassword);
             this.groupBoxAuthentication.Controls.Add(this.labelPassword);
             this.groupBoxAuthentication.Controls.Add(this.labelUsername);
-            this.groupBoxAuthentication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxAuthentication.Location = new System.Drawing.Point(10, 120);
             this.groupBoxAuthentication.Name = "groupBoxAuthentication";
-            this.groupBoxAuthentication.Size = new System.Drawing.Size(368, 226);
-            this.groupBoxAuthentication.TabIndex = 16;
             this.groupBoxAuthentication.TabStop = false;
-            this.groupBoxAuthentication.Text = "Log onto the server";
             // 
             // DatabaseConnection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 466);
             this.Controls.Add(this.groupBoxAuthentication);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxDatabase);
             this.Controls.Add(this.textBoxServer);
             this.Controls.Add(this.labelDatabase);
             this.Controls.Add(this.labelServer);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.MinimumSize = new System.Drawing.Size(374, 495);
             this.Name = "DatabaseConnection";
-            this.Text = "Connection";
             this.Load += new System.EventHandler(this.DatabaseConnection_Load);
             this.panel2.ResumeLayout(false);
             this.groupBoxAuthentication.ResumeLayout(false);

@@ -24,10 +24,12 @@ namespace Utilities
         public const int TEXT_COLUMN_INDEX = 3;
         public const int ORDER_COLUMN_INDEX = 4;
         //STRING SPLIT
+        public const int SMILEYS_STARS_INDEX = 3;
         public const int START_VALUE_INDEX = 2;
         public const int END_VALUE_INDEX = 10;
         public const int START_CAPTION_INDEX = 6;
         public const int END_CAPTION_INDEX = 14;
+        public const string SLIDER_PROPERTIES = "SliderProperties";
 
 
         //QUESTION TYPES
@@ -59,7 +61,7 @@ namespace Utilities
 
         //CONNECTION STRING
         public const string SET_CONNECTION_WINDOWS_AUTH = "Data Source={0};Initial Catalog ={1}; Integrated Security = True;";
-        public const string SET_CONNECTION_SQL_AUTH = "Data Source={0};Initial Catalog ={1};User Id={3}; Password={4}";
+        public const string SET_CONNECTION_SQL_AUTH = "Data Source={0};Initial Catalog ={1};User Id={2}; Password={3}";
         //QUESTION ATTRIBUTES
         public const string ID = "Id";
         public const string TEXT = "Text";

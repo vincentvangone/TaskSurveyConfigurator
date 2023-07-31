@@ -28,26 +28,8 @@ namespace SurveyConfigurator
         public DatabaseConnection()
         {
             try
-            {
-
+            { 
                 InitializeComponent();
-                // ConfigurationManager.RefreshSection("connectionStrings");
-                if (ConfigurationManager.AppSettings["IntegratedSecurity"] == "True")
-                {
-                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
-                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
-                    radioButtonIntegratedSecurity.Checked = true;
-                    textBoxUsername.Enabled = false;
-                    textBoxPassword.Enabled = false;
-                }
-                else
-                {
-                    radioButtonSQLAuth.Checked = true;
-                    textBoxUsername.Enabled = true;
-                    textBoxPassword.Enabled = true;
-                    textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
-                    textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
-                }
 
             }
             catch (Exception E)
@@ -61,7 +43,14 @@ namespace SurveyConfigurator
         {
             try
             {
-
+                 Controls.Clear();
+                InitializeComponent();
+                if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
+                { 
+                    this.RightToLeft = RightToLeft.Yes;
+                }
+                else
+                    this.RightToLeft = RightToLeft.No;
                // ConfigurationManager.RefreshSection("connectionStrings");
                 if (ConfigurationManager.AppSettings["IntegratedSecurity"] == "True")
                 {
@@ -78,6 +67,10 @@ namespace SurveyConfigurator
                     textBoxPassword.Enabled = true;
                     textBoxServer.Text = ConfigurationManager.AppSettings["Server"];
                     textBoxDatabase.Text = ConfigurationManager.AppSettings["Database"];
+                    textBoxUsername.Text = ConfigurationManager.AppSettings["Username"];
+                    textBoxPassword.Text = ConfigurationManager.AppSettings["Password"];
+
+
                 }
             }
             catch (Exception E)

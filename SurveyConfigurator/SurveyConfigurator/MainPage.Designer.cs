@@ -78,9 +78,9 @@
             // 
             // dataGridViewQuestions
             // 
-            resources.ApplyResources(this.dataGridViewQuestions, "dataGridViewQuestions");
             this.dataGridViewQuestions.AllowUserToAddRows = false;
             this.dataGridViewQuestions.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.dataGridViewQuestions, "dataGridViewQuestions");
             this.dataGridViewQuestions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewQuestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewQuestions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
@@ -93,12 +93,12 @@
             // 
             // panelButtons
             // 
-            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Controls.Add(this.buttonAdd);
             this.panelButtons.Controls.Add(this.panelDummy);
             this.panelButtons.Controls.Add(this.buttonEdit);
             this.panelButtons.Controls.Add(this.panel3);
             this.panelButtons.Controls.Add(this.buttonDelete);
+            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Name = "panelButtons";
             // 
             // panelDummy
@@ -120,13 +120,13 @@
             // 
             // panelTitle
             // 
-            resources.ApplyResources(this.panelTitle, "panelTitle");
             this.panelTitle.Controls.Add(this.pictureBox1);
             this.panelTitle.Controls.Add(this.panel2);
             this.panelTitle.Controls.Add(this.comboBoxLanguage);
             this.panelTitle.Controls.Add(this.panel1);
             this.panelTitle.Controls.Add(this.labelQuestions);
             this.panelTitle.Controls.Add(this.buttonConnect);
+            resources.ApplyResources(this.panelTitle, "panelTitle");
             this.panelTitle.Name = "panelTitle";
             // 
             // pictureBox1
@@ -158,8 +158,8 @@
             // 
             // labelConnectionCheck
             // 
-            resources.ApplyResources(this.labelConnectionCheck, "labelConnectionCheck");
             this.labelConnectionCheck.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            resources.ApplyResources(this.labelConnectionCheck, "labelConnectionCheck");
             this.labelConnectionCheck.Name = "labelConnectionCheck";
             // 
             // formSurveyConfigurator
@@ -170,6 +170,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.dataGridViewQuestions);
             this.Controls.Add(this.panelButtons);
+            this.MaximizeBox = false;
             this.Name = "formSurveyConfigurator";
             this.Load += new System.EventHandler(this.formSurveyConfigurator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestions)).EndInit();
@@ -178,7 +179,6 @@
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

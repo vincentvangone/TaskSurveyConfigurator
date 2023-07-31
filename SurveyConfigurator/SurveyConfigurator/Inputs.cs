@@ -1,9 +1,11 @@
 ﻿using BusinessLayer;
 using ErrorLogger;
+using SurveyConfigurator.Properties;
 using SurveyConfigurator.UserControls;
 using System;
 using System.Drawing;
 using System.Globalization;
+using System.Resources;
 using System.Threading;
 //using System.Windows.Controls;
 using System.Windows.Forms;
@@ -38,10 +40,7 @@ namespace SurveyConfigurator
             {
                 
                 InitializeComponent();
-                comboBoxType.SelectedIndex = 0;
-
-                // Subscribe to the LanguageChanged event in the constructor
-                // When the event is raised, the LanguageChangedHandler method will be called
+                LoadComboBoxItems();
 
 
             }
@@ -53,12 +52,17 @@ namespace SurveyConfigurator
 
         private void Inputs_Load(object sender, EventArgs e)
         {
-
-            if (comboBoxType.Enabled)
+            try { 
+                if (comboBoxType.Enabled)
+                {
+                    comboBoxType.SelectedIndex = 0;
+                    numericUpDownOrder.Value = 1;
+                    textBoxText.Text = string.Empty;
+                }
+            }
+            catch (Exception E)
             {
-                comboBoxType.SelectedIndex = 0;
-                numericUpDownOrder.Value = 1;
-                textBoxText.Text = string.Empty;
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
 
         }
@@ -80,41 +84,41 @@ namespace SurveyConfigurator
         }
 
 
-
-        protected virtual void OnRequestMainFormUpdate()
-        {
-            // Raise the event to request a UI update in the UI layer
-            E_RequestMainFormUpdate?.Invoke(this, EventArgs.Empty);
-        }
-
-
         public void OnLanguageChanged()
         {
+            try
+            {
 
-            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
-            {
-                RightToLeftLayout = true;
-                this.RightToLeft = RightToLeft.Yes;
-                buttonCancel.Dock = DockStyle.Left;
-                panelDummy.Dock = DockStyle.Left;
-                buttonSave.Dock = DockStyle.Left;
+                if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.AR)
+                {
+                    RightToLeftLayout = true;
+                    this.RightToLeft = RightToLeft.Yes;
+                    buttonCancel.Dock = DockStyle.Left;
+                    panelDummy.Dock = DockStyle.Left;
+                    buttonSave.Dock = DockStyle.Left;
+                }
+                if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.ENG)
+                {
+                    RightToLeftLayout = false;
+                    this.RightToLeft = RightToLeft.No;
+                }
+                this.Controls.Clear();
+                ucSlider.InitializeSlider();
+                ucSmiley.InitializeSmiley();
+                ucStar.InitializeStar();
+                InitializeComponent();
+                LoadComboBoxItems();
             }
-            if (Thread.CurrentThread.CurrentUICulture.Name == clsConstants.ENG)
+            catch (Exception E)
             {
-                RightToLeftLayout = false;
-                this.RightToLeft = RightToLeft.No;
+                Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
-            this.Controls.Clear();
-            ucSlider.InitializeSlider();
-            ucSmiley.InitializeSmiley();
-            ucStar.InitializeStar();
-            InitializeComponent();
         }
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                switch (comboBoxType.SelectedItem.ToString())
+                switch (Resources.ResourceManager.GetString(comboBoxType.SelectedItem.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name) ))
                 {
                     case clsConstants.SMILEY:
                         QuestionSmiley.Type = clsConstants.SMILEY;
@@ -151,16 +155,16 @@ namespace SurveyConfigurator
         {
             try
             {
-                
+               
                 //set Id to the sent one so we can use it in the other functions
                 this.Id = Id;
 
                 this.Text = "Edit Question";
                 //textBoxText.Text = LogicLayer.GetText(Id);
-                comboBoxType.SelectedItem = Type;
+                comboBoxType.SelectedItem = Type; 
                 comboBoxType.Enabled = false;
 
-                switch (comboBoxType.SelectedItem.ToString())
+                switch (Resources.ResourceManager.GetString(Type, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)))
                 {
                     case clsConstants.SMILEY:
                         QuestionSmiley.Id= Id;
@@ -211,7 +215,7 @@ namespace SurveyConfigurator
                 if (!(comboBoxType.Enabled))
                 {
 
-                    switch (comboBoxType.SelectedItem.ToString())
+                    switch (Resources.ResourceManager.GetString(comboBoxType.SelectedItem.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)))
                     {
                         case clsConstants.SMILEY:
                             QuestionSmiley.Order = (int)numericUpDownOrder.Value;
@@ -221,7 +225,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             
@@ -235,7 +238,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             break;
@@ -250,7 +252,6 @@ namespace SurveyConfigurator
                             Result = LogicLayer.SliderInputValidation(QuestionSlider, Id);
                             ErrorMessage(Result);
                             if (Result == 1) {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             break;
@@ -261,7 +262,7 @@ namespace SurveyConfigurator
                 //if the question is new send id=-1
                 else
                 {
-                    switch (comboBoxType.SelectedItem.ToString())
+                    switch (Resources.ResourceManager.GetString(comboBoxType.SelectedItem.ToString(), new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name)))
                     {
                         case clsConstants.SMILEY:
                             QuestionSmiley.Order = (int)numericUpDownOrder.Value;
@@ -271,7 +272,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             break;
@@ -283,7 +283,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             break;
@@ -298,7 +297,6 @@ namespace SurveyConfigurator
                             ErrorMessage(Result);
                             if (Result == 1)
                             {
-                                OnRequestMainFormUpdate();
                                 this.Close();
                             }
                             break;
@@ -338,6 +336,26 @@ namespace SurveyConfigurator
             {
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
             }
+        }
+
+        private void LoadComboBoxItems()
+        {
+            // Get the current culture from the selected language
+            CultureInfo Culture = new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name);
+
+            
+            // Retrieve the translated values for the ComboBox from the resources file
+            string ComboBoxItemSmiley = Resources.ResourceManager.GetString(clsConstants.SMILEY, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+            string ComboBoxItemStar = Resources.ResourceManager.GetString(clsConstants.STAR, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+            string ComboBoxItemSlider = Resources.ResourceManager.GetString(clsConstants.SLIDER, new CultureInfo(Thread.CurrentThread.CurrentUICulture.Name));
+            
+
+            // Set the DataSource for the ComboBox
+            comboBoxType.Items.Clear();
+            comboBoxType.Items.AddRange(new string[] { ComboBoxItemSmiley, ComboBoxItemStar, ComboBoxItemSlider });
+
+            comboBoxType.SelectedIndex = 0;
+            // Add more items as needed
         }
 
 
@@ -384,16 +402,6 @@ namespace SurveyConfigurator
                 Logger.WriteLog(E.Message, clsConstants.ERROR);
                 return clsConstants.ERROR;
             }
-        }
-
-        // Event handler for the LanguageChanged event
-        private void LanguageChangedHandler(object sender, EventArgs e)
-        {
-            // Update your localized strings and other language-specific elements here
-            // ...
-
-            // For example, update the text of a label
-            MessageBox.Show(Thread.CurrentThread.CurrentUICulture.Name);
         }
 
 
